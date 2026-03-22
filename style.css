@@ -340,6 +340,29 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 8px;
 }
 
+.report-body figure {
+    margin: 24px 0;
+    padding: 0;
+}
+
+.report-body figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+}
+
+.report-body figure figcaption {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+.report-body figure figcaption a {
+    color: var(--accent-red);
+}
+
 .report-body blockquote {
     border-left: 3px solid var(--accent-red);
     padding: 16px 24px;
