@@ -74,7 +74,7 @@
                 <p><strong>The conflict expanded dramatically on Day 3 as <a href="https://www.aljazeera.com/opinions/2026/3/11/the-israel-hezbollah-ceasefire-was-built-to-fail" target="_blank" style="color: var(--accent-red);">Hezbollah broke its November 2024 ceasefire</a> and launched missiles and drones into Israel from southern Lebanon.</strong> The move opened a <a href="https://en.wikipedia.org/wiki/2026_Lebanon_war" target="_blank" style="color: var(--accent-red);">second front for Israel</a> and drew Lebanon back into a war many hoped it had escaped. In a particularly alarming escalation, a <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">Hezbollah drone struck a British RAF base in Cyprus</a>, raising the prospect of direct NATO-country involvement. <a href="https://www.longwarjournal.org/archives/2026/03/analysis-israel-strikes-over-500-targets-in-lebanon-issues-evac-orders-in-new-war-with-hezbollah-march-2-6-updates.php" target="_blank" style="color: var(--accent-red);">Israel responded with escalated air strikes</a> reaching into southern Beirut.</p>
 
                 <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tehran_-_The_Fourth_Day_of_War_9_Avash.webp/960px-Tehran_-_The_Fourth_Day_of_War_9_Avash.webp.png" alt="Tehran on the fourth day of the 2026 Iran War">
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tehran_-_The_Fourth_Day_of_War_9_Avash.webp/960px-Tehran_-_The_Fourth_Day_of_War_9_Avash.webp.png" alt="Tehran on the fourth day of the 2026 Iran War">
                     <figcaption>Tehran on the fourth day of the war, March 3, 2026 — avash.ir / Wikimedia Commons (CC BY 4.0)</figcaption>
                 </figure>
 
@@ -129,6 +129,16 @@
                 </ul>
             </div>
 
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+    </div>
+</div>
+
             <div class="report-nav">
                 <a href="day-2.html">← Day 2</a>
                 <a href="day-4.html">Day 4 →</a>
@@ -137,12 +147,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>The Wartime Report — Independent daily briefings on the 2026 Iran War</p>
-            <p class="disclaimer">Sources linked inline and in each report's Sources section.</p>
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="../feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../about.html" style="color: var(--accent-red);">About us</a> · <a href="../corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');
@@ -155,6 +170,16 @@ const h=document.documentElement;
 const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
 progress.style.width=pct+'%';
 });
+</script>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+})();
 </script>
 </body>
 </html>

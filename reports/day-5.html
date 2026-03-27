@@ -74,7 +74,7 @@
                 <p><strong>On the fifth day of the war, the <a href="https://www.cnn.com/2026/03/05/politics/house-vote-war-powers-iran-vis" target="_blank" style="color: var(--accent-red);">U.S. Congress effectively gave President Trump a blank check</a>.</strong> Both the Senate and the House voted to reject bipartisan war powers resolutions that would have constrained the president's authority to continue military operations without explicit congressional authorization. <a href="https://www.nytimes.com/2026/03/05/us/politics/trump-war-powers-iran-house-vote.html" target="_blank" style="color: var(--accent-red);">The House vote</a> was particularly decisive. Defense Secretary Hegseth declared the U.S. was "just getting started," while Trump promised defense manufacturers would <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">"quadruple" weapons production</a>.</p>
 
                 <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_1_Avash.webp/960px-Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_1_Avash.webp.png" alt="Aftermath of airstrike on residential area of Shahid Boroujerdi, Tehran">
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_1_Avash.webp/960px-Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_1_Avash.webp.png" alt="Aftermath of airstrike on residential area of Shahid Boroujerdi, Tehran">
                     <figcaption>Aftermath of airstrike on residential area of Shahid Boroujerdi, Tehran — Avash Media / Wikimedia Commons (CC BY 4.0)</figcaption>
                 </figure>
 
@@ -127,6 +127,16 @@
                 </ul>
             </div>
 
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+    </div>
+</div>
+
             <div class="report-nav">
                 <a href="day-4.html">← Day 4</a>
                 <a href="day-6.html">Day 6 →</a>
@@ -135,12 +145,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>The Wartime Report — Independent daily briefings on the 2026 Iran War</p>
-            <p class="disclaimer">Sources linked inline and in each report's Sources section.</p>
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="../feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../about.html" style="color: var(--accent-red);">About us</a> · <a href="../corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');
@@ -153,6 +168,16 @@ const h=document.documentElement;
 const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
 progress.style.width=pct+'%';
 });
+</script>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrections & Editorial Policy | The Wartime Report</title>
+    <meta name="description" content="Our corrections policy and log. The Wartime Report is committed to accuracy and transparency.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://thewartimereport.com/corrections.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="masthead">
+                <h1 class="site-title"><a href="index.html">THE WARTIME REPORT</a></h1>
+            </div>
+            </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="container">
+            <div class="nav-toggle-row">
+                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="economics.html">Economics</a>
+            <a href="investigations.html">Investigations</a>
+            <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="report-header">
+            <h1>Corrections & Editorial Policy</h1>
+            <p class="report-meta">Last updated: March 27, 2026</p>
+        </div>
+        <div class="report-body">
+            <h2>Our Commitment</h2>
+            <p>The Wartime Report is committed to accuracy. When we get something wrong, we correct it publicly and promptly. We believe transparency about our mistakes builds more trust than pretending we don't make them.</p>
+            
+            <h2>How We Handle Errors</h2>
+            <ul>
+                <li><strong>Factual errors:</strong> Corrected immediately. The original text is updated with a note indicating the correction.</li>
+                <li><strong>Sourcing errors:</strong> If a source link is broken or incorrect, we replace it with the correct source.</li>
+                <li><strong>Significant corrections:</strong> Listed below with date and explanation.</li>
+            </ul>
+            
+            <h2>Report an Error</h2>
+            <p>Found something wrong? <a href="https://github.com/thewartimereport/thewartimereport.github.io/issues" style="color: var(--accent-red);">Open a GitHub issue</a> or email <a href="mailto:thewartimereport@gmail.com" style="color: var(--accent-red);">thewartimereport@gmail.com</a>.</p>
+            
+            <h2>Corrections Log</h2>
+            <p><em>No significant corrections to date. This page will be updated as needed.</em></p>
+        </div>
+    </main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="/feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
+        </div>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="/about.html" style="color: var(--accent-red);">About us</a> · <a href="/corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const btn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
+</script>
+</body>
+</html>

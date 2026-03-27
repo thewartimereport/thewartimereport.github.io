@@ -74,7 +74,7 @@
                 <p><strong>As Operation Epic Fury enters its second week, the financial and strategic costs of the war are becoming impossible to ignore.</strong> The Pentagon disclosed that the first six days of operations <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">cost the United States $11.3 billion</a>. The International Energy Agency declared the conflict the <a href="https://www.theguardian.com/world/2026/mar/10/bombing-of-irans-oil-infrastructure-to-have-major-environmental-fallout-experts-warn" target="_blank" style="color: var(--accent-red);">"greatest energy security threat in history"</a>. Meanwhile, <a href="https://www.reuters.com/world/middle-east/two-drones-fall-vicinity-dubai-airport-iran-crisis-shows-no-sign-easing-2026-03-11/" target="_blank" style="color: var(--accent-red);">drones fell near Dubai's international airport</a> as the crisis showed no sign of easing, and analysts questioned whether the administration had a viable endgame.</p>
 
                 <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Operation-Roaring-Lion-0011.jpg/960px-Operation-Roaring-Lion-0011.jpg" alt="Operation Roaring Lion military operations, March 2026">
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Operation-Roaring-Lion-0011.jpg/960px-Operation-Roaring-Lion-0011.jpg" alt="Operation Roaring Lion military operations, March 2026">
                     <figcaption>Operation Roaring Lion military operations, March 2026 — IDF / Wikimedia Commons (CC BY-SA 3.0)</figcaption>
                 </figure>
 
@@ -136,6 +136,16 @@
                 </ul>
             </div>
 
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+    </div>
+</div>
+
             <div class="report-nav">
                 <a href="day-11.html">← Day 11</a>
                 <a href="day-13.html">Day 13 →</a>
@@ -144,12 +154,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>The Wartime Report — Independent daily briefings on the 2026 Iran War</p>
-            <p class="disclaimer">Sources verified via Reuters, The Guardian, Britannica, New York Times, Al Jazeera, and other major outlets.</p>
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="../feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../about.html" style="color: var(--accent-red);">About us</a> · <a href="../corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');
@@ -162,6 +177,16 @@ const h=document.documentElement;
 const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
 progress.style.width=pct+'%';
 });
+</script>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+})();
 </script>
 </body>
 </html>

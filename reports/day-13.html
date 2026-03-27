@@ -74,7 +74,7 @@
                 <p><strong>As the war stretches into its third week, the Trump administration escalated its confrontation with domestic critics, threatening news outlets over critical coverage and floating treason charges.</strong> Simultaneously, the U.S. <a href="https://www.nytimes.com/live/2026/03/09/world/iran-war-israel-trump-oil" target="_blank" style="color: var(--accent-red);">told citizens to leave Iraq</a> after a second attack on the American embassy. European leaders firmly rejected military involvement in the Strait of Hormuz, and <a href="https://www.aljazeera.com/news/2026/3/8/iran-war-what-is-happening-on-day-nine-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">gasoline prices continued climbing</a> with no relief in sight. A senior U.S. counterterrorism official resigned over the war.</p>
 
                 <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_24_Avash.webp/960px-Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_24_Avash.webp.png" alt="Destroyed residential buildings in Shahid Boroujerdi area, Tehran">
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_24_Avash.webp/960px-Airstrike_on_the_residential_town_of_Shahid_Boroujerdi_24_Avash.webp.png" alt="Destroyed residential buildings in Shahid Boroujerdi area, Tehran">
                     <figcaption>Destroyed residential buildings in Shahid Boroujerdi area, Tehran — Avash Media / Wikimedia Commons (CC BY 4.0)</figcaption>
                 </figure>
 
@@ -137,6 +137,16 @@
                 </ul>
             </div>
 
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+    </div>
+</div>
+
             <div class="report-nav">
                 <a href="day-12.html">← Day 12</a>
                 <a href="day-14.html">Day 14 →</a>
@@ -145,12 +155,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>The Wartime Report — Independent daily briefings on the 2026 Iran War</p>
-            <p class="disclaimer">Sources verified via New York Times, Reuters, The Guardian, PBS, Britannica, and other major outlets.</p>
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="../feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../about.html" style="color: var(--accent-red);">About us</a> · <a href="../corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');
@@ -163,6 +178,16 @@ const h=document.documentElement;
 const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
 progress.style.width=pct+'%';
 });
+</script>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+})();
 </script>
 </body>
 </html>

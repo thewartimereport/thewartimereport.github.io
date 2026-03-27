@@ -53,7 +53,7 @@
         <div class="report-body">
             <h2>Open Source. Unbiased. Independent.</h2>
             <p>The Wartime Report is an <strong>open-source, independently produced</strong> daily briefing covering the 2026 Iran War — the military conflict between the United States, Israel, and Iran that began on February 28, 2026.</p>
-            <p>Our entire codebase, research notes, and editorial process are <a href="https://github.com/thewartimereport/thewartimereport.com" style="color: var(--accent-red);">public on GitHub</a>. You can verify every claim, check every source, and contribute improvements.</p>
+            <p>Our entire codebase, research notes, and editorial process are <a href="https://github.com/thewartimereport/thewartimereport.github.io" style="color: var(--accent-red);">public on GitHub</a>. You can verify every claim, check every source, and contribute improvements.</p>
             <p>Each day we publish a comprehensive report covering:</p>
             <ul>
                 <li><strong>Military developments</strong> — strikes, operations, casualties, and strategic moves</li>
@@ -87,7 +87,7 @@
             </ul>
 
             <h2>Contribute</h2>
-            <p>Found an error? Have a source we missed? <a href="https://github.com/thewartimereport/thewartimereport.com/issues" style="color: var(--accent-red);">Open an issue on GitHub</a> or submit a pull request. The more eyes on this, the better the reporting gets.</p>
+            <p>Found an error? Have a source we missed? <a href="https://github.com/thewartimereport/thewartimereport.github.io/issues" style="color: var(--accent-red);">Open an issue on GitHub</a> or submit a pull request. The more eyes on this, the better the reporting gets.</p>
 
             <h2>Disclaimers</h2>
             <p>The Wartime Report is an independent, open-source project. We are not affiliated with any government, military organization, or political party. Information is compiled from publicly available sources and may be incomplete or subject to the fog of war.</p>
@@ -123,10 +123,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="/feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="/about.html" style="color: var(--accent-red);">About us</a> · <a href="/corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');

@@ -74,7 +74,7 @@
                 <p><strong>As the war reaches the three-week mark on Nowruz — the Persian New Year — both sides appear locked in an escalatory spiral with no off-ramp in sight.</strong> Iran warned of <a href="https://www.aljazeera.com/news/2026/3/20/iran-war-what-is-happening-on-day-21-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">"zero restraint"</a> if its energy facilities are attacked again, claiming it has used only a "fraction" of its firepower. Trump <a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" style="color: var(--accent-red);">called NATO allies "cowards"</a> for refusing to help secure the Strait of Hormuz, referenced Pearl Harbor to Japan's PM, and flatly stated "I don't want to do a ceasefire." Switzerland halted U.S. arms exports and closed its airspace to U.S. military flights. Netanyahu signaled a possible ground component in Iran. The Lebanese death toll surpassed 1,000.</p>
 
                 <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Attack_on_Kavirabad_%282%29.jpg/960px-Attack_on_Kavirabad_%282%29.jpg" alt="Damage from attack on Kavirabad, Iran">
+                    <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Attack_on_Kavirabad_%282%29.jpg/960px-Attack_on_Kavirabad_%282%29.jpg" alt="Damage from attack on Kavirabad, Iran">
                     <figcaption>Attack on Kavirabad, Iran — Wikimedia Commons</figcaption>
                 </figure>
 
@@ -176,6 +176,16 @@
                 </ul>
             </div>
 
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+    </div>
+</div>
+
             <div class="report-nav">
                 <a href="day-20.html">← Day 20</a>
                 <a href="day-22.html">Day 22 →</a>
@@ -184,12 +194,17 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>The Wartime Report — Independent daily briefings on the 2026 Iran War</p>
-            <p class="disclaimer">Sources: Reuters, AP, CNN, BBC, Al Jazeera, Britannica, and other major outlets.</p>
-            <p>&copy; 2026 The Wartime Report</p>
+    <div class="container">
+        <div style="margin-bottom: 16px;">
+            <a href="https://github.com/thewartimereport" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="../feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>
-    </footer>
+        <p>The Wartime Report is an independent, open-source news project. We aggregate and cross-reference reporting from major international outlets to provide comprehensive, unbiased coverage.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../about.html" style="color: var(--accent-red);">About us</a> · <a href="../corrections.html" style="color: var(--accent-red);">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script>
 const btn=document.querySelector('.back-to-top');
@@ -202,6 +217,16 @@ const h=document.documentElement;
 const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
 progress.style.width=pct+'%';
 });
+</script>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+})();
 </script>
 </body>
 </html>
