@@ -66,13 +66,19 @@ img { max-width: 100%; height: auto; }
 }
 
 .site-nav {
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 200;
     background: rgba(10, 10, 10, 0.97);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     padding: 12px 0;
+}
+
+@media (min-width: 769px) {
+    .site-nav {
+        position: sticky;
+        top: 0;
+    }
 }
 
 .site-nav .container {
