@@ -7,7 +7,7 @@
     --bg-card-hover: #1c1a17;
     --text-primary: #ece8e4;
     --text-secondary: #a8a4a0;
-    --text-muted: #787470;
+    --text-muted: #858078;
     --accent-red: #dc2626;
     --accent-red-dim: #991b1b;
     --accent-gold: #d4a520;
@@ -540,8 +540,9 @@ img { max-width: 100%; height: auto; }
 
 /* === FOCUS STYLES === */
 :focus-visible {
-    outline: 2px solid var(--accent-red);
-    outline-offset: 2px;
+    outline: 3px solid var(--accent-red);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.2);
 }
 :focus:not(:focus-visible) {
     outline: none;
