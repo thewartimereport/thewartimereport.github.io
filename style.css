@@ -37,7 +37,7 @@ img { max-width: 100%; height: auto; }
 .site-header {
     border-bottom: 1px solid var(--border);
     padding: 24px 0;
-    position: sticky;
+    position: relative;
     top: 0;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
