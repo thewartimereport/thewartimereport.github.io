@@ -4,7 +4,7 @@
 
 Daily briefings on the 2026 Iran War — military updates, economic impact, and international reactions, documented from Day 1.
 
-🌐 **Live site:** [thewartimereport.github.io](https://thewartimereport.github.io)
+🌐 **Live site:** [thewartimereport.com](https://thewartimereport.com)
 
 ## What is this?
 
@@ -66,7 +66,7 @@ This project is open source under the [MIT License](LICENSE). Reports are compil
 
 ## Contact
 
-- **Website:** [thewartimereport.github.io](https://thewartimereport.github.io)
+- **Website:** [thewartimereport.com](https://thewartimereport.com)
 - **Email:** thewartimereport@gmail.com
 - **GitHub:** [github.com/thewartimereport](https://github.com/thewartimereport)
 
