@@ -118,6 +118,14 @@ img { max-width: 100%; height: auto; }
     max-width: 720px;
 }
 
+.hero-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+}
+
 .breaking-badge {
     display: inline-block;
     background: var(--accent-red);
