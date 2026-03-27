@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Research Reports — Deep-Dive Analysis | The Wartime Report</title>
+    <meta name="description" content="Deep-dive financial analysis on 18 Canadian equities across copper, uranium, AI/data centres, clean energy, tech, and infrastructure. Bull and bear cases, key financials, and analyst targets.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .stock-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+        .stock-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .sector-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+        .tag-copper { background: rgba(205, 127, 50, 0.15); color: #cd7f32; }
+        .tag-uranium { background: rgba(0, 255, 100, 0.1); color: #00cc66; }
+        .tag-ai { background: rgba(100, 149, 237, 0.15); color: #6495ed; }
+        .tag-clean { background: rgba(100, 210, 80, 0.15); color: #64d250; }
+        .tag-tech { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+        .tag-infra { background: rgba(255, 165, 0, 0.15); color: #ffa500; }
+        .financials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .fin-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 6px;
+            padding: 0.6rem 0.75rem;
+        }
+        .fin-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+        .fin-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 600px) {
+            .case-grid { grid-template-columns: 1fr; }
+        }
+        .bull-case, .bear-case {
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .bull-case {
+            background: rgba(0, 200, 80, 0.06);
+            border: 1px solid rgba(0, 200, 80, 0.12);
+        }
+        .bear-case {
+            background: rgba(255, 59, 48, 0.06);
+            border: 1px solid rgba(255, 59, 48, 0.12);
+        }
+        .analyst-target {
+            display: inline-block;
+            background: rgba(255, 204, 0, 0.1);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+            border-radius: 6px;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        .top-picks-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+        }
+        .top-picks-table th {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .top-picks-table td {
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .top-picks-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .sector-header {
+            margin-top: 3rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .source-links {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.75rem;
+        }
+        .source-links a {
+            color: var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="masthead">
+                <h1 class="site-title"><a href="index.html">THE WARTIME REPORT</a></h1>
+            </div>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="economics.html">Economics</a>
+                <a href="investigations.html">Investigations</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div style="margin: 1.5rem 0 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+            <a href="economics.html" style="color: var(--accent-red);">Economics</a> → Research Reports
+        </div>
+
+        <article>
+            <div class="report-header">
+                <span class="day-badge" style="background: #6495ed;">RESEARCH</span>
+                <h1>Stock Research Reports — Canadian Equities Deep Dives</h1>
+                <p class="report-meta">The Wartime Report · March 27, 2026</p>
+            </div>
+
+            <div class="report-body">
+
+                <!-- Disclaimer -->
+                <div style="background: rgba(255, 59, 48, 0.08); border: 2px solid var(--accent-red); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem;">
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;"><strong>⚠️ DISCLAIMER:</strong> This page is for educational and informational purposes only. Nothing here constitutes financial advice, investment recommendations, or endorsements. All data is sourced from publicly available filings, analyst reports, and financial news. Always consult a licensed financial advisor before making investment decisions. Past performance does not guarantee future results.</p>
+                </div>
+
+                <!-- Top Picks Summary -->
+                <h2>Top Picks Summary</h2>
+                <p>18 stocks across 6 sectors, analyzed for wartime relevance, fundamentals, and upside potential.</p>
+
+                <div style="overflow-x: auto;">
+                    <table class="top-picks-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Company</th>
+                                <th>Sector</th>
+                                <th>Market Cap</th>
+                                <th>FY25 Rev</th>
+                                <th>Fwd P/E</th>
+                                <th>Analyst Target</th>
+                                <th>War Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>TECK.B</strong></td><td>Teck Resources</td><td><span class="sector-tag tag-copper">Copper</span></td><td>US$28.8B</td><td>US$10.8B</td><td>16.6x</td><td>C$79.05</td><td>🟡 Mixed</td></tr>
+                            <tr><td><strong>FM</strong></td><td>First Quantum</td><td><span class="sector-tag tag-copper">Copper</span></td><td>C$26.9B</td><td>C$7.2B</td><td>27.7x</td><td>C$43.53</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>HBM</strong></td><td>Hudbay Minerals</td><td><span class="sector-tag tag-copper">Copper</span></td><td>US$7.5B</td><td>US$2.2B+</td><td>11.1x</td><td>US$29.30</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>LUN</strong></td><td>Lundin Mining</td><td><span class="sector-tag tag-copper">Copper</span></td><td>C$26.7B</td><td>C$5.6B</td><td>19.8x</td><td>C$36.47</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>CCO</strong></td><td>Cameco</td><td><span class="sector-tag tag-uranium">Uranium</span></td><td>US$44B</td><td>US$3.5B</td><td>~70x</td><td>C$167.66</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>DML</strong></td><td>Denison Mines</td><td><span class="sector-tag tag-uranium">Uranium</span></td><td>C$1.9B</td><td>Pre-rev</td><td>N/A</td><td>C$5.84</td><td>🟢🟢 Strong</td></tr>
+                            <tr><td><strong>NXE</strong></td><td>NexGen Energy</td><td><span class="sector-tag tag-uranium">Uranium</span></td><td>US$10B+</td><td>Pre-rev</td><td>N/A</td><td>US$15.27</td><td>🟢🟢 Strong</td></tr>
+                            <tr><td><strong>CLS</strong></td><td>Celestica</td><td><span class="sector-tag tag-ai">Data/AI</span></td><td>US$35B</td><td>US$12.4B</td><td>34.5x</td><td>US$354.24</td><td>🟡 Neutral</td></tr>
+                            <tr><td><strong>BEP.UN</strong></td><td>Brookfield Renewable</td><td><span class="sector-tag tag-clean">Clean Energy</span></td><td>US$20B</td><td>US$6.4B</td><td>~15x P/FFO</td><td>US$34.50</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>NPI</strong></td><td>Northland Power</td><td><span class="sector-tag tag-clean">Clean Energy</span></td><td>C$6.1B</td><td>C$2.4B</td><td>11.8x</td><td>C$23.96</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>CPX</strong></td><td>Capital Power</td><td><span class="sector-tag tag-clean">Clean Energy</span></td><td>C$10.3B</td><td>C$3.7B</td><td>24.9x</td><td>C$76.67</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>KXS</strong></td><td>Kinaxis</td><td><span class="sector-tag tag-tech">Tech</span></td><td>C$5.2B</td><td>US$548M</td><td>~44x</td><td>C$208.67</td><td>🟢 Positive</td></tr>
+                            <tr><td><strong>SHOP</strong></td><td>Shopify</td><td><span class="sector-tag tag-tech">Tech</span></td><td>US$150B</td><td>US$11.6B</td><td>63.1x</td><td>US$163.67</td><td>🟡 Mixed</td></tr>
+                            <tr><td><strong>VNP</strong></td><td>5N Plus</td><td><span class="sector-tag tag-tech">Tech</span></td><td>C$3.1B</td><td>US$391M</td><td>38.5x</td><td>C$34.08</td><td>🟢🟢 Strong</td></tr>
+                            <tr><td><strong>BIP.UN</strong></td><td>Brookfield Infra</td><td><span class="sector-tag tag-infra">Infra</span></td><td>US$16.6B</td><td>US$23.1B</td><td>41.9x</td><td>US$40.88</td><td>🟡 Mixed</td></tr>
+                            <tr><td><strong>CJT</strong></td><td>Cargojet</td><td><span class="sector-tag tag-infra">Logistics</span></td><td>C$1.3B</td><td>C$993M</td><td>21.2x</td><td>C$110.89</td><td>🟡 Mixed</td></tr>
+                            <tr><td><strong>BDGI</strong></td><td>Badger Infra</td><td><span class="sector-tag tag-infra">Infra</span></td><td>C$2.1B</td><td>C$1.1B</td><td>20.5x</td><td>C$75.65</td><td>🟢 Mild Pos</td></tr>
+                            <tr><td><strong>BDT</strong></td><td>Bird Construction</td><td><span class="sector-tag tag-infra">Infra</span></td><td>C$2.1B</td><td>C$3.4B</td><td>14.8x</td><td>C$39.13</td><td>🟢 Positive</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- COPPER SECTOR -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-copper" style="font-size: 0.8rem;">Copper</span> Copper Miners</h2>
+
+                <!-- TECK.B -->
+                <div class="stock-card" id="teck">
+                    <span class="sector-tag tag-copper">Copper</span>
+                    <h3>TECK.B — Teck Resources Limited</h3>
+                    <p>Pure-play copper miner (post-coal divestiture) headquartered in Vancouver. Advancing a merger of equals with Anglo American to form "Anglo Teck." Key assets include QB2 (Chile), Highland Valley Copper, and Antamina (Peru).</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$10.8B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EPS (Q4)</div><div class="fin-value">C$1.37</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA (FY)</div><div class="fin-value">US$4.3B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">16.6x</div></div>
+                        <div class="fin-item"><div class="fin-label">52wk Range</div><div class="fin-value">$39–$62</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$28.8B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$79.05</strong> (Buy) — ~34% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Anglo Teck merger creates a top-tier copper champion with $800M+ in synergies. Copper supercycle driven by electrification and EVs with supply deficits through 2030+. Adj EBITDA up 81% YoY shows enormous operating leverage.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Prolonged Iran war could trigger global recession, crushing copper demand. Merger execution risk — combining two massive mining companies is complex. Margins compress rapidly if copper falls below ~US$3.50/lb.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.teck.com/news/news-releases/2026/teck-reports-unaudited-fourth-quarter-results-for-2025" target="_blank">Teck Q4</a>, <a href="https://www.tipranks.com/stocks/tse:teck.b/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- FM -->
+                <div class="stock-card" id="fm">
+                    <span class="sector-tag tag-copper">Copper</span>
+                    <h3>FM — First Quantum Minerals Ltd.</h3>
+                    <p>Major global copper miner headquartered in Toronto. Primary operations include Kansanshi and Sentinel mines in Zambia. Cobre Panamá mine currently suspended pending government resolution — stockpile processing recently approved.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (TTM)</div><div class="fin-value">C$7.18B</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS (TTM)</div><div class="fin-value">-C$0.05</div></div>
+                        <div class="fin-item"><div class="fin-label">EBITDA (TTM)</div><div class="fin-value">C$2.32B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">27.7x</div></div>
+                        <div class="fin-item"><div class="fin-label">EV/EBITDA</div><div class="fin-value">16.67x</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$26.9B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$43.53</strong> (Buy) — ~41% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> S3 Kansanshi expansion delivering 84,000+ tonnes copper in 2026. Cobre Panamá stockpile processing is a first step toward potential restart (was 300,000 tonnes/yr). Trading at deep value with 41% upside to consensus.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Massive debt load — C$10B with interest coverage of only 1.97x. Cobre Panamá full restart remains politically uncertain. Heavy Zambia concentration with rising power costs and regulatory uncertainty.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.first-quantum.com/news/first-quantum-minerals-reports-fourth-quarter-2025-results/" target="_blank">FM Q4</a>, <a href="https://stockanalysis.com/quote/tsx/FM/statistics/" target="_blank">StockAnalysis</a></div>
+                </div>
+
+                <!-- HBM -->
+                <div class="stock-card" id="hbm">
+                    <span class="sector-tag tag-copper">Copper</span>
+                    <h3>HBM — Hudbay Minerals Inc.</h3>
+                    <p>Diversified base metals miner with copper-gold operations in Peru (Constancia), British Columbia (Copper Mountain), and Manitoba (Snow Lake). Record financial performance in 2025.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$2.2B+</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS (TTM)</div><div class="fin-value">US$1.44</div></div>
+                        <div class="fin-item"><div class="fin-label">EBITDA (FY)</div><div class="fin-value">US$1.1B+</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">11.1x</div></div>
+                        <div class="fin-item"><div class="fin-label">52wk Range</div><div class="fin-value">$5.95–$22</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$7.5B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$29.30</strong> (Strong Buy) — ~56% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Record performance at cheap valuations — EV/EBITDA of 7.98 and forward PE of 11x. Multi-asset diversification across Peru, BC, Manitoba with both copper and gold exposure. 5% copper production increase guided for 2026.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Q4 adjusted EPS missed estimates, suggesting cost pressures. High beta (2.03) means extreme price swings. Peru political risk — Constancia faces potential policy shifts on mining royalties.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://hudbayminerals.com/investors/press-releases/" target="_blank">Hudbay PR</a>, <a href="https://www.tipranks.com/stocks/hbm/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- LUN -->
+                <div class="stock-card" id="lun">
+                    <span class="sector-tag tag-copper">Copper</span>
+                    <h3>LUN — Lundin Mining Corporation</h3>
+                    <p>Diversified base metals miner with operations in Chile, Brazil, Portugal, Sweden, and Argentina. Rebranding to emphasize copper-focused strategy. Record financial year in 2025.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$5.56B</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS (TTM)</div><div class="fin-value">C$2.05</div></div>
+                        <div class="fin-item"><div class="fin-label">EBITDA (FY)</div><div class="fin-value">C$2.25B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (TTM)</div><div class="fin-value">18.7x</div></div>
+                        <div class="fin-item"><div class="fin-label">D/E Ratio</div><div class="fin-value">0.06x (!)</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$26.7B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$36.47</strong> (Moderate Buy) — ~17% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Fortress balance sheet — D/E of 0.06 and near net-cash is extraordinary for a miner. Record year with 21% ROE validates premium valuation. Vicuña copper-gold project plus Caserones expansion for growth.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Weaker 2026 production guidance — cut copper/gold output at Candelaria. Shares up 135% in 52 weeks — premium valuation vs peers like HBM. Share dilution of 10.44% YoY erodes per-share metrics.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.lundinmining.com/news/lundin-mining-reports-fourth-quarter-and-full-year-2025-results" target="_blank">Lundin Q4</a>, <a href="https://www.tipranks.com/stocks/tse:lun/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- URANIUM SECTOR -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-uranium" style="font-size: 0.8rem;">Uranium</span> Uranium & Nuclear</h2>
+
+                <!-- CCO -->
+                <div class="stock-card" id="cco">
+                    <span class="sector-tag tag-uranium">Uranium</span>
+                    <h3>CCO — Cameco Corporation</h3>
+                    <p>World's largest publicly traded uranium producer (Saskatoon, SK). Owns McArthur River-Key Lake (world's largest high-grade uranium mine) and 49% of Westinghouse Electric. Controls ~18% of global uranium supply.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$3.5B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj Earnings</div><div class="fin-value">US$630M</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">US$1.9B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (TTM)</div><div class="fin-value">~70-80x</div></div>
+                        <div class="fin-item"><div class="fin-label">52wk Range</div><div class="fin-value">$35–$135</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$44B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$167.66</strong> (Buy)</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Nuclear renaissance — 60+ reactors under construction worldwide. War accelerating energy security buildout. Westinghouse integration gives exposure to nuclear services, not just uranium commodity. Years of underinvestment create structural supply deficit.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> P/E extremely elevated at 70-80x — priced for perfection. Uranium at $82/lb is historically high; a pullback compresses multiples fast. Westinghouse integration complexity and lumpy revenue recognition remain risks.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.cameco.com/media/news/cameco-reports-2025-fourth-quarter-results" target="_blank">Cameco Q4</a>, <a href="https://www.tipranks.com/stocks/tse:cco/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- DML -->
+                <div class="stock-card" id="dml">
+                    <span class="sector-tag tag-uranium">Uranium Dev.</span>
+                    <h3>DML — Denison Mines Corp.</h3>
+                    <p>Pre-production uranium developer focused on the Athabasca Basin. Flagship Phoenix ISR mine just received Final Investment Decision — construction commencing March 2026. First production expected mid-2028.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue</div><div class="fin-value">Pre-revenue</div></div>
+                        <div class="fin-item"><div class="fin-label">Cash + Assets</div><div class="fin-value">C$720M</div></div>
+                        <div class="fin-item"><div class="fin-label">Op Cost (Phoenix)</div><div class="fin-value">C$8.51/lb</div></div>
+                        <div class="fin-item"><div class="fin-label">After-Tax IRR</div><div class="fin-value">82.7%</div></div>
+                        <div class="fin-item"><div class="fin-label">Price</div><div class="fin-value">~C$2.20</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$1.86B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$5.84</strong> (Strong Buy) — ~165% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Phoenix FID is the biggest catalyst — construction starting now, production mid-2028. Ultra-low cost at $6.28/lb vs $82/lb spot = enormous margin potential. One of the few new uranium supply sources this decade.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> ISR mining at this scale is novel in the Athabasca Basin — real execution risk. No revenue until 2028 means patient capital required. If uranium crashes below $40/lb (unlikely), the entire thesis unwinds.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://denisonmines.com/news/denison-reports-financial-and-operational-results-122845/" target="_blank">Denison FID</a>, <a href="https://www.tipranks.com/stocks/tse:dml/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- NXE -->
+                <div class="stock-card" id="nxe">
+                    <span class="sector-tag tag-uranium">Uranium Dev.</span>
+                    <h3>NXE — NexGen Energy Ltd.</h3>
+                    <p>Pre-revenue uranium developer building the Rook I project in Saskatchewan — expected to become one of the world's largest and lowest-cost uranium mines. Final CNSC federal approval received March 2026.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue</div><div class="fin-value">Pre-revenue</div></div>
+                        <div class="fin-item"><div class="fin-label">Cash</div><div class="fin-value">C$1.1B+</div></div>
+                        <div class="fin-item"><div class="fin-label">Cash Cost (est)</div><div class="fin-value">~US$7.50/lb</div></div>
+                        <div class="fin-item"><div class="fin-label">Offtake</div><div class="fin-value">2M lbs/yr</div></div>
+                        <div class="fin-item"><div class="fin-label">Price</div><div class="fin-value">~US$11.63</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$10B+</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$15.27</strong> (Strong Buy) — ~31% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Rook I is a generational asset — final CNSC approval de-risks the project. Construction starts summer 2026. Western governments urgently seeking non-Russian uranium supply — Saskatchewan is ideal. Cash cost of ~$7.50/lb vs spot $82+.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Zero revenue for years — 4-year construction timeline. Mega-project execution risk is real; cost overruns common in mining. Uranium is thinly traded and can swing violently on sentiment.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.stocktitan.net/news/NXE/nex-gen-receives-final-federal-approval-for-the-rook-i-uranium-c1vp232p16r5.html" target="_blank">NXE Approval</a>, <a href="https://www.tipranks.com/stocks/nxe/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- DATA CENTRES / AI -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-ai" style="font-size: 0.8rem;">Data/AI</span> Data Centres & AI</h2>
+
+                <!-- CLS -->
+                <div class="stock-card" id="cls">
+                    <span class="sector-tag tag-ai">Data/AI</span>
+                    <h3>CLS — Celestica Inc.</h3>
+                    <p>Toronto-based electronics manufacturing services company. Major player in AI data center infrastructure — manufactures networking switches, server assemblies, and power/cooling solutions for hyperscalers. New AMD "Helios" partnership announced.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">~US$12.4B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EPS (FY25)</div><div class="fin-value">US$6.04</div></div>
+                        <div class="fin-item"><div class="fin-label">Rev Growth (Q4)</div><div class="fin-value">+44% YoY</div></div>
+                        <div class="fin-item"><div class="fin-label">2026 Guide Rev</div><div class="fin-value">US$17.0B</div></div>
+                        <div class="fin-item"><div class="fin-label">2026 Guide EPS</div><div class="fin-value">US$8.75</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$35B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$354.24</strong> (Strong Buy) — ~17% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> AI infrastructure supercycle — 44% Q4 revenue growth with $17B guided for 2026. AMD Helios partnership adds to hyperscaler relationships. Operating margins improving from 8.0% to 8.6% with scale.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Heavy dependence on a few hyperscaler customers — any capex slowdown hits disproportionately. At ~50x TTM P/E, priced for continued hypergrowth. Significant capital investments planned for 2026-2027 could constrain FCF.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://corporate.celestica.com/news-releases/news-release-details/celestica-announces-fourth-quarter-and-fy-2025-financial-results" target="_blank">CLS Q4</a>, <a href="https://stockanalysis.com/stocks/cls/forecast/" target="_blank">StockAnalysis</a></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- CLEAN ENERGY -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-clean" style="font-size: 0.8rem;">Clean Energy</span> Clean Energy & Power</h2>
+
+                <!-- BEP.UN -->
+                <div class="stock-card" id="bep">
+                    <span class="sector-tag tag-clean">Renewables</span>
+                    <h3>BEP.UN — Brookfield Renewable Partners L.P.</h3>
+                    <p>One of the world's largest publicly traded renewable power platforms (~34 GW operating capacity). Portfolio spans hydro, wind, solar, and energy storage globally. 30 GW development pipeline. Managed by Brookfield Asset Management.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$6.4B</div></div>
+                        <div class="fin-item"><div class="fin-label">FFO/Unit</div><div class="fin-value">US$2.01</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">US$2.70B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/FFO</div><div class="fin-value">~15x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">5.1%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$20B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$34.50</strong> (Buy) — ~13% upside + 5.1% yield</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Energy transition + war premium — fossil fuel volatility makes renewables more attractive. 5.1% yield with 5%+ annual distribution growth (14th consecutive increase). 30 GW development pipeline is massive. Brookfield platform access.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Interest rate sensitivity — as a yield vehicle, less attractive vs bonds if rates stay high. LP tax complexity (K-1 forms). Global operations expose to FX risk and varying regulatory regimes.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://bep.brookfield.com/press-releases/bep/brookfield-renewable-reports-strong-2025-results-and-announces-5-distribution" target="_blank">BEP FY25</a>, <a href="https://www.tipranks.com/stocks/bep/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- NPI -->
+                <div class="stock-card" id="npi">
+                    <span class="sector-tag tag-clean">Offshore Wind</span>
+                    <h3>NPI — Northland Power Inc.</h3>
+                    <p>Global renewable power producer focused on offshore wind, onshore wind, solar, and natural gas. Major construction projects: Baltic Power 1.1 GW (Poland) and Hai Long 1.0 GW (Taiwan). Targeting 7 GW by 2030.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$2.44B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">C$1.25B</div></div>
+                        <div class="fin-item"><div class="fin-label">2026 EBITDA Guide</div><div class="fin-value">$1.45–1.65B</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">11.8x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">3.26%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$6.1B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$23.96</strong> — ~3% upside + yield</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> 2026 guidance of $1.45–$1.65B EBITDA represents 16–31% growth as Baltic Power comes online. Cheap valuation at 11.8x forward P/E with PEG of 0.78. Iran war accelerates global push for domestic renewables.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Two massive offshore wind projects (2.1 GW total) under construction simultaneously — execution risk. 40% dividend cut in late 2025 alienated income investors. $7.13B debt with D/E of 1.61x is heavy.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.northlandpower.com/en/news/press-release/northland-power-reports-fourth-quarter-2025-results-and-2026-financial-outlook.aspx" target="_blank">NPI Q4</a>, <a href="https://www.tipranks.com/stocks/tse:npi/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- CPX -->
+                <div class="stock-card" id="cpx">
+                    <span class="sector-tag tag-clean">Power Gen</span>
+                    <h3>CPX — Capital Power Corporation</h3>
+                    <p>North American power producer. Transformative $3.0B acquisition of Hummel and Rolling Hills gas facilities puts ~60% of capacity in the U.S. (PJM market). Binding MOU for 250 MW data centre contract in Alberta.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$3.72B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">C$1.58B</div></div>
+                        <div class="fin-item"><div class="fin-label">AFFO/Share</div><div class="fin-value">$7.08</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">24.9x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">4.20%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$10.3B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$76.67</strong> (Buy) — ~17% upside + 4.2% yield</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> AI/data centre demand — 250 MW binding MOU positions CPX for surging electricity demand. U.S. PJM expansion de-risks Canadian regulatory exposure. 12 consecutive years of dividend growth with AFFO up 29.4% YoY.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> D/E of 1.42x and $6.89B total debt after acquisition spree. FY2025 net income fell 77%; trailing P/E of 74.8x hard to justify on GAAP. Gas price spikes could squeeze margins on unhedged generation.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.capitalpower.com/media/media_releases/capital-power-reports-fourth-quarter-and-year-end-2025-results/" target="_blank">CPX Q4</a>, <a href="https://www.marketbeat.com/stocks/TSE/CPX/forecast/" target="_blank">MarketBeat</a></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- TECH -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-tech" style="font-size: 0.8rem;">Tech</span> Technology & Software</h2>
+
+                <!-- KXS -->
+                <div class="stock-card" id="kxs">
+                    <span class="sector-tag tag-tech">Supply Chain SaaS</span>
+                    <h3>KXS — Kinaxis Inc.</h3>
+                    <p>Ottawa-based supply chain management SaaS company. "RapidResponse" platform serves major manufacturers. Wartime supply chain chaos directly drives demand. Named "Top Pick for 2026" by National Bank Financial.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$548M</div></div>
+                        <div class="fin-item"><div class="fin-label">ARR</div><div class="fin-value">US$433M</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA Margin</div><div class="fin-value">25.3%</div></div>
+                        <div class="fin-item"><div class="fin-label">2026 Rev Guide</div><div class="fin-value">$620–635M</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (TTM)</div><div class="fin-value">~103x</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$5.2B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$208.67</strong> (Buy) — ~13% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Supply chain disruptions from Iran war directly increase demand for planning software. 20% ARR growth with RPO approaching $1B shows strong visibility. AI capabilities expanding TAM and pricing power.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> 103x P/E is extremely expensive — any deceleration gets severely punished. CFO departure creates transition risk. Larger ERP vendors (SAP, Oracle) expanding into supply chain planning space.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.cantechletter.com/2026/03/kinaxis-named-a-top-pick-for-2026-by-this-analyst/" target="_blank">Cantech</a>, <a href="https://www.marketbeat.com/stocks/TSE/KXS/forecast/" target="_blank">MarketBeat</a></div>
+                </div>
+
+                <!-- SHOP -->
+                <div class="stock-card" id="shop">
+                    <span class="sector-tag tag-tech">E-Commerce</span>
+                    <h3>SHOP — Shopify Inc.</h3>
+                    <p>Leading global e-commerce platform powering millions of merchants. Comprehensive Q4 beat — revenue, EPS, EBITDA, and GMV all exceeded estimates. $6.6B net cash, $2B buyback program announced.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$11.6B</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS (TTM)</div><div class="fin-value">US$0.94</div></div>
+                        <div class="fin-item"><div class="fin-label">FCF (TTM)</div><div class="fin-value">US$2.01B</div></div>
+                        <div class="fin-item"><div class="fin-label">Rev Growth</div><div class="fin-value">+30.6%</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">63.1x</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$150B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$163.67</strong> (Buy) — ~42% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> 30%+ growth machine at $11.6B scale is remarkable. $2B+ annual FCF, $6.6B net cash — now a cash-generating compounder. Platform dominance with high switching costs and expanding moat from Payments, Fulfillment, and B2B.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> P/E of 122.8x and EV/EBITDA of 74.6x — priced for perfection. Consumer spending vulnerable to war-driven recession. Competition from Amazon, BigCommerce, Temu, and Shein intensifying. Beta of 2.90 means violent drawdowns.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.shopify.com/news/shopify-q4-2025-financial-results" target="_blank">Shopify Q4</a>, <a href="https://stockanalysis.com/stocks/shop/forecast/" target="_blank">StockAnalysis</a></div>
+                </div>
+
+                <!-- VNP -->
+                <div class="stock-card" id="vnp">
+                    <span class="sector-tag tag-tech">Specialty Semis</span>
+                    <h3>VNP — 5N Plus Inc.</h3>
+                    <p>Leading global producer of specialty semiconductors and performance materials. Critical supplier outside China for defence-grade imaging, IR detection, missile guidance, and space solar materials. Stock up 485% in 52 weeks.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$391M</div></div>
+                        <div class="fin-item"><div class="fin-label">Net Income (FY)</div><div class="fin-value">US$50.6M</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">US$92.4M</div></div>
+                        <div class="fin-item"><div class="fin-label">Rev Growth</div><div class="fin-value">+35.2%</div></div>
+                        <div class="fin-item"><div class="fin-label">Backlog</div><div class="fin-value">$394.9M</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$3.1B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$34.08</strong> (Buy) — near current price</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Iran war drives structural defence spending increase — VNP's imaging/sensing materials are critical for IR detection and satellite systems. Only major supplier outside China — irreplaceable in Western defence supply chains. Revenue +35%, EBITDA +73%, net income +244%.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> After 485% rally, trailing P/E of 45x and EV/EBITDA of 25x are stretched. Management warned margins to "normalize" for bismuth products in 2026. Q4 gross margin already dropped from 33.0% to 29.1% YoY.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.5nplus.com/en/news/5n-plus-inc-reports-Q4-and-FY-2025-results/" target="_blank">5N Plus Q4</a>, <a href="https://www.tipranks.com/stocks/tse:vnp/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- INFRASTRUCTURE / LOGISTICS -->
+                <!-- ============================================================ -->
+                <h2 class="sector-header"><span class="sector-tag tag-infra" style="font-size: 0.8rem;">Infra</span> Infrastructure & Logistics</h2>
+
+                <!-- BIP.UN -->
+                <div class="stock-card" id="bip">
+                    <span class="sector-tag tag-infra">Global Infra</span>
+                    <h3>BIP.UN — Brookfield Infrastructure Partners</h3>
+                    <p>One of the world's largest owners/operators of critical infrastructure — utilities, transport, midstream, and data infrastructure. Managed by Brookfield. 17th consecutive distribution increase announced. Data segment FFO up 50%+.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">US$23.1B</div></div>
+                        <div class="fin-item"><div class="fin-label">FFO/Unit</div><div class="fin-value">US$3.32</div></div>
+                        <div class="fin-item"><div class="fin-label">Net Income</div><div class="fin-value">US$1.09B</div></div>
+                        <div class="fin-item"><div class="fin-label">EV/EBITDA</div><div class="fin-value">8.40x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">4.44%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">US$16.6B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>US$40.88</strong> — ~15% upside + 4.4% yield</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> AI infrastructure supercycle — data segment FFO up 50%+ with 3.6 GW of data centre potential. Self-funding capital recycling ($3.1B in asset sales at 45% IRR). 17 consecutive distribution increases with inflation-linked revenue.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> $69.5B total debt with D/E of 1.96x — rising rates pressure refinancing. Complex Brookfield partnership structure makes true value opaque. Transport assets ($1.1B FFO) face volume decline risk if war disrupts global trade.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://bip.brookfield.com/press-releases/bip/brookfield-infrastructure-reports-solid-2025-year-end-results-declares-17th" target="_blank">BIP FY25</a>, <a href="https://www.tipranks.com/stocks/bip/forecast" target="_blank">TipRanks</a></div>
+                </div>
+
+                <!-- CJT -->
+                <div class="stock-card" id="cjt">
+                    <span class="sector-tag tag-infra">Air Cargo</span>
+                    <h3>CJT — Cargojet Inc.</h3>
+                    <p>Canada's largest airline cargo carrier. Dominates overnight air cargo with 99% on-time performance. Domestic e-commerce revenue up 17% YoY in Q4. Q4 EPS crushed estimates by 51%. Aggressive share buybacks.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$993M</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS (TTM)</div><div class="fin-value">C$5.24</div></div>
+                        <div class="fin-item"><div class="fin-label">EBITDA (TTM)</div><div class="fin-value">C$268M</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (TTM)</div><div class="fin-value">15.9x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">1.68%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$1.3B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$110.89</strong> (Buy) — ~38% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Domestic monopoly economics — dominates Canadian overnight cargo with long-term contracts (Amazon, DHL). PE of 15.9x and EV/EBITDA of 8.2x for a monopolistic position. Dividend raised + shares down 5.56% YoY from buybacks.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> D/E of 1.34x and ~C$988M net debt on a C$1.3B market cap. ACMI and China charter revenue declining — international headwinds. Jet fuel cost spikes from Iran conflict directly compress margins.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://cargojet.com/news/" target="_blank">Cargojet</a>, <a href="https://www.alphaspread.com/security/tsx/cjt/summary" target="_blank">Alpha Spread</a></div>
+                </div>
+
+                <!-- BDGI -->
+                <div class="stock-card" id="bdgi">
+                    <span class="sector-tag tag-infra">Hydrovac</span>
+                    <h3>BDGI — Badger Infrastructure Solutions Ltd.</h3>
+                    <p>North America's largest non-destructive excavation (hydrovac) provider. Serves oil & gas, utilities, telecom, and infrastructure. Record FY2025 revenue with 4 consecutive years of double-digit growth.</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$1.14B</div></div>
+                        <div class="fin-item"><div class="fin-label">EPS</div><div class="fin-value">C$2.40</div></div>
+                        <div class="fin-item"><div class="fin-label">EBITDA Margin</div><div class="fin-value">23.8%</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">20.5x</div></div>
+                        <div class="fin-item"><div class="fin-label">Yield</div><div class="fin-value">1.26%</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$2.1B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$75.65</strong> — ~20% upside</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> Infrastructure spending supercycle — energy security and renewal create sustained hydrovac demand. 4 consecutive years of 10%+ revenue growth with improving margins. U.S. revenue growing faster than Canada with OTCQX listing.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> Stock dropped 7.8% post-earnings despite record results — market may be pricing in peak margins. Cyclical exposure to construction activity. Only $6.5M cash with $354M debt.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://finance.yahoo.com/news/badger-infrastructure-solutions-ltd-bdgif-210231255.html" target="_blank">Yahoo Finance</a>, <a href="https://www.stockopedia.com/share-prices/badger-infrastructure-solutions-TSE:BDGI/" target="_blank">Stockopedia</a></div>
+                </div>
+
+                <!-- BDT -->
+                <div class="stock-card" id="bdt">
+                    <span class="sector-tag tag-infra">Construction</span>
+                    <h3>BDT — Bird Construction Inc.</h3>
+                    <p>One of Canada's largest general contractors — LNG, mining, defence, transit, data centres, and healthcare. Record $11.1B combined backlog with higher embedded margins. Positioned for "Canada's nation-building investment cycle."</p>
+                    <div class="financials-grid">
+                        <div class="fin-item"><div class="fin-label">Revenue (FY25)</div><div class="fin-value">C$3.40B</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EPS</div><div class="fin-value">C$1.94</div></div>
+                        <div class="fin-item"><div class="fin-label">Adj EBITDA</div><div class="fin-value">C$222M</div></div>
+                        <div class="fin-item"><div class="fin-label">P/E (Fwd)</div><div class="fin-value">14.8x</div></div>
+                        <div class="fin-item"><div class="fin-label">Backlog</div><div class="fin-value">$11.1B</div></div>
+                        <div class="fin-item"><div class="fin-label">Market Cap</div><div class="fin-value">C$2.1B</div></div>
+                    </div>
+                    <div class="analyst-target">📊 Analyst Avg Target: <strong>C$39.13</strong> — near current price</div>
+                    <div class="case-grid">
+                        <div class="bull-case"><strong>🟢 Bull:</strong> $11B backlog at higher margins provides unprecedented visibility into 2026-2027 earnings. Forward P/E of 14.8x vs trailing 44.3x signals massive earnings inflection. Positioned across LNG, nuclear, defence, and infrastructure themes amplified by war.</div>
+                        <div class="bear-case"><strong>🔴 Bear:</strong> $62.2M impairment from single customer credit issue highlights concentration risk. FY2025 revenue essentially flat at $3.4B. Trading above 52-week high with RSI at 77.7 (overbought) — consensus targets already at current price.</div>
+                    </div>
+                    <div class="source-links">Sources: <a href="https://www.bird.ca/news/2026/03/11/bird-reports-2025-fourth-quarter-results-11-billion-combined-backlog-and-pending-backlog/" target="_blank">Bird Q4</a>, <a href="https://www.marketbeat.com/stocks/TSE/BDT/forecast/" target="_blank">MarketBeat</a></div>
+                </div>
+
+                <!-- Methodology -->
+                <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px;">
+                    <h3 style="margin-top: 0;">Methodology & Sources</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary);">All financial data sourced from company press releases, quarterly reports, StockAnalysis.com, TipRanks, MarketBeat, CNBC, Yahoo Finance, and Investing.com. Analyst consensus targets compiled from multiple brokerages. Iran war impact assessments are editorial analysis based on sector exposure and publicly available commentary. Prices as of market close March 26, 2026.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 0;">Research compiled by Ticker 📊 — The Wartime Report's economic research agent.</p>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>The Wartime Report is an independent, open-source project. Not affiliated with any government or military.</p>
+            <p><a href="https://github.com/aj-media/wartime-report" target="_blank">View on GitHub</a> · <a href="about.html">About this project</a></p>
+        </div>
+    </footer>
+</body>
+</html>
