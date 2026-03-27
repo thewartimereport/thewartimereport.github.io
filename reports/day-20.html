@@ -36,6 +36,8 @@
     </script>
 </head>
 <body>
+<div class="reading-progress" id="progress"></div>
+
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -46,11 +48,16 @@
 
     <nav class="site-nav">
         <div class="container">
-            <a href="../index.html">Home</a>
+            <div class="nav-toggle-row">
+                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
             <a href="../timeline.html">Timeline</a>
             <a href="../economics.html">Economics</a>
             <a href="../investigations.html">Investigations</a>
             <a href="../about.html">About</a>
+            </div>
         </div>
     </nav>
 
@@ -154,5 +161,18 @@
             <p>&copy; 2026 The Wartime Report</p>
         </div>
     </footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const btn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
+</script>
+<script>
+const progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{
+const h=document.documentElement;
+const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+progress.style.width=pct+'%';
+});
+</script>
 </body>
 </html>

@@ -442,3 +442,87 @@ img { max-width: 100%; height: auto; }
     .facts-grid { grid-template-columns: 1fr; }
     .site-title { font-size: 1.2rem; }
 }
+
+/* === BACK TO TOP === */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--accent-red-dim); transform: translateY(-2px); }
+
+/* === READING PROGRESS === */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent-red);
+    z-index: 999;
+    transition: width 0.1s;
+    width: 0%;
+}
+
+/* === HAMBURGER MENU === */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    .site-nav .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .site-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .site-nav .nav-links.open { display: flex; }
+    .site-nav .nav-toggle-row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-toggle-row { display: none; }
+    .nav-links { display: flex !important; gap: 24px; }
+}
+
+/* === REPORT CARD THUMBNAILS === */
+.report-card .card-thumb {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+}

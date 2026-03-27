@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | The Wartime Report</title>
+    <meta name="description" content="Page not found.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="masthead">
+                <h1 class="site-title"><a href="/index.html">THE WARTIME REPORT</a></h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="container">
+            <div class="nav-toggle-row">
+                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/timeline.html">Timeline</a>
+                <a href="/economics.html">Economics</a>
+                <a href="/investigations.html">Investigations</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="report-header" style="text-align: center; padding: 80px 0;">
+            <h1 style="font-size: 4rem; color: var(--accent-red);">404</h1>
+            <p style="font-size: 1.3rem; color: var(--text-secondary); margin: 16px 0;">Page not found. The fog of war is real.</p>
+            <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/index.html" class="btn-primary">← Back to Homepage</a>
+                <a href="/timeline.html" class="btn-primary" style="background: var(--bg-card); border: 1px solid var(--border);">View Timeline</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>The Wartime Report is an independent news briefing project. Sources include Reuters, AP, Al Jazeera, BBC, CNN, Britannica, and other major outlets.</p>
+            <p class="disclaimer">This site aggregates and analyzes publicly available information. We are not affiliated with any government or military organization.</p>
+            <p>&copy; 2026 The Wartime Report</p>
+        </div>
+    </footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const btn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
+</script>
+</body>
+</html>

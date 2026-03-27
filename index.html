@@ -34,11 +34,16 @@
 
     <nav class="site-nav">
         <div class="container">
-            <a href="index.html">Home</a>
+            <div class="nav-toggle-row">
+                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
             <a href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
             <a href="investigations.html">Investigations</a>
             <a href="about.html">About</a>
+            </div>
         </div>
     </nav>
 
@@ -51,6 +56,10 @@
                 <a href="reports/day-27.html" class="btn-primary">Read Today's Report →</a>
             </div>
         </section>
+
+        <p style="color: var(--text-muted); font-size: 0.8rem; text-align: center; margin-top: -8px; margin-bottom: 24px;">
+Last updated: March 27, 2026 at 03:05 UTC · <a href="timeline.html" style="color: var(--accent-red);">View full timeline →</a>
+</p>
 
         <section class="reports-grid">
             <h2 class="section-title">Featured Investigation</h2>
@@ -153,6 +162,11 @@
             <p>&copy; 2026 The Wartime Report</p>
         </div>
     </footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const btn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
+</script>
 </body>
 </html>
 <!-- cache-bust 1774265512 -->
