@@ -426,7 +426,8 @@ img { max-width: 100%; height: auto; }
     .hero h2 { font-size: 1.6rem; }
     .grid { grid-template-columns: 1fr; }
     .report-card.latest { grid-column: 1; }
-    .site-nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .site-nav { gap: 12px; flex-wrap: wrap; justify-content: center; font-size: 0.75rem; padding: 8px 12px; }
+    .site-nav a { letter-spacing: 1px; }
     .report-header h1 { font-size: 1.6rem; }
     .facts-grid { grid-template-columns: repeat(2, 1fr); }
 }
