@@ -119,13 +119,13 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero-image {
-    display: block;
-    max-width: 800px;
-    max-height: 560px;
     width: 100%;
     height: auto;
-    margin: 0 auto 24px;
+    max-height: 560px;
+    object-fit: cover;
+    object-position: center center;
     border: 1px solid var(--border);
+    margin-bottom: 24px;
     border-radius: 4px;
 }
 
