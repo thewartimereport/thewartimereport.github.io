@@ -31,11 +31,12 @@
       "author": {"@type": "Organization", "name": "The Wartime Report"},
       "publisher": {"@type": "Organization", "name": "The Wartime Report", "url": "https://thewartimereport.com"},
       "url": "https://thewartimereport.com/reports/day-14.html",
-      "description": "March 13, 2026: U.S. forces strike Kharg Island, Iran's main oil export hub. Trump says he might 'hit it a few more times just for fun.' Iran threatens U.S. 'hideouts' in UAE."
+      "description": "<time datetime="2026-03-13">March 13, 2026</time>: U.S. forces strike Kharg Island, Iran's main oil export hub. Trump says he might 'hit it a few more times just for fun.' Iran threatens U.S. 'hideouts' in UAE."
     }
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
 <div class="reading-progress" id="progress"></div>
 
     <header class="site-header">
@@ -50,9 +51,9 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="../index.html">Home</a>
             <a href="../timeline.html">Timeline</a>
             <a href="../economics.html">Economics</a>
@@ -62,17 +63,17 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <article>
             <div class="report-header">
-                <span class="day-badge">DAY 14 — MARCH 13, 2026</span>
+                <span class="day-badge">DAY 14 — <time datetime="2026-03-13">MARCH 13, 2026</time></span>
                 <h1>Kharg Island Struck — U.S. Hits Iran's Oil Lifeline as Economic Warfare Escalates</h1>
-                <p class="report-meta">The Wartime Report · Published March 20, 2026</p>
+                <p class="report-meta">The Wartime Report · Published <time datetime="2026-03-20">March 20, 2026</time></p>
             </div>
 
             <div class="report-body">
                 <h2>Summary</h2>
-                <p><strong>In a dramatic escalation of the economic dimension of the conflict, U.S. forces <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" style="color: var(--accent-red);">struck military targets on Kharg Island</a> — Iran's main oil export hub, responsible for roughly 90% of the country's crude oil exports.</strong> President Trump boasted that strikes <a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" style="color: var(--accent-red);">"totally demolished" most of the island</a> and suggested he might "hit it a few more times just for fun." Iran <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" style="color: var(--accent-red);">threatened U.S. "hideouts" in the UAE</a>, and Iran's Foreign Minister rejected any talk of dialogue. Markets braced for peak war panic.</p>
+                <p><strong>In a dramatic escalation of the economic dimension of the conflict, U.S. forces <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">struck military targets on Kharg Island</a> — Iran's main oil export hub, responsible for roughly 90% of the country's crude oil exports.</strong> President Trump boasted that strikes <a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">"totally demolished" most of the island</a> and suggested he might "hit it a few more times just for fun." Iran <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">threatened U.S. "hideouts" in the UAE</a>, and Iran's Foreign Minister rejected any talk of dialogue. Markets braced for peak war panic.</p>
 
                 <figure>
                     <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Operation-Roaring-Lion-0012.jpg/960px-Operation-Roaring-Lion-0012.jpg" alt="Israeli military operations during Operation Roaring Lion">
@@ -82,28 +83,28 @@
                 <h2>Military Developments</h2>
 
                 <h3>The Kharg Island Strikes</h3>
-                <p>U.S. forces struck <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" style="color: var(--accent-red);"><strong>military targets on Kharg Island</strong></a>, Iran's critical oil export terminal in the Persian Gulf. The island handles approximately <a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" style="color: var(--accent-red);">90% of Iran's crude oil exports</a> and its targeting represented a significant escalation — moving beyond purely military infrastructure to strike at the economic foundations of the Iranian state.</p>
-                <p>President Trump claimed the strikes <a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" style="color: var(--accent-red);">"totally demolished" most of the island</a> and added provocatively that he might "hit it a few more times just for fun" — remarks that drew criticism from energy analysts and diplomats who warned of the global economic consequences.</p>
+                <p>U.S. forces struck <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>military targets on Kharg Island</strong></a>, Iran's critical oil export terminal in the Persian Gulf. The island handles approximately <a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">90% of Iran's crude oil exports</a> and its targeting represented a significant escalation — moving beyond purely military infrastructure to strike at the economic foundations of the Iranian state.</p>
+                <p>President Trump claimed the strikes <a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">"totally demolished" most of the island</a> and added provocatively that he might "hit it a few more times just for fun" — remarks that drew criticism from energy analysts and diplomats who warned of the global economic consequences.</p>
 
                 <h3>Mine-Laying Vessels Destroyed</h3>
-                <p>The <a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" style="color: var(--accent-red);">U.S. struck 16 Iranian mine-laying vessels</a> near critical oil shipping routes, in an effort to prevent Iran from mining the approaches to the Strait of Hormuz — a tactic Tehran had long threatened to employ in any major conflict.</p>
+                <p>The <a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">U.S. struck 16 Iranian mine-laying vessels</a> near critical oil shipping routes, in an effort to prevent Iran from mining the approaches to the Strait of Hormuz — a tactic Tehran had long threatened to employ in any major conflict.</p>
 
                 <h3>Iranian Threats Against UAE</h3>
-                <p>Iran threatened U.S. <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" style="color: var(--accent-red);">"hideouts" in the UAE</a>, raising the specter of expanded strikes against coalition staging areas in the Gulf. Black smoke was reported rising over the <strong>port of Fujairah</strong> in the UAE from drone debris, underscoring the ongoing threat to Gulf state infrastructure.</p>
+                <p>Iran threatened U.S. <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">"hideouts" in the UAE</a>, raising the specter of expanded strikes against coalition staging areas in the Gulf. Black smoke was reported rising over the <strong>port of Fujairah</strong> in the UAE from drone debris, underscoring the ongoing threat to Gulf state infrastructure.</p>
 
                 <h2>Political Developments</h2>
 
                 <h3>Iran Rejects Dialogue</h3>
-                <p>Iran's Foreign Minister <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" style="color: var(--accent-red);">rejected any talk of dialogue with the United States</a> — shutting the door on diplomatic off-ramps at a moment when the conflict was intensifying rather than plateauing. The rejection came despite behind-the-scenes efforts by regional intermediaries to establish communication channels.</p>
+                <p>Iran's Foreign Minister <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">rejected any talk of dialogue with the United States</a> — shutting the door on diplomatic off-ramps at a moment when the conflict was intensifying rather than plateauing. The rejection came despite behind-the-scenes efforts by regional intermediaries to establish communication channels.</p>
 
                 <h3>ISW Assessment</h3>
-                <p>The Institute for the Study of War issued a <a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" style="color: var(--accent-red);">special report on the Kharg Island raid</a>, analyzing the strategic implications of targeting Iran's oil export capacity and the likely Iranian response.</p>
+                <p>The Institute for the Study of War issued a <a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">special report on the Kharg Island raid</a>, analyzing the strategic implications of targeting Iran's oil export capacity and the likely Iranian response.</p>
 
                 <h2>Economic Impact</h2>
 
                 <h3>Peak War Panic</h3>
-                <p><a href="https://fortune.com/2026/03/08/tehran-fire-smoke-acid-rain-us-war-israel-airstrikes-fuel-depot/" target="_blank" style="color: var(--accent-red);">Peak war panic was expected in global markets</a> following the Kharg Island strikes. The targeting of Iran's primary oil export facility, combined with Trump's inflammatory rhetoric about further strikes, sent shockwaves through energy markets that were already at record levels.</p>
-                <p>The Kharg Island attack represented a turning point in the economic dimension of the conflict — from disruption as a byproduct of military operations to the <a href="https://www.aljazeera.com/news/2026/3/8/israel-strikes-irans-oil-facilities-for-first-time-as-war-enters-ninth-day" target="_blank" style="color: var(--accent-red);">deliberate targeting of oil infrastructure</a> as a weapon of war.</p>
+                <p><a href="https://fortune.com/2026/03/08/tehran-fire-smoke-acid-rain-us-war-israel-airstrikes-fuel-depot/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Peak war panic was expected in global markets</a> following the Kharg Island strikes. The targeting of Iran's primary oil export facility, combined with Trump's inflammatory rhetoric about further strikes, sent shockwaves through energy markets that were already at record levels.</p>
+                <p>The Kharg Island attack represented a turning point in the economic dimension of the conflict — from disruption as a byproduct of military operations to the <a href="https://www.aljazeera.com/news/2026/3/8/israel-strikes-irans-oil-facilities-for-first-time-as-war-enters-ninth-day" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">deliberate targeting of oil infrastructure</a> as a weapon of war.</p>
 
                 <h2>International Reaction</h2>
                 <ul>
@@ -124,23 +125,23 @@
 
                 <h2>Sources</h2>
                 <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" style="color: var(--accent-red);">2026 Kharg Island raid — Wikipedia</a></li>
-                    <li><a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" style="color: var(--accent-red);">US strikes Kharg Island oil export hub — The Guardian</a></li>
-                    <li><a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" style="color: var(--accent-red);">Both sides dig in as war approaches two-week mark — Reuters</a></li>
-                    <li><a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" style="color: var(--accent-red);">Iran update: special report, March 14 — ISW</a></li>
-                    <li><a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" style="color: var(--accent-red);">Iran war live updates, March 14 — New York Times</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" style="color: var(--accent-red);">2026 Iranian strikes on the UAE — Wikipedia</a></li>
-                    <li><a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" style="color: var(--accent-red);">Iran rejects Trump's unconditional surrender — The Guardian</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">2026 Kharg Island raid — Wikipedia</a></li>
+                    <li><a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">US strikes Kharg Island oil export hub — The Guardian</a></li>
+                    <li><a href="https://www.reuters.com/world/middle-east/both-sides-dig-iran-war-approaches-two-week-mark-2026-03-13/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Both sides dig in as war approaches two-week mark — Reuters</a></li>
+                    <li><a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran update: special report, March 14 — ISW</a></li>
+                    <li><a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran war live updates, March 14 — New York Times</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">2026 Iranian strikes on the UAE — Wikipedia</a></li>
+                    <li><a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran rejects Trump's unconditional surrender — The Guardian</a></li>
                 </ul>
             </div>
 
             <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
     <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
-        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
-        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
-        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
 </div>
 

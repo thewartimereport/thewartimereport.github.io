@@ -31,11 +31,12 @@
       "author": {"@type": "Organization", "name": "The Wartime Report"},
       "publisher": {"@type": "Organization", "name": "The Wartime Report", "url": "https://thewartimereport.com"},
       "url": "https://thewartimereport.com/reports/day-17.html",
-      "description": "March 16, 2026: A U.S. refueling aircraft crashes in Iraq. The war's logistical strain begins to show as the air campaign enters its third week."
+      "description": "<time datetime="2026-03-16">March 16, 2026</time>: A U.S. refueling aircraft crashes in Iraq. The war's logistical strain begins to show as the air campaign enters its third week."
     }
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
 <div class="reading-progress" id="progress"></div>
 
     <header class="site-header">
@@ -50,9 +51,9 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="../index.html">Home</a>
             <a href="../timeline.html">Timeline</a>
             <a href="../economics.html">Economics</a>
@@ -62,17 +63,17 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <article>
             <div class="report-header">
-                <span class="day-badge">DAY 17 — MARCH 16, 2026</span>
+                <span class="day-badge">DAY 17 — <time datetime="2026-03-16">MARCH 16, 2026</time></span>
                 <h1>U.S. Refueling Plane Crashes in Iraq — Logistical Strain Begins to Show</h1>
-                <p class="report-meta">The Wartime Report · Published March 20, 2026</p>
+                <p class="report-meta">The Wartime Report · Published <time datetime="2026-03-20">March 20, 2026</time></p>
             </div>
 
             <div class="report-body">
                 <h2>Summary</h2>
-                <p><strong>A U.S. aerial refueling aircraft crashed in Iraq, underscoring the punishing operational tempo of the air campaign now entering its third week.</strong> While details of the crash remained limited, the incident highlighted the immense logistical demands of sustaining round-the-clock strike operations across a vast theater. The crash came as the war's broader toll — financial, human, and diplomatic — continued to accumulate with <a href="https://www.theguardian.com/world/live/2026/mar/16/iran-war-live-updates-news-oil-trump-hormuz-dubai-airport-israel-targets" target="_blank" style="color: var(--accent-red);">no resolution in sight</a>.</p>
+                <p><strong>A U.S. aerial refueling aircraft crashed in Iraq, underscoring the punishing operational tempo of the air campaign now entering its third week.</strong> While details of the crash remained limited, the incident highlighted the immense logistical demands of sustaining round-the-clock strike operations across a vast theater. The crash came as the war's broader toll — financial, human, and diplomatic — continued to accumulate with <a href="https://www.theguardian.com/world/live/2026/mar/16/iran-war-live-updates-news-oil-trump-hormuz-dubai-airport-israel-targets" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">no resolution in sight</a>.</p>
 
                 <figure>
                     <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Operation-Roaring-Lion-0014.jpg/960px-Operation-Roaring-Lion-0014.jpg" alt="Israeli military operations, March 2026">
@@ -82,31 +83,31 @@
                 <h2>Military Developments</h2>
 
                 <h3>Refueling Plane Down</h3>
-                <p>A <a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" style="color: var(--accent-red);"><strong>U.S. refueling plane crashed in Iraq</strong></a>. The cause of the crash was not immediately disclosed. Aerial refueling tankers are critical enablers of the sustained air campaign over Iran — without them, strike aircraft operating from Gulf bases and aircraft carriers cannot reach targets deep inside Iranian territory and return safely.</p>
-                <p>The crash underscored the <strong>logistical strain</strong> of maintaining over 1,000 strike sorties per day across a theater stretching from Lebanon to eastern Iran. Tanker aircraft had been flying near-continuous missions since <a href="https://www.reuters.com/business/aerospace-defense/israel-us-launch-strikes-iran-2026-02-28/" target="_blank" style="color: var(--accent-red);">the war began on February 28</a>, and the loss of even a single platform added pressure to an already stretched refueling fleet.</p>
+                <p>A <a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>U.S. refueling plane crashed in Iraq</strong></a>. The cause of the crash was not immediately disclosed. Aerial refueling tankers are critical enablers of the sustained air campaign over Iran — without them, strike aircraft operating from Gulf bases and aircraft carriers cannot reach targets deep inside Iranian territory and return safely.</p>
+                <p>The crash underscored the <strong>logistical strain</strong> of maintaining over 1,000 strike sorties per day across a theater stretching from Lebanon to eastern Iran. Tanker aircraft had been flying near-continuous missions since <a href="https://www.reuters.com/business/aerospace-defense/israel-us-launch-strikes-iran-2026-02-28/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">the war began on February 28</a>, and the loss of even a single platform added pressure to an already stretched refueling fleet.</p>
 
                 <h3>Air Campaign Continues</h3>
-                <p>Despite the loss, coalition strike operations continued without pause. By this point in the campaign, the U.S. and Israel had struck <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">well over 15,000 targets across Iran</a>, systematically degrading military infrastructure, missile production facilities, and command-and-control networks. The <a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" style="color: var(--accent-red);">ISW assessed</a> that Iran's conventional military capability had been significantly reduced but not eliminated.</p>
+                <p>Despite the loss, coalition strike operations continued without pause. By this point in the campaign, the U.S. and Israel had struck <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">well over 15,000 targets across Iran</a>, systematically degrading military infrastructure, missile production facilities, and command-and-control networks. The <a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">ISW assessed</a> that Iran's conventional military capability had been significantly reduced but not eliminated.</p>
 
                 <h2>Political Developments</h2>
 
                 <h3>White House Timeline</h3>
-                <p>The White House had previously indicated the campaign might run <strong>4-6 weeks</strong>, which would place the midpoint roughly around this day. Yet there was no indication the war was approaching its conclusion — if anything, the recent <a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" style="color: var(--accent-red);">Kharg Island strikes</a> and Iran's continued retaliatory waves suggested escalation rather than de-escalation.</p>
+                <p>The White House had previously indicated the campaign might run <strong>4-6 weeks</strong>, which would place the midpoint roughly around this day. Yet there was no indication the war was approaching its conclusion — if anything, the recent <a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Kharg Island strikes</a> and Iran's continued retaliatory waves suggested escalation rather than de-escalation.</p>
 
                 <h3>Dubai Under Pressure</h3>
-                <p>The <a href="https://www.nytimes.com/2026/03/16/opinion/dubai-hormuz-war-iran-elite.html" target="_blank" style="color: var(--accent-red);">New York Times reported</a> on the mounting pressure on Dubai's economy and its international elite, as the war increasingly threatened the UAE's position as a regional hub. Earlier drone incidents near <a href="https://www.reuters.com/world/middle-east/two-drones-fall-vicinity-dubai-airport-iran-crisis-shows-no-sign-easing-2026-03-11/" target="_blank" style="color: var(--accent-red);">Dubai International Airport</a> had already shaken confidence.</p>
+                <p>The <a href="https://www.nytimes.com/2026/03/16/opinion/dubai-hormuz-war-iran-elite.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">New York Times reported</a> on the mounting pressure on Dubai's economy and its international elite, as the war increasingly threatened the UAE's position as a regional hub. Earlier drone incidents near <a href="https://www.reuters.com/world/middle-east/two-drones-fall-vicinity-dubai-airport-iran-crisis-shows-no-sign-easing-2026-03-11/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Dubai International Airport</a> had already shaken confidence.</p>
 
                 <h2>Economic Impact</h2>
                 <ul>
-                    <li><strong>War costs</strong> — With the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" style="color: var(--accent-red);">$891 million/day burn rate</a> established in the first week, cumulative U.S. military expenditures were approaching an estimated $15+ billion</li>
-                    <li><strong>Oil markets</strong> — Remained severely disrupted; the <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" style="color: var(--accent-red);">Kharg Island strikes</a> continued to reverberate through global energy markets</li>
+                    <li><strong>War costs</strong> — With the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">$891 million/day burn rate</a> established in the first week, cumulative U.S. military expenditures were approaching an estimated $15+ billion</li>
+                    <li><strong>Oil markets</strong> — Remained severely disrupted; the <a href="https://en.wikipedia.org/wiki/2026_Kharg_Island_raid" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Kharg Island strikes</a> continued to reverberate through global energy markets</li>
                     <li><strong>Insurance costs</strong> — War risk premiums for shipping and aviation in the Persian Gulf had reached unprecedented levels</li>
                 </ul>
 
                 <h2>International Reaction</h2>
                 <ul>
                     <li><strong>Military analysts</strong> — Noted that the tanker crash highlighted the operational risks of a sustained air campaign at this intensity</li>
-                    <li><strong>Allied nations</strong> — Continued to monitor the conflict's trajectory with <a href="https://www.aljazeera.com/news/2026/3/15/iran-war-what-is-happening-on-day-16-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">growing concern about its open-ended nature</a></li>
+                    <li><strong>Allied nations</strong> — Continued to monitor the conflict's trajectory with <a href="https://www.aljazeera.com/news/2026/3/15/iran-war-what-is-happening-on-day-16-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">growing concern about its open-ended nature</a></li>
                 </ul>
 
                 <h2>What to Watch</h2>
@@ -119,23 +120,23 @@
 
                 <h2>Sources</h2>
                 <ul>
-                    <li><a href="https://www.theguardian.com/world/live/2026/mar/16/iran-war-live-updates-news-oil-trump-hormuz-dubai-airport-israel-targets" target="_blank" style="color: var(--accent-red);">Iran War Live Updates, March 16 — The Guardian</a></li>
-                    <li><a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" style="color: var(--accent-red);">Iran War Live Updates — The New York Times</a></li>
-                    <li><a href="https://www.nytimes.com/2026/03/16/opinion/dubai-hormuz-war-iran-elite.html" target="_blank" style="color: var(--accent-red);">Dubai, Hormuz, and the War — The New York Times</a></li>
-                    <li><a href="https://www.aljazeera.com/news/2026/3/15/iran-war-what-is-happening-on-day-16-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">Iran War: Day 16 Developments — Al Jazeera</a></li>
-                    <li><a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" style="color: var(--accent-red);">Iran Update Special Report, March 14 — ISW</a></li>
-                    <li><a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" style="color: var(--accent-red);">US Strikes Kharg Island Oil Export Hub — The Guardian</a></li>
-                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">2026 Iran War Overview — Britannica</a></li>
+                    <li><a href="https://www.theguardian.com/world/live/2026/mar/16/iran-war-live-updates-news-oil-trump-hormuz-dubai-airport-israel-targets" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran War Live Updates, March 16 — The Guardian</a></li>
+                    <li><a href="https://www.nytimes.com/live/2026/03/14/world/iran-war-trump-oil-israel" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran War Live Updates — The New York Times</a></li>
+                    <li><a href="https://www.nytimes.com/2026/03/16/opinion/dubai-hormuz-war-iran-elite.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Dubai, Hormuz, and the War — The New York Times</a></li>
+                    <li><a href="https://www.aljazeera.com/news/2026/3/15/iran-war-what-is-happening-on-day-16-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran War: Day 16 Developments — Al Jazeera</a></li>
+                    <li><a href="https://understandingwar.org/research/middle-east/iran-update-special-report-march-14-2026/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Iran Update Special Report, March 14 — ISW</a></li>
+                    <li><a href="https://www.theguardian.com/world/2026/mar/14/us-kharg-island-oil-export-hub" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">US Strikes Kharg Island Oil Export Hub — The Guardian</a></li>
+                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">2026 Iran War Overview — Britannica</a></li>
                 </ul>
             </div>
 
             <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
     <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
-        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
-        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
-        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
 </div>
 

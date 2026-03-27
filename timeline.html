@@ -40,6 +40,7 @@
     <link rel="alternate" type="application/rss+xml" title="The Wartime Report RSS" href="https://thewartimereport.com/feed.xml">
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -52,11 +53,11 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
-            <a href="timeline.html">Timeline</a>
+            <a aria-current="page" href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
             <a href="investigations.html">Investigations</a>
             <a href="about.html">About</a>
@@ -64,7 +65,7 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <div class="report-header">
             <h1>Timeline — Day by Day</h1>
             <p class="report-meta">Every day of the 2026 Iran War, documented from Day 1.</p>

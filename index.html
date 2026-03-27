@@ -23,6 +23,7 @@
     <link rel="alternate" type="application/rss+xml" title="The Wartime Report RSS" href="https://thewartimereport.com/feed.xml">
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -35,10 +36,10 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
+            <div class="nav-links" id="nav-links">
+                <a aria-current="page" href="index.html">Home</a>
             <a href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
             <a href="investigations.html">Investigations</a>
@@ -47,18 +48,18 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <section class="hero">
             <div class="hero-content">
                 <span class="breaking-badge">ONGOING CONFLICT</span>
                 <h2>Operation Epic Fury — Day 28</h2>
-                <p>Since February 28, 2026, the United States and Israel have been engaged in a military conflict with Iran that has reshaped the Middle East, disrupted global energy markets, and displaced over a million people.</p>
+                <p>Since <time datetime="2026-02-28">February 28, 2026</time>, the United States and Israel have been engaged in a military conflict with Iran that has reshaped the Middle East, disrupted global energy markets, and displaced over a million people.</p>
                 <a href="reports/day-28.html" class="btn-primary">Read Today's Report →</a>
             </div>
         </section>
 
         <p style="color: var(--text-muted); font-size: 0.8rem; text-align: center; margin-top: -8px; margin-bottom: 24px;">
-Last updated: March 27, 2026 at 04:17 UTC · <a href="timeline.html" style="color: var(--accent-red);">View full timeline →</a>
+Last updated: <time datetime="2026-03-27">March 27, 2026</time> at 04:17 UTC · <a href="timeline.html" style="color: var(--accent-red);">View full timeline →</a>
 </p>
 
         <section class="reports-grid">
@@ -66,7 +67,7 @@ Last updated: March 27, 2026 at 04:17 UTC · <a href="timeline.html" style="colo
             <div class="grid">
                 <a href="who-benefits.html" class="report-card latest" style="border-left-color: var(--accent-gold);">
                     <span class="day-badge" style="background: var(--accent-gold);">INVESTIGATION</span>
-                    <span class="date">Published March 23, 2026</span>
+                    <span class="date">Published <time datetime="2026-03-23">March 23, 2026</time></span>
                     <h3>Who Benefits From This War? — Follow the Money, Power, and Paper Trail</h3>
                     <p>A collaborative investigation from 4 specialist agents. Congressional insider trading, Epstein's 7-year-old prediction, Russia's €510M/day windfall, and the cross-connections between them. 29 sourced claims.</p>
                     <span class="read-more" style="color: var(--accent-gold);">Read the full investigation →</span>
@@ -82,42 +83,42 @@ Last updated: March 27, 2026 at 04:17 UTC · <a href="timeline.html" style="colo
                         <span class="day-badge">DAY 28</span>
                         <span class="breaking-badge" style="font-size: 0.65rem; padding: 2px 8px;">🔴 LIVE</span>
                     </div>
-                    <span class="date">March 27, 2026</span>
+                    <span class="date"><time datetime="2026-03-27">March 27, 2026</time></span>
                     <h3>Day 28 — Developments Ongoing</h3>
                     <p>Four weeks of war. Diplomatic stalemate continues as Trump extends Hormuz deadline to April 5-6. Reports suggest Trump "leaning toward" ordering US ground operation against Iran. Oil at $108/barrel. Tangsiri killing adds uncertainty to blockade command.</p>
                     <span class="read-more">Read full report →</span>
                 </a>
                 <a href="reports/day-27.html" class="report-card">
                     <span class="day-badge">DAY 27</span>
-                    <span class="date">March 26, 2026</span>
+                    <span class="date"><time datetime="2026-03-26">March 26, 2026</time></span>
                     <h3>Israel Kills Hormuz Blockade Mastermind as Iran Rejects US Peace Plan</h3>
                     <p>Israel claims to have killed IRGC Navy commander Alireza Tangsiri in Bandar Abbas — the architect of the Strait of Hormuz blockade. Iran formally rejected the US 15-point peace plan. Trump extended his energy infrastructure deadline by 10 days. Brent crude surged to ~$108/barrel.</p>
                     <span class="read-more">Read full report →</span>
                 </a>
                 <a href="reports/day-26.html" class="report-card">
                     <span class="day-badge">DAY 26</span>
-                    <span class="date">March 25, 2026</span>
+                    <span class="date"><time datetime="2026-03-25">March 25, 2026</time></span>
                     <h3>Iran Dismisses Trump's Peace Claims as Strikes Kill 12 in Tehran</h3>
                     <p>Day 26 brought an escalating gap between rhetoric and reality. Trump declared "war has been won" while Tehran's military forcefully dismissed any negotiations. 82nd Airborne deploying, oil plunged 6% to $94 on peace signals.</p>
                     <span class="read-more">Read full report →</span>
                 </a>
                 <a href="reports/day-25.html" class="report-card">
                     <span class="day-badge">DAY 25</span>
-                    <span class="date">March 24, 2026</span>
+                    <span class="date"><time datetime="2026-03-24">March 24, 2026</time></span>
                     <h3>US Sends 15-Point Peace Plan to Iran as Bushehr Nuclear Plant Hit</h3>
                     <p>US sends Iran a 15-point peace plan via Pakistan. Projectile strikes Bushehr nuclear plant grounds. Trump approves 1,000+ more troops. Lebanon expels Iran's ambassador. Oil whiplash continues.</p>
                     <span class="read-more">Read full report →</span>
                 </a>
                 <a href="reports/day-24.html" class="report-card">
                     <span class="day-badge">DAY 24</span>
-                    <span class="date">March 23, 2026</span>
+                    <span class="date"><time datetime="2026-03-23">March 23, 2026</time></span>
                     <h3>Trump Blinks: Ultimatum Extended 5 Days Amid 'Very Good' Iran Talks</h3>
                     <p>Trump extends Hormuz ultimatum by 5 days, halts strikes on Iran's energy sites, claims 'very good and productive conversations' with Iran. Iranian state TV declares 'US president backs down.' Tehran rocked by explosions. Iran fires missiles and drones at Bahrain.</p>
                     <span class="read-more">Read full report →</span>
                 </a>
                 <a href="reports/day-23.html" class="report-card">
                     <span class="day-badge">DAY 23</span>
-                    <span class="date">March 22, 2026</span>
+                    <span class="date"><time datetime="2026-03-22">March 22, 2026</time></span>
                     <h3>48-Hour Ultimatum — Trump Threatens to Obliterate Iran's Power Grid</h3>
                     <p>Trump gives Iran 48 hours to reopen Strait of Hormuz. Iran strikes near Dimona nuclear site, wounding 100+. Both sides target nuclear infrastructure.</p>
                     <span class="read-more">Read full report →</span>

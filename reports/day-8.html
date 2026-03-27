@@ -31,11 +31,12 @@
       "author": {"@type": "Organization", "name": "The Wartime Report"},
       "publisher": {"@type": "Organization", "name": "The Wartime Report", "url": "https://thewartimereport.com"},
       "url": "https://thewartimereport.com/reports/day-8.html",
-      "description": "March 7, 2026: CENTCOM reports 3,000+ targets struck and 43 warships destroyed. Brent crude up 27% in one week. First US caskets arrive home. Norway embassy blast."
+      "description": "<time datetime="2026-03-07">March 7, 2026</time>: CENTCOM reports 3,000+ targets struck and 43 warships destroyed. Brent crude up 27% in one week. First US caskets arrive home. Norway embassy blast."
     }
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
 <div class="reading-progress" id="progress"></div>
 
     <header class="site-header">
@@ -50,9 +51,9 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="../index.html">Home</a>
             <a href="../timeline.html">Timeline</a>
             <a href="../economics.html">Economics</a>
@@ -62,17 +63,17 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <article>
             <div class="report-header">
-                <span class="day-badge">DAY 8 — MARCH 7, 2026</span>
+                <span class="day-badge">DAY 8 — <time datetime="2026-03-07">MARCH 7, 2026</time></span>
                 <h1>One Week of War: 3,000+ Targets Struck, $3.7 Billion Spent, 1,332 Dead in Iran</h1>
-                <p class="report-meta">The Wartime Report · Published March 20, 2026</p>
+                <p class="report-meta">The Wartime Report · Published <time datetime="2026-03-20">March 20, 2026</time></p>
             </div>
 
             <div class="report-body">
                 <h2>Summary</h2>
-                <p><strong>The one-week mark of Operation Epic Fury brought the war's staggering scale into focus.</strong> CENTCOM reported striking <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">over 3,000 targets and destroying 43 Iranian warships</a>. <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" style="color: var(--accent-red);">At least 1,332 people had been killed in Iran</a>. The first 100 hours alone <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">cost $3.7 billion</a>. Brent crude surged 27% — the biggest weekly gain since the COVID-19 crash of 2020. The caskets of the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" style="color: var(--accent-red);">first six U.S. service members killed</a> arrived home. And far from the battlefield, an overnight blast at the U.S. embassy in Norway raised the <a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" style="color: var(--accent-red);">specter of global terrorism</a> tied to the conflict.</p>
+                <p><strong>The one-week mark of Operation Epic Fury brought the war's staggering scale into focus.</strong> CENTCOM reported striking <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">over 3,000 targets and destroying 43 Iranian warships</a>. <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">At least 1,332 people had been killed in Iran</a>. The first 100 hours alone <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">cost $3.7 billion</a>. Brent crude surged 27% — the biggest weekly gain since the COVID-19 crash of 2020. The caskets of the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">first six U.S. service members killed</a> arrived home. And far from the battlefield, an overnight blast at the U.S. embassy in Norway raised the <a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">specter of global terrorism</a> tied to the conflict.</p>
 
                 <figure>
                     <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2026_Iran_war_collage.jpg/960px-2026_Iran_war_collage.jpg" alt="2026 Iran War collage: Abraham Lincoln carrier group, Tomahawk launch, smoke over Tehran, Israeli F-16s, destruction in Kermanshah">
@@ -84,14 +85,14 @@
                 <h3>CENTCOM One-Week Assessment</h3>
                 <p>U.S. Central Command released its first comprehensive summary of the campaign:</p>
                 <ul>
-                    <li><a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);"><strong>3,000+ targets struck</strong></a> across Iran</li>
-                    <li><a href="https://www.war.gov/Spotlights/Operation-Epic-Fury/" target="_blank" style="color: var(--accent-red);"><strong>43 Iranian warships destroyed</strong></a></li>
+                    <li><a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>3,000+ targets struck</strong></a> across Iran</li>
+                    <li><a href="https://www.war.gov/Spotlights/Operation-Epic-Fury/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>43 Iranian warships destroyed</strong></a></li>
                     <li>Iran's offensive naval capability in the Persian Gulf effectively neutralized</li>
                 </ul>
 
                 <h3>Iran's Response</h3>
                 <ul>
-                    <li>Iran confirmed the <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" style="color: var(--accent-red);">Strait of Hormuz remained open</a> but warned it would target U.S. and Israeli ships</li>
+                    <li>Iran confirmed the <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Strait of Hormuz remained open</a> but warned it would target U.S. and Israeli ships</li>
                     <li>Iran's deputy foreign minister <strong>warned Europe would become "legitimate targets"</strong> if European nations joined the conflict</li>
                 </ul>
 
@@ -100,37 +101,37 @@
                     <li><strong>Qatar</strong> intercepted 9 of 10 Iranian drones targeting its territory</li>
                     <li><strong>Saudi Arabia</strong> intercepted multiple drones near Riyadh</li>
                     <li><strong>Kuwait</strong> — 2 border security personnel killed; airport and social security office hit</li>
-                    <li><strong>UAE</strong> — <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" style="color: var(--accent-red);">Death toll from Iranian attacks reached 4</a></li>
+                    <li><strong>UAE</strong> — <a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Death toll from Iranian attacks reached 4</a></li>
                 </ul>
 
                 <h3>First U.S. Casualties Come Home</h3>
-                <p>The caskets of the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" style="color: var(--accent-red);"><strong>first 6 U.S. service members killed</strong></a> in the conflict arrived in the United States. President Trump presided over the ceremony — a somber moment that brought the human cost of the war home to the American public.</p>
+                <p>The caskets of the <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>first 6 U.S. service members killed</strong></a> in the conflict arrived in the United States. President Trump presided over the ceremony — a somber moment that brought the human cost of the war home to the American public.</p>
 
                 <h3>School Strike Investigation</h3>
-                <p>Human Rights Watch called for the <strong>girls' school attack in southern Iran — killing 160+ — to be investigated as a war crime</strong>. An <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">Al Jazeera investigation</a> found the targeting was "likely deliberate." The New York Times reported the strike may have been carried out by U.S. forces.</p>
+                <p>Human Rights Watch called for the <strong>girls' school attack in southern Iran — killing 160+ — to be investigated as a war crime</strong>. An <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Al Jazeera investigation</a> found the targeting was "likely deliberate." The New York Times reported the strike may have been carried out by U.S. forces.</p>
 
                 <h3>Special Forces Discussion</h3>
-                <p>Axios reported that the <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);"><strong>U.S. and Israel discussed deploying special forces to seize Iran's enriched uranium stockpile</strong></a> — a dramatic potential escalation that would put boots on the ground inside Iran.</p>
+                <p>Axios reported that the <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>U.S. and Israel discussed deploying special forces to seize Iran's enriched uranium stockpile</strong></a> — a dramatic potential escalation that would put boots on the ground inside Iran.</p>
 
                 <h2>Political Developments</h2>
 
                 <h3>White House: 4-6 Week Campaign</h3>
-                <p>The White House indicated the campaign <a href="https://www.cnn.com/world/live-news/israel-iran-attack-02-28-26-hnk-intl" target="_blank" style="color: var(--accent-red);"><strong>may run 4 to 6 weeks</strong></a> — the first concrete timeline offered by the administration, suggesting this was far from a quick strike operation.</p>
+                <p>The White House indicated the campaign <a href="https://www.cnn.com/world/live-news/israel-iran-attack-02-28-26-hnk-intl" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>may run 4 to 6 weeks</strong></a> — the first concrete timeline offered by the administration, suggesting this was far from a quick strike operation.</p>
 
                 <h3>Intelligence Assessment</h3>
-                <p>A U.S. National Intelligence Council report found that a <a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" style="color: var(--accent-red);"><strong>large-scale assault was unlikely to topple Iran's government</strong></a> — directly undermining the regime-change rhetoric coming from Trump and his allies.</p>
+                <p>A U.S. National Intelligence Council report found that a <a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>large-scale assault was unlikely to topple Iran's government</strong></a> — directly undermining the regime-change rhetoric coming from Trump and his allies.</p>
 
                 <h3>Russia's Position</h3>
-                <p>Putin spoke with Iranian President Pezeshkian and offered condolences. <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" style="color: var(--accent-red);">Russia was reportedly providing Iran with intelligence on U.S. positions</a> — a significant development if confirmed. Russia was also seeing a <strong>"significant increase in demand"</strong> for its energy products as the war disrupted Middle Eastern supplies.</p>
+                <p>Putin spoke with Iranian President Pezeshkian and offered condolences. <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Russia was reportedly providing Iran with intelligence on U.S. positions</a> — a significant development if confirmed. Russia was also seeing a <strong>"significant increase in demand"</strong> for its energy products as the war disrupted Middle Eastern supplies.</p>
 
                 <h3>India Sanctions Waiver</h3>
-                <p>The U.S. gave India a <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);"><strong>30-day sanctions waiver</strong></a>, acknowledging New Delhi's dependence on Iranian oil and attempting to prevent the war from alienating a key strategic partner.</p>
+                <p>The U.S. gave India a <a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>30-day sanctions waiver</strong></a>, acknowledging New Delhi's dependence on Iranian oil and attempting to prevent the war from alienating a key strategic partner.</p>
 
                 <h2>Economic Impact</h2>
 
                 <h3>By the Numbers</h3>
                 <ul>
-                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);"><strong>$3.7 billion</strong></a> — Cost of the first 100 hours ($891 million per day)</li>
+                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);"><strong>$3.7 billion</strong></a> — Cost of the first 100 hours ($891 million per day)</li>
                     <li><strong>Brent crude up 27%</strong> — Biggest weekly gain since the COVID-19 crash of 2020</li>
                     <li><strong>Kuwait cutting oil production</strong> — Running out of storage capacity</li>
                 </ul>
@@ -144,9 +145,9 @@
                 <h2>International Reaction</h2>
                 <ul>
                     <li><strong>Norway</strong> — Overnight blast at the U.S. embassy, possibly an "act of terrorism" — the war's first violent echo in Europe</li>
-                    <li><strong>UN</strong> — Reported <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">330,000+ people forcibly displaced</a> across the Middle East in one week</li>
+                    <li><strong>UN</strong> — Reported <a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">330,000+ people forcibly displaced</a> across the Middle East in one week</li>
                     <li><strong>Russia</strong> — Offering condolences publicly, reportedly providing intelligence privately</li>
-                    <li><strong>Iran</strong> — <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" style="color: var(--accent-red);">Threatened to expand the war to Europe</a> if European nations participated</li>
+                    <li><strong>Iran</strong> — <a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Threatened to expand the war to Europe</a> if European nations participated</li>
                     <li><strong>Human rights organizations</strong> — Called for war crimes investigation into the school strike</li>
                 </ul>
 
@@ -162,24 +163,24 @@
 
                 <h2>Sources</h2>
                 <ul>
-                    <li><a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" style="color: var(--accent-red);">Al Jazeera — Iran War: What Is Happening on Day Eight</a></li>
-                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" style="color: var(--accent-red);">Britannica — 2026 Iran War</a></li>
-                    <li><a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" style="color: var(--accent-red);">AJC — The Iran Strikes Explained</a></li>
-                    <li><a href="https://www.war.gov/Spotlights/Operation-Epic-Fury/" target="_blank" style="color: var(--accent-red);">US Department of War — Operation Epic Fury</a></li>
-                    <li><a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" style="color: var(--accent-red);">The Guardian — Iran Rejects Trump's Surrender Demand</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" style="color: var(--accent-red);">Wikipedia — 2026 Iranian Strikes on the UAE</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" style="color: var(--accent-red);">Wikipedia — Timeline of the 2026 Iran War</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" style="color: var(--accent-red);">Wikipedia — 2026 Iran War</a></li>
+                    <li><a href="https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Al Jazeera — Iran War: What Is Happening on Day Eight</a></li>
+                    <li><a href="https://www.britannica.com/event/2026-Iran-War" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Britannica — 2026 Iran War</a></li>
+                    <li><a href="https://www.ajc.org/news/the-iran-strikes-explained-how-we-got-here-and-what-it-means" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">AJC — The Iran Strikes Explained</a></li>
+                    <li><a href="https://www.war.gov/Spotlights/Operation-Epic-Fury/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">US Department of War — Operation Epic Fury</a></li>
+                    <li><a href="https://www.theguardian.com/world/2026/mar/07/iran-trump-unconditional-surrender-war-masoud-pezeshkian" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">The Guardian — Iran Rejects Trump's Surrender Demand</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Wikipedia — 2026 Iranian Strikes on the UAE</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Wikipedia — Timeline of the 2026 Iran War</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Wikipedia — 2026 Iran War</a></li>
                 </ul>
             </div>
 
             <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
     <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this report:</p>
     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Twitter/X</a>
-        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Reddit</a>
-        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">Telegram</a>
-        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank">WhatsApp</a>
+        <a href="" class="share-twitter" style="background: #1DA1F2; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="" class="share-reddit" style="background: #FF4500; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="" class="share-telegram" style="background: #0088cc; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="" class="share-whatsapp" style="background: #25D366; color: white; padding: 8px 16px; font-size: 0.8rem; font-weight: 600; text-decoration: none;" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
 </div>
 

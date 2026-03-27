@@ -526,3 +526,9 @@ img { max-width: 100%; height: auto; }
     border-bottom: 1px solid var(--border);
     margin-bottom: 12px;
 }
+
+/* Active page indicator */
+.site-nav a[aria-current="page"] {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--accent-red);
+}

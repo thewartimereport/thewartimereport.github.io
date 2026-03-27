@@ -22,6 +22,7 @@
     <link rel="alternate" type="application/rss+xml" title="The Wartime Report RSS" href="https://thewartimereport.com/feed.xml">
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -34,26 +35,26 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
             <a href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
             <a href="investigations.html">Investigations</a>
-            <a href="about.html">About</a>
+            <a aria-current="page" href="about.html">About</a>
             </div>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <div class="report-header">
             <h1>About The Wartime Report</h1>
         </div>
         <div class="report-body">
             <h2>Open Source. Unbiased. Independent.</h2>
-            <p>The Wartime Report is an <strong>open-source, independently produced</strong> daily briefing covering the 2026 Iran War — the military conflict between the United States, Israel, and Iran that began on February 28, 2026.</p>
-            <p>Our entire codebase, research notes, and editorial process are <a href="https://github.com/thewartimereport/thewartimereport.github.io" style="color: var(--accent-red);">public on GitHub</a>. You can verify every claim, check every source, and contribute improvements.</p>
+            <p>The Wartime Report is an <strong>open-source, independently produced</strong> daily briefing covering the 2026 Iran War — the military conflict between the United States, Israel, and Iran that began on <time datetime="2026-02-28">February 28, 2026</time>.</p>
+            <p>Our entire codebase, research notes, and editorial process are <a href="https://github.com/thewartimereport/thewartimereport.github.io" style="color: var(--accent-red);" target="_blank" rel="noopener noreferrer">public on GitHub</a>. You can verify every claim, check every source, and contribute improvements.</p>
             <p>Each day we publish a comprehensive report covering:</p>
             <ul>
                 <li><strong>Military developments</strong> — strikes, operations, casualties, and strategic moves</li>
@@ -87,7 +88,7 @@
             </ul>
 
             <h2>Contribute</h2>
-            <p>Found an error? Have a source we missed? <a href="https://github.com/thewartimereport/thewartimereport.github.io/issues" style="color: var(--accent-red);">Open an issue on GitHub</a> or submit a pull request. The more eyes on this, the better the reporting gets.</p>
+            <p>Found an error? Have a source we missed? <a href="https://github.com/thewartimereport/thewartimereport.github.io/issues" style="color: var(--accent-red);" target="_blank" rel="noopener noreferrer">Open an issue on GitHub</a> or submit a pull request. The more eyes on this, the better the reporting gets.</p>
 
             <h2>Disclaimers</h2>
             <p>The Wartime Report is an independent, open-source project. We are not affiliated with any government, military organization, or political party. Information is compiled from publicly available sources and may be incomplete or subject to the fog of war.</p>
@@ -95,8 +96,8 @@
 
             <h2>Contact</h2>
             <ul>
-                <li><strong>Email:</strong> thewartimereport@gmail.com</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/thewartimereport" style="color: var(--accent-red);">github.com/thewartimereport</a></li>
+                <li><strong>Email:</strong> <a href="mailto:thewartimereport@gmail.com" style="color: var(--accent-red);">thewartimereport@gmail.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/thewartimereport" style="color: var(--accent-red);" target="_blank" rel="noopener noreferrer">github.com/thewartimereport</a></li>
             </ul>
 
             <h2>Site Statistics</h2>
@@ -118,14 +119,14 @@
                     <div style="font-size: 0.85rem; color: var(--text-secondary);">Update Frequency</div>
                 </div>
             </div>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Last updated: March 27, 2026 at 02:08 UTC</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Last updated: <time datetime="2026-03-27">March 27, 2026</time> at 02:08 UTC</p>
         </div>
     </main>
 
     <footer class="site-footer">
     <div class="container">
         <div style="margin-bottom: 16px;">
-            <a href="https://github.com/thewartimereport/thewartimereport.github.io" style="color: var(--text-muted); margin: 0 8px;">GitHub</a> ·
+            <a href="https://github.com/thewartimereport/thewartimereport.github.io" style="color: var(--text-muted); margin: 0 8px;" target="_blank" rel="noopener noreferrer">GitHub</a> ·
             <a href="feed.xml" style="color: var(--text-muted); margin: 0 8px;">RSS</a> ·
             <a href="mailto:thewartimereport@gmail.com" style="color: var(--text-muted); margin: 0 8px;">Email</a>
         </div>

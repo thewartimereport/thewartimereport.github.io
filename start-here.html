@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://thewartimereport.com/start-here.html">
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -23,9 +24,9 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
             <a href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
@@ -35,14 +36,14 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <div class="report-header">
             <h1>Start Here — The 2026 Iran War in 5 Minutes</h1>
             <p class="report-meta">New to The Wartime Report? Here's everything you need to know.</p>
         </div>
         <div class="report-body">
             <h2>What Happened?</h2>
-            <p>On February 28, 2026, the United States and Israel launched <strong>Operation Epic Fury</strong> — a massive coordinated strike campaign against Iran. Supreme Leader Ali Khamenei was killed in the opening hours. Iran responded with hundreds of missiles across the region. The war has now entered its fourth week.</p>
+            <p>On <time datetime="2026-02-28">February 28, 2026</time>, the United States and Israel launched <strong>Operation Epic Fury</strong> — a massive coordinated strike campaign against Iran. Supreme Leader Ali Khamenei was killed in the opening hours. Iran responded with hundreds of missiles across the region. The war has now entered its fourth week.</p>
             
             <h2>Key Numbers (Day 27)</h2>
             <ul>

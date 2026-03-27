@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://thewartimereport.com/corrections.html">
 </head>
 <body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
     <header class="site-header">
         <div class="container">
             <div class="masthead">
@@ -23,9 +24,9 @@
     <nav class="site-nav">
         <div class="container">
             <div class="nav-toggle-row">
-                <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰ Menu</button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="index.html">Home</a>
             <a href="timeline.html">Timeline</a>
             <a href="economics.html">Economics</a>
@@ -35,10 +36,10 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <div class="report-header">
             <h1>Corrections & Editorial Policy</h1>
-            <p class="report-meta">Last updated: March 27, 2026</p>
+            <p class="report-meta">Last updated: <time datetime="2026-03-27">March 27, 2026</time></p>
         </div>
         <div class="report-body">
             <h2>Our Commitment</h2>
