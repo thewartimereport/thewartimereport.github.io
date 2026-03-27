@@ -566,6 +566,46 @@ img { max-width: 100%; height: auto; }
     overflow: visible;
 }
 
+/* === INLINE STYLE REPLACEMENTS === */
+.hero-updated {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 24px;
+}
+
+.badge-live-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.badge-live-small {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+}
+
+.featured-card-gold {
+    border-left-color: var(--accent-gold);
+}
+
+.badge-gold {
+    background: var(--accent-gold);
+}
+
+.read-more-gold {
+    color: var(--accent-gold);
+}
+
+/* === ABOUT PAGE STATS GRID MOBILE === */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
 /* === REDUCED MOTION === */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
