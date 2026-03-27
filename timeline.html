@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .timeline { padding: 48px 0; }
+        .timeline { padding: 16px 0; }
         .tl-item { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); }
         .tl-item:hover { background: var(--bg-card); margin: 0 -24px; padding: 24px; }
         .tl-meta { min-width: 120px; text-align: right; }
@@ -20,7 +20,7 @@
         .tl-content h3 a { transition: color 0.2s; }
         .tl-content h3 a:hover { color: var(--accent-red); }
         .tl-content p { color: var(--text-secondary); font-size: 0.9rem; }
-        .tl-week { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; padding: 32px 0 16px; border-bottom: 2px solid var(--accent-red); margin-top: 24px; color: var(--accent-gold); }
+        .tl-week { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; padding: 16px 0 12px; border-bottom: 2px solid var(--accent-red); margin-top: 16px; color: var(--accent-gold); }
         @media (max-width: 768px) {
             .tl-item { flex-direction: column; gap: 8px; }
             .tl-meta { text-align: left; min-width: auto; }
@@ -32,16 +32,21 @@
         <div class="container">
             <div class="masthead">
                 <h1 class="site-title"><a href="index.html">THE WARTIME REPORT</a></h1>
+                <p class="site-tagline">Open source · Unbiased · Independent — Daily briefings on the 2026 Iran War</p>
             </div>
-            <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="timeline.html">Timeline</a>
-                <a href="economics.html">Economics</a>
-                <a href="investigations.html">Investigations</a>
-                <a href="about.html">About</a>
-            </nav>
-        </div>
+            </div>
     </header>
+</header>
+
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="economics.html">Economics</a>
+            <a href="investigations.html">Investigations</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
 
     <main class="container">
         <div class="report-header">

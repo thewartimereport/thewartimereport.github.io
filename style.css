@@ -72,11 +72,14 @@ img { max-width: 100%; height: auto; }
     background: rgba(10, 10, 10, 0.97);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+}
+
+.site-nav .container {
     display: flex;
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
-    padding: 12px 24px;
 }
 
 .site-nav a {
