@@ -309,6 +309,11 @@ img { max-width: 100%; height: auto; }
     margin: 0 auto;
 }
 
+.report-header-full {
+    max-width: none;
+    margin: 0;
+}
+
 .report-header .day-badge {
     font-size: 0.8rem;
     padding: 4px 12px;
