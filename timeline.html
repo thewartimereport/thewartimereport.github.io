@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
     <style>
         .timeline { padding: 16px 0; }
-        .tl-item { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+        .tl-item { display: flex; align-items: baseline; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); }
         .tl-item:hover { background: var(--bg-card); margin: 0 -24px; padding: 24px; }
-        .tl-meta { min-width: 120px; text-align: right; }
-        .tl-meta .day-badge { display: block; margin-bottom: 4px; text-align: center; }
+        .tl-meta { min-width: 120px; text-align: left; }
+        .tl-meta .day-badge { display: block; margin-bottom: 4px; }
         .tl-meta .date { display: block; color: var(--text-muted); font-size: 0.8rem; }
         .tl-content h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
         .tl-content h3 a { transition: color 0.2s; }
@@ -23,7 +23,7 @@
         .tl-week { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; padding: 16px 0 12px; border-bottom: 2px solid var(--accent-red); margin-top: 16px; color: var(--accent-gold); }
         @media (max-width: 768px) {
             .tl-item { flex-direction: column; gap: 8px; }
-            .tl-meta { text-align: left; min-width: auto; }
+            .tl-meta { min-width: auto; }
         }
     </style>
     <meta property="og:type" content="website">
