@@ -1,10 +1,5 @@
-// Auto-generated search index — rebuild with scripts/update-search.sh
-let searchIndex = [];
-
-function buildSearchIndex() {
-  // This will be populated by the update script
-  return searchIndex;
-}
+// searchIndex is populated by search-index.js (loaded before this file)
+if (typeof searchIndex === 'undefined') var searchIndex = [];
 
 function initSearch() {
   const trigger = document.getElementById('search-trigger');
