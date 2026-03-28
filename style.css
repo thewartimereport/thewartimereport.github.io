@@ -115,19 +115,20 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero-content {
-    max-width: 720px;
+    max-width: 80ch;
     margin: 0 auto;
-    text-align: center;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
     max-height: 560px;
+    max-width: 80ch;
+    display: block;
+    margin: 0 auto 24px;
     object-fit: cover;
     object-position: center center;
     border: 1px solid var(--border);
-    margin-bottom: 24px;
     border-radius: 4px;
 }
 
@@ -585,9 +586,8 @@ img { max-width: 100%; height: auto; }
 .hero-updated {
     color: var(--text-muted);
     font-size: 0.8rem;
-    text-align: center;
-    margin-top: 12px;
-    margin-bottom: 24px;
+    max-width: 80ch;
+    margin: 12px auto 24px;
 }
 
 .badge-live-wrapper {
