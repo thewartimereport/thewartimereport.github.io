@@ -59,16 +59,13 @@
             <a href="../economics.html">Economics</a>
             <a href="../investigations.html">Investigations</a>
             <a href="../about.html">About</a>
+                <button id="search-trigger" class="search-trigger" aria-label="Search">🔍 Search <kbd>/</kbd></button>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="search-container">
-            <span class="search-icon">&#128269;</span>
-            <input type="search" id="search-input" class="search-input" placeholder="Search reports, events, names..." aria-label="Search reports">
-            <div id="search-results" class="search-results"></div>
-        </div>
+        
     </div>
 
     <main class="container" id="main-content">
@@ -190,6 +187,19 @@ document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url
 document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
 })();
 </script>
+<script src="../search-index.js"></script>
 <script src="../search.js"></script>
+<div id="search-overlay" class="search-overlay">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="search-input" class="search-input" placeholder="Search reports, investigations, economics..." aria-label="Search">
+      <button id="search-close" class="search-close">ESC</button>
+    </div>
+    <div id="search-results" class="search-results">
+      <div class="search-hint">Type to search across all reports, investigations, and economic analysis...</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
