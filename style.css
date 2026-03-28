@@ -442,6 +442,19 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 8px;
 }
 
+.footer-links {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    margin: 0 8px;
+}
+
+.disclaimer a {
+    color: var(--accent-red);
+}
+
 .disclaimer {
     font-style: italic;
 }
