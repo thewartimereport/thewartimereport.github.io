@@ -266,14 +266,14 @@ img { max-width: 100%; height: auto; }
 
 .facts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
 }
 
 .fact-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    padding: 28px;
+    padding: 20px 16px;
     text-align: center;
 }
 
