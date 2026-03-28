@@ -63,15 +63,24 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <input type="search" id="search-input" class="search-input" placeholder="Search reports, events, names..." aria-label="Search reports">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
     <main class="container" id="main-content">
         <article>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="separator">→</span><a href="../timeline.html">Timeline</a><span class="separator">→</span><span>Report</span></nav>
             <div class="report-header">
                 <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
                     <span class="day-badge">DAY 29 — <time datetime="2026-03-28">MARCH 28, 2026</time></span>
                     <span class="breaking-badge">🔴 LIVE — UPDATING</span>
                 </div>
                 <h1>Iran's "Heavy Price" Retaliation After Nuclear Facility Strikes</h1>
-                <p class="report-meta">The Wartime Report · Published <time datetime="2026-03-28">March 28, 2026</time> · Last updated: <time datetime="2026-03-28">March 28, 2026</time> — 7:13 PM UTC</p>
+                <p class="report-meta"><span class="reading-time">9 min read</span> · The Wartime Report · Published <time datetime="2026-03-28">March 28, 2026</time> · Last updated: <time datetime="2026-03-28">March 28, 2026</time> — 7:13 PM UTC</p>
             </div>
 
             <div class="report-body">
@@ -213,5 +222,6 @@ document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url
 document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
 })();
 </script>
+<script src="../search.js"></script>
 </body>
 </html>

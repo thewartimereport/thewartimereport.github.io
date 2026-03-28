@@ -36,6 +36,14 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <input type="search" id="search-input" class="search-input" placeholder="Search reports, events, names..." aria-label="Search reports">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
     <main class="container" id="main-content">
         <div class="report-header">
             <h1>Start Here — The 2026 Iran War in 5 Minutes</h1>
@@ -96,5 +104,6 @@
 const btn=document.querySelector('.back-to-top');
 window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
 </script>
+<script src="search.js"></script>
 </body>
 </html>

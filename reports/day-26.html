@@ -63,12 +63,21 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <input type="search" id="search-input" class="search-input" placeholder="Search reports, events, names..." aria-label="Search reports">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
     <main class="container" id="main-content">
         <article>
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="separator">→</span><a href="../timeline.html">Timeline</a><span class="separator">→</span><span>Report</span></nav>
             <div class="report-header">
                 <span class="day-badge">DAY 26 — <time datetime="2026-03-25">MARCH 25, 2026</time></span>
                 <h1>Iran Dismisses Trump's Peace Claims as Strikes Kill 12 in Tehran</h1>
-                <p class="report-meta">The Wartime Report · Published <time datetime="2026-03-25">March 25, 2026</time> · Last updated: <time datetime="2026-03-25">March 25, 2026</time> — 9:40 PM UTC</p>
+                <p class="report-meta"><span class="reading-time">9 min read</span> · The Wartime Report · Published <time datetime="2026-03-25">March 25, 2026</time> · Last updated: <time datetime="2026-03-25">March 25, 2026</time> — 9:40 PM UTC</p>
             </div>
 
             <div class="report-body">
@@ -212,5 +221,6 @@ document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url
 document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
 })();
 </script>
+<script src="../search.js"></script>
 </body>
 </html>
