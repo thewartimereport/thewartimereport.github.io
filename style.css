@@ -84,8 +84,10 @@ img { max-width: 100%; height: auto; }
 .site-nav .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 24px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .site-nav a {
@@ -568,6 +570,15 @@ img { max-width: 100%; height: auto; }
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+    .site-nav .search-trigger {
+        order: -1;
+    }
+    .search-overlay {
+        padding: 5vh 12px 12px;
+    }
+    .search-trigger kbd {
+        display: none;
     }
 }
 
