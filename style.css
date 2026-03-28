@@ -915,12 +915,10 @@ img { max-width: 100%; height: auto; }
 }
 
 /* === BREADCRUMBS === */
-.breadcrumb {
+.report-header .breadcrumb {
     font-size: 0.85rem;
     color: var(--text-muted);
-    padding: 16px 0 0;
-    max-width: 80ch;
-    margin: 0 auto;
+    margin-bottom: 16px;
 }
 
 .breadcrumb a {
