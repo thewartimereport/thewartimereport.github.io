@@ -115,14 +115,13 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero-content {
-    max-width: 80ch;
+    max-width: none;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
     max-height: 560px;
-    max-width: 80ch;
     display: block;
     margin-bottom: 24px;
     object-fit: cover;
@@ -603,7 +602,6 @@ img { max-width: 100%; height: auto; }
 .hero-updated {
     color: var(--text-muted);
     font-size: 0.8rem;
-    max-width: 80ch;
     margin: 12px 0 24px;
 }
 
