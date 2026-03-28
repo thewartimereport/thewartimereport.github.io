@@ -78,3 +78,27 @@ function initSearch() {
 }
 
 document.addEventListener('DOMContentLoaded', initSearch);
+
+// Newsletter subscription (temporary - swap with Beehiiv API when ready)
+function subscribeNewsletter() {
+  const input = document.getElementById('newsletter-email');
+  if (!input) return;
+  
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) {
+    input.style.borderColor = '#dc2626';
+    input.placeholder = 'Please enter a valid email';
+    return;
+  }
+  
+  // Store in localStorage for now (Beehiiv integration TODO)
+  const subs = JSON.parse(localStorage.getItem('twtr_subscribers') || '[]');
+  if (!subs.includes(email)) {
+    subs.push(email);
+    localStorage.setItem('twtr_subscribers', JSON.stringify(subs));
+  }
+  
+  // Show success
+  const form = input.closest('.newsletter-form');
+  form.innerHTML = '<p style="color: var(--accent-red); font-weight: 600; padding: 10px 0;">✓ Subscribed! Check your inbox tomorrow at 6:30 AM ET.</p>';
+}
