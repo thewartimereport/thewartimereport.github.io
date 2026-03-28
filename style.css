@@ -279,10 +279,12 @@ img { max-width: 100%; height: auto; }
 .fact-number {
     display: block;
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
     font-weight: 900;
     color: var(--accent-red);
     margin-bottom: 4px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .fact-label {
