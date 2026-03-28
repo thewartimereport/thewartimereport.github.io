@@ -116,6 +116,8 @@ img { max-width: 100%; height: auto; }
 
 .hero-content {
     max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-image {
