@@ -283,8 +283,7 @@ img { max-width: 100%; height: auto; }
     font-weight: 900;
     color: var(--accent-red);
     margin-bottom: 4px;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    white-space: nowrap;
 }
 
 .fact-label {
