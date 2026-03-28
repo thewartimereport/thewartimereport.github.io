@@ -11,37 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
     <style>
         .investigation-article { max-width: 820px; margin: 0 auto; padding: 2rem 1rem; }
-        .investigation-article h2 { font-family: 'Merriweather', serif; font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.5rem; color: var(--text-primary, #f0f0f0); }
-        .investigation-article h3 { font-family: 'Merriweather', serif; font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-red, #c0392b); color: var(--text-primary, #f0f0f0); }
-        .investigation-article p { font-family: 'Inter', sans-serif; font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.2rem; color: var(--text-secondary, #ccc); }
+        .investigation-article h2 { font-family: var(--font-serif); font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.5rem; color: var(--text-primary, #f0f0f0); }
+        .investigation-article h3 { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-red, #c0392b); color: var(--text-primary, #f0f0f0); }
+        .investigation-article p { font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.2rem; color: var(--text-secondary, #ccc); }
         .investigation-article .lead { font-size: 1.25rem; line-height: 1.9; color: var(--text-primary, #f0f0f0); font-weight: 400; }
         .disclaimer-box { background: rgba(192, 57, 43, 0.1); border-left: 4px solid var(--accent-red, #c0392b); padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-radius: 0 4px 4px 0; }
         .disclaimer-box strong { color: var(--accent-red, #c0392b); }
-        .byline { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text-muted, #888); margin-bottom: 2rem; }
+        .byline { font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted, #888); margin-bottom: 2rem; }
         .byline time { color: var(--accent-red, #c0392b); }
-        .stat-highlight { display: inline-block; background: rgba(192, 57, 43, 0.15); border: 1px solid rgba(192, 57, 43, 0.3); padding: 2px 8px; border-radius: 3px; font-weight: 600; color: var(--accent-red, #c0392b); font-family: 'Inter', sans-serif; }
+        .stat-highlight { display: inline-block; background: rgba(192, 57, 43, 0.15); border: 1px solid rgba(192, 57, 43, 0.3); padding: 2px 8px; border-radius: 3px; font-weight: 600; color: var(--accent-red, #c0392b); font-family: var(--font-sans); }
         .evidence-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
         .tag-documented { background: rgba(39, 174, 96, 0.2); color: #27ae60; border: 1px solid rgba(39, 174, 96, 0.3); }
         .tag-alleged { background: rgba(243, 156, 18, 0.2); color: #f39c12; border: 1px solid rgba(243, 156, 18, 0.3); }
         .investigation-article ul { list-style: none; padding: 0; }
-        .investigation-article ul li { padding: 0.6rem 0 0.6rem 1.5rem; position: relative; font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .investigation-article ul li { padding: 0.6rem 0 0.6rem 1.5rem; position: relative; font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .investigation-article ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-red, #c0392b); font-weight: bold; }
-        .pull-quote { border-left: 4px solid var(--accent-red, #c0392b); padding: 1.5rem 2rem; margin: 2rem 0; background: rgba(255,255,255,0.03); font-family: 'Merriweather', serif; font-size: 1.15rem; font-style: italic; line-height: 1.8; color: var(--text-primary, #f0f0f0); }
-        .pull-quote cite { display: block; margin-top: 0.8rem; font-style: normal; font-size: 0.85rem; color: var(--text-muted, #888); font-family: 'Inter', sans-serif; }
+        .pull-quote { border-left: 4px solid var(--accent-red, #c0392b); padding: 1.5rem 2rem; margin: 2rem 0; background: rgba(255,255,255,0.03); font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; line-height: 1.8; color: var(--text-primary, #f0f0f0); }
+        .pull-quote cite { display: block; margin-top: 0.8rem; font-style: normal; font-size: 0.85rem; color: var(--text-muted, #888); font-family: var(--font-sans); }
         .losers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
         .loser-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.2rem 1.5rem; }
-        .loser-card h4 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.5rem; }
+        .loser-card h4 { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.5rem; }
         .loser-card p { font-size: 0.9rem; margin-bottom: 0; }
         .cross-connection { background: rgba(192, 57, 43, 0.08); border: 1px solid rgba(192, 57, 43, 0.2); border-radius: 6px; padding: 1.5rem; margin: 1rem 0; }
-        .cross-connection h4 { font-family: 'Inter', sans-serif; color: var(--accent-red, #c0392b); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .cross-connection h4 { font-family: var(--font-sans); color: var(--accent-red, #c0392b); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
         .cross-connection p { font-size: 0.95rem; margin-bottom: 0; }
         .sources-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(255,255,255,0.1); }
         .sources-section h3 { border-bottom: none; font-size: 1.2rem; }
         .sources-section ol { padding-left: 1.5rem; }
-        .sources-section ol li { font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted, #888); padding: 0.3rem 0; border-bottom: none; }
+        .sources-section ol li { font-family: var(--font-sans); font-size: 0.85rem; line-height: 1.6; color: var(--text-muted, #888); padding: 0.3rem 0; border-bottom: none; }
         .sources-section ol li::before { content: none; }
         .sources-section ol li a { color: var(--accent-red, #c0392b); word-break: break-all; }
-        .article-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Inter', sans-serif; font-size: 0.9rem; }
+        .article-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: var(--font-sans); font-size: 0.9rem; }
         .article-nav a { color: var(--accent-red, #c0392b); text-decoration: none; }
         .article-nav a:hover { text-decoration: underline; }
         @media (max-width: 600px) {
@@ -98,7 +98,7 @@
             </div>
 
             <h2>Who Benefits From This War?</h2>
-            <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--text-muted, #888); margin-bottom: 2rem; font-style: italic;">Follow the Money, Power, and Paper Trail</p>
+            <p style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--text-muted, #888); margin-bottom: 2rem; font-style: italic;">Follow the Money, Power, and Paper Trail</p>
 
             <div class="disclaimer-box">
                 <strong>⚠ Editorial Note:</strong> This article presents documented evidence from SEC filings, congressional financial disclosures, DOJ releases, Pentagon budget reports, intelligence community testimony, and credible journalism. Where claims are allegations or lack definitive proof of intentional coordination, they are clearly labeled as <span class="evidence-tag tag-alleged">ALLEGED</span>. Items marked <span class="evidence-tag tag-documented">DOCUMENTED</span> are based on official filings, direct testimony, or confirmed reporting.
