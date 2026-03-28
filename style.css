@@ -362,6 +362,10 @@ img { max-width: 100%; height: auto; }
     color: var(--accent-gold);
 }
 
+.report-body a {
+    color: var(--accent-red);
+}
+
 .report-body p {
     margin-bottom: 16px;
     color: var(--text-primary);
@@ -460,6 +464,25 @@ img { max-width: 100%; height: auto; }
 .disclaimer {
     font-style: italic;
 }
+
+/* === SOURCE LINKS === */
+.source-link {
+    color: var(--accent-red);
+}
+
+/* === SHARE BUTTONS === */
+.share-btn {
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.share-twitter { background: #1DA1F2; }
+.share-reddit { background: #FF4500; }
+.share-telegram { background: #0088cc; }
+.share-whatsapp { background: #25D366; }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
