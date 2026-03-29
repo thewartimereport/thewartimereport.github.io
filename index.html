@@ -6,7 +6,7 @@
     <title>The Wartime Report — Daily Briefings on the 2026 Iran War</title>
     <meta name="description" content="Comprehensive daily reports on the US-Israel-Iran war. Military updates, economic impact, international reactions, and analysis from Day 1.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
     <meta property="og:type" content="website">
@@ -55,10 +55,10 @@
             </div>
             <div class="nav-links" id="nav-links">
                 <a aria-current="page" href="index.html">Home</a>
-            <a href="timeline.html">Timeline</a>
-            <a href="economics.html">Economics</a>
-            <a href="investigations.html">Investigations</a>
-            <a href="about.html">About</a>
+            <a href="pages/timeline.html">Timeline</a>
+            <a href="economics/index.html">Economics</a>
+            <a href="investigations/index.html">Investigations</a>
+            <a href="pages/about.html">About</a>
             </div>
             
         </div>
@@ -76,13 +76,13 @@
         </section>
 
         <p class="hero-updated">
-Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · <a href="timeline.html">View full timeline →</a>
+Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · <a href="pages/timeline.html">View full timeline →</a>
 </p>
 
         <section class="reports-grid" role="region" aria-label="Featured investigation">
             <h2 class="section-title">Featured Investigation</h2>
             <div class="grid">
-                <a href="who-benefits.html" class="report-card latest featured-card-gold">
+                <a href="investigations/who-benefits.html" class="report-card latest featured-card-gold">
                     <span class="day-badge badge-gold">INVESTIGATION</span>
                     <span class="date">Published <time datetime="2026-03-23">March 23, 2026</time></span>
                     <h3>Who Benefits From This War? — Follow the Money, Power, and Paper Trail</h3>
@@ -163,7 +163,7 @@ Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · 
                 </a>
             </div>
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="timeline.html" class="btn-primary">View all 30 daily reports →</a>
+                <a href="pages/timeline.html" class="btn-primary">View all 30 daily reports →</a>
             </div>
         </section>
 
@@ -212,7 +212,7 @@ Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · 
             <a href="mailto:thewartimereport@gmail.com">Email</a>
         </div>
         <p>The Wartime Report is an independent, open-source news project covering the 2026 Iran War. Sources include Reuters, AP, Al Jazeera, BBC, CNN, NYT, Guardian, and other major outlets.</p>
-        <p class="disclaimer">Open source · Unbiased · Independent · <a href="about.html">About</a> · <a href="start-here.html">Start Here</a> · <a href="corrections.html">Corrections</a></p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="pages/about.html">About</a> · <a href="pages/start-here.html">Start Here</a> · <a href="pages/corrections.html">Corrections</a></p>
         <p>&copy; 2026 The Wartime Report</p>
     </div>
 </footer>
@@ -221,8 +221,8 @@ Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · 
 const btn=document.querySelector('.back-to-top');
 window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
 </script>
-<script src="search-index.js"></script>
-<script src="search.js"></script>
+<script src="assets/js/search-index.js"></script>
+<script src="assets/js/search.js"></script>
 <div id="search-overlay" class="search-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:9999;display:flex;justify-content:center;align-items:flex-start;padding:12vh 16px 16px;opacity:0;visibility:hidden;background:rgba(0,0,0,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:opacity .15s,visibility .15s;overflow-y:auto">
   <div class="search-modal" style="background:var(--bg-primary,#1a1a1a);border:1px solid rgba(255,255,255,0.12);border-radius:16px;width:100%;max-width:580px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7)">
     <div class="search-header">
