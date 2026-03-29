@@ -56,11 +56,16 @@ function initSearch() {
       return;
     }
 
-    const words = query.split(/\s+/);
-    const matches = searchIndex.filter(item => {
-      const text = (item.title + ' ' + item.snippet + ' ' + (item.date || '') + ' ' + (item.tags || '')).toLowerCase();
-      return words.every(w => text.includes(w));
-    }).slice(0, 10);
+    const words = query.split(/\s+/).filter(w => w.length > 0);
+    const matches = searchIndex
+      .map(item => {
+        const text = (item.title + ' ' + item.snippet + ' ' + (item.date || '') + ' ' + (item.tags || '')).toLowerCase();
+        const score = words.reduce((s, w) => s + (text.includes(w) ? 1 : 0), 0);
+        return { ...item, score };
+      })
+      .filter(item => item.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10);
 
     if (matches.length === 0) {
       results.innerHTML = '<div class="search-no-results">No results for "' + this.value + '"</div>';
