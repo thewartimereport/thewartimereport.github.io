@@ -32,10 +32,9 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-/* Content links — red and underlined */
+/* Content links — red and underlined (exclude cards and nav) */
 .report-body a,
 .investigation-article a,
-article a,
 main p a,
 main li a,
 .sources-section a,
@@ -47,10 +46,22 @@ main li a,
     text-underline-offset: 2px;
 }
 
-/* Headers should not be underlined */
+/* Cards are full-clickable blocks, not inline links */
+a.report-card,
+a.report-card *,
+.report-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Headers and cards should not be underlined */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .report-header a,
-.site-title a {
+.site-title a,
+.report-card a,
+.report-card h3,
+.report-card .read-more,
+.report-card p {
     text-decoration: none;
 }
 button, input, select, textarea { font-family: inherit; }
