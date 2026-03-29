@@ -83,7 +83,6 @@ img { max-width: 100%; height: auto; }
 
 .site-nav .container {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
@@ -683,10 +682,9 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (min-width: 769px) {
-    .nav-toggle-row { display: flex; justify-content: flex-end; order: 99; margin-left: auto; }
+    .nav-toggle-row { display: flex; margin-left: auto; }
     .nav-toggle-row .hamburger { display: none; }
-    .nav-links { display: flex !important; gap: 24px; flex: 1; }
-    .site-nav .container { display: flex; align-items: center; gap: 16px; }
+    .nav-links { display: flex !important; gap: 24px; }
 }
 
 /* === REPORT CARD THUMBNAILS === */
