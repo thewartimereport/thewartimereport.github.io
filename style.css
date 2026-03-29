@@ -46,6 +46,13 @@ main li a,
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+/* Headers should not be underlined */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.report-header a,
+.site-title a {
+    text-decoration: none;
+}
 button, input, select, textarea { font-family: inherit; }
 img { max-width: 100%; height: auto; }
 
