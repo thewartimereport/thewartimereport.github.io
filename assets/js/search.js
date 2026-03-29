@@ -16,7 +16,8 @@ function initSearch() {
     overlay.classList.add('active');
     overlay.style.opacity = '1';
     overlay.style.visibility = 'visible';
-    input.focus();
+    // Delay focus to ensure the overlay is visible before focusing
+    requestAnimationFrame(() => { input.focus(); });
     document.body.style.overflow = 'hidden';
   }
 
