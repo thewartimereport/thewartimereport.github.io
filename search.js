@@ -126,7 +126,7 @@ function subscribeNewsletter() {
   input.disabled = true;
 
   // Submit to FormSubmit.co
-  fetch('https://formsubmit.co/ajax/thewartimereport@gmail.com', {
+  fetch('https://formsubmit.co/ajax/3c457e8b34adf42313257d26c49397e5', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
