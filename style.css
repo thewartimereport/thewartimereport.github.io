@@ -1007,6 +1007,10 @@ img { max-width: 100%; height: auto; }
 }
 
 /* === BREADCRUMBS === */
+.breadcrumb {
+    margin-top: 24px;
+}
+
 .report-header .breadcrumb {
     font-size: 0.85rem;
     color: var(--text-muted);
