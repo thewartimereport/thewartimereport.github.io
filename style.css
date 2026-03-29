@@ -641,6 +641,10 @@ img { max-width: 100%; height: auto; }
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+        box-sizing: border-box;
     }
     .site-nav .nav-links {
         display: none;
