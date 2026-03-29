@@ -947,8 +947,8 @@ img { max-width: 100%; height: auto; }
 .search-result-item mark {
     background: rgba(220, 38, 38, 0.25);
     color: inherit;
-    padding: 0 2px;
-    border-radius: 2px;
+    padding: 0;
+    border-radius: 0;
 }
 
 .search-no-results, .search-hint {
