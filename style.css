@@ -652,14 +652,15 @@ img { max-width: 100%; height: auto; }
         justify-content: center;
         width: 100%;
     }
-    .site-nav .search-trigger {
-        order: -1;
+    .site-nav .nav-toggle-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        justify-content: center;
-        margin: 0 0 4px;
-        padding: 10px;
-        background: rgba(255,255,255,0.03);
-        border-radius: 8px;
+    }
+    .site-nav .search-trigger {
+        margin: 0;
+        padding: 6px 12px;
     }
     .search-trigger kbd {
         display: none;
