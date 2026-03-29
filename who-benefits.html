@@ -13,39 +13,37 @@
         .investigation-article { max-width: 820px; margin: 0 auto; padding: 2rem 1rem; }
         .investigation-article h2 { font-family: var(--font-serif); font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.5rem; color: var(--text-primary, #f0f0f0); }
         .investigation-article h3 { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-red, #c0392b); color: var(--text-primary, #f0f0f0); }
-        .investigation-article p { font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.2rem; color: var(--text-secondary, #ccc); }
+        .investigation-article p { font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.2rem; color: var(--text-secondary, #ccc); }
         .investigation-article .lead { font-size: 1.25rem; line-height: 1.9; color: var(--text-primary, #f0f0f0); font-weight: 400; }
         .disclaimer-box { background: rgba(192, 57, 43, 0.1); border-left: 4px solid var(--accent-red, #c0392b); padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-radius: 0 4px 4px 0; }
         .disclaimer-box strong { color: var(--accent-red, #c0392b); }
-        .byline { font-size: 0.9rem; color: var(--text-muted, #888); margin-bottom: 2rem; }
+        .byline { font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted, #888); margin-bottom: 2rem; }
         .byline time { color: var(--accent-red, #c0392b); }
-        .stat-highlight { display: inline-block; background: rgba(192, 57, 43, 0.15); border: 1px solid rgba(192, 57, 43, 0.3); padding: 2px 8px; border-radius: 3px; font-weight: 600; color: var(--accent-red, #c0392b); }
+        .stat-highlight { display: inline-block; background: rgba(192, 57, 43, 0.15); border: 1px solid rgba(192, 57, 43, 0.3); padding: 2px 8px; border-radius: 3px; font-weight: 600; color: var(--accent-red, #c0392b); font-family: var(--font-sans); }
         .evidence-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
         .tag-documented { background: rgba(39, 174, 96, 0.2); color: #27ae60; border: 1px solid rgba(39, 174, 96, 0.3); }
         .tag-alleged { background: rgba(243, 156, 18, 0.2); color: #f39c12; border: 1px solid rgba(243, 156, 18, 0.3); }
         .investigation-article ul { list-style: none; padding: 0; }
-        .investigation-article ul li { padding: 0.6rem 0 0.6rem 1.5rem; position: relative; font-size: 1rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .investigation-article ul li { padding: 0.6rem 0 0.6rem 1.5rem; position: relative; font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .investigation-article ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-red, #c0392b); font-weight: bold; }
         .pull-quote { border-left: 4px solid var(--accent-red, #c0392b); padding: 1.5rem 2rem; margin: 2rem 0; background: rgba(255,255,255,0.03); font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; line-height: 1.8; color: var(--text-primary, #f0f0f0); }
         .pull-quote cite { display: block; margin-top: 0.8rem; font-style: normal; font-size: 0.85rem; color: var(--text-muted, #888); font-family: var(--font-sans); }
         .losers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
         .loser-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.2rem 1.5rem; }
-        .loser-card h4 { font-size: 1rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.5rem; }
+        .loser-card h4 { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.5rem; }
         .loser-card p { font-size: 0.9rem; margin-bottom: 0; }
         .cross-connection { background: rgba(192, 57, 43, 0.08); border: 1px solid rgba(192, 57, 43, 0.2); border-radius: 6px; padding: 1.5rem; margin: 1rem 0; }
-        .cross-connection h4 { color: var(--accent-red, #c0392b); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .cross-connection h4 { font-family: var(--font-sans); color: var(--accent-red, #c0392b); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
         .cross-connection p { font-size: 0.95rem; margin-bottom: 0; }
         .sources-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(255,255,255,0.1); }
         .sources-section h3 { border-bottom: none; font-size: 1.2rem; }
         .sources-section ol { padding-left: 1.5rem; }
-        .sources-section ol li { font-size: 0.85rem; line-height: 1.6; color: var(--text-muted, #888); padding: 0.3rem 0; border-bottom: none; }
+        .sources-section ol li { font-family: var(--font-sans); font-size: 0.85rem; line-height: 1.6; color: var(--text-muted, #888); padding: 0.3rem 0; border-bottom: none; }
         .sources-section ol li::before { content: none; }
         .sources-section ol li a { color: var(--accent-red, #c0392b); word-break: break-all; }
-        .article-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+        .article-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: var(--font-sans); font-size: 0.9rem; }
         .article-nav a { color: var(--accent-red, #c0392b); text-decoration: none; }
         .article-nav a:hover { text-decoration: underline; }
-        sup a { color: var(--accent-red, #c0392b); text-decoration: none; font-size: 0.75rem; font-weight: 600; }
-        sup a:hover { text-decoration: underline; }
         @media (max-width: 600px) {
             .investigation-article h2 { font-size: 1.7rem; }
             .investigation-article h3 { font-size: 1.3rem; }
@@ -89,7 +87,7 @@
             <a aria-current="page" href="investigations.html">Investigations</a>
             <a href="about.html">About</a>
             </div>
-
+            
         </div>
     </nav>
 
@@ -102,7 +100,7 @@
             </div>
 
             <h2>Who Benefits From This War?</h2>
-            <p style="font-size: 1.1rem; color: var(--text-muted, #888); margin-bottom: 2rem; font-style: italic;">Follow the Money, Power, and Paper Trail</p>
+            <p style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--text-muted, #888); margin-bottom: 2rem; font-style: italic;">Follow the Money, Power, and Paper Trail</p>
 
             <div class="disclaimer-box">
                 <strong><span class="warning-label">WARNING</span> Editorial Note:</strong> This article presents documented evidence from SEC filings, congressional financial disclosures, DOJ releases, Pentagon budget reports, intelligence community testimony, and credible journalism. Where claims are allegations or lack definitive proof of intentional coordination, they are clearly labeled as <span class="evidence-tag tag-alleged">ALLEGED</span>. Items marked <span class="evidence-tag tag-documented">DOCUMENTED</span> are based on official filings, direct testimony, or confirmed reporting.
@@ -116,50 +114,50 @@
             <!-- THE MONEY -->
             <h3>I. The Money</h3>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Within hours of the first strikes on February 28, the financial machinery of war kicked into high gear. The iShares U.S. Aerospace & Defense ETF (ITA) has gained <span class="stat-highlight">35%</span> since the June 2025 preliminary strikes through early March 2026. Individual defense giants fared even better: Lockheed Martin climbed 40%, Northrop Grumman surged 46%<sup><a href="#src-4">[4]</a></sup> over the same period.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Within hours of the first strikes on February 28, the financial machinery of war kicked into high gear. The iShares U.S. Aerospace & Defense ETF (ITA) has gained <span class="stat-highlight">35%</span> since the June 2025 preliminary strikes through early March 2026. Individual defense giants fared even better: <a href="https://govfacts.org/policy-security/military/defense-budget-spending/defense-stocks-surged-after-the-iran-strikes-heres-exactly-who-gained/" target="_blank" rel="noopener noreferrer">Lockheed Martin climbed 40%, Northrop Grumman surged 46%</a> over the same period.</p>
 
-            <p>The scale of the single-day windfall was staggering. On March 2 — the first trading day after strikes began — RTX (Raytheon) alone jumped 4.7%, adding approximately $12.7 billion in shareholder wealth in a single session<sup><a href="#src-4">[4]</a></sup>. Across the top three defense contractors, the combined day-one shareholder gain was <span class="stat-highlight">$25–30 billion</span>. RTX had conveniently pre-signed a Pentagon deal to ramp Tomahawk cruise missile production to over 1,000 per year.</p>
+            <p>The scale of the single-day windfall was staggering. On March 2 — the first trading day after strikes began — <a href="https://govfacts.org/policy-security/military/defense-budget-spending/defense-stocks-surged-after-the-iran-strikes-heres-exactly-who-gained/" target="_blank" rel="noopener noreferrer">RTX (Raytheon) alone jumped 4.7%, adding approximately $12.7 billion in shareholder wealth in a single session</a>. Across the top three defense contractors, the combined day-one shareholder gain was <span class="stat-highlight">$25–30 billion</span>. RTX had conveniently pre-signed a Pentagon deal to ramp Tomahawk cruise missile production to over 1,000 per year.</p>
 
-            <p>Palantir<sup><a href="#src-20">[20]</a></sup>, whose AI platform is being used by the DoD to track Iranian arms shipments and Strait of Hormuz confrontations, rose on war momentum. Analysts flagged it as a key long-term beneficiary of sustained conflict.</p>
+            <p><a href="https://www.fool.com/investing/2026/03/17/2-defense-stocks-set-to-rise-if-the-iran-war-drags/" target="_blank" rel="noopener noreferrer">Palantir</a>, whose AI platform is being used by the DoD to track Iranian arms shipments and Strait of Hormuz confrontations, rose on war momentum. Analysts flagged it as a key long-term beneficiary of sustained conflict.</p>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Then there's oil. When Iran effectively closed the Strait of Hormuz on March 4, it triggered what the International Energy Agency called "the greatest global energy disruption in history"<sup><a href="#src-14">[14]</a></sup> — surpassing even the 1973 Arab oil embargo. Over 10 million barrels per day were knocked offline from Kuwait, Iraq, Saudi Arabia, and the UAE. Brent crude surged past $120 per barrel<sup><a href="#src-13">[13]</a></sup>. US oil majors — Exxon, Chevron, and Shell hit all-time-high stock valuations<sup><a href="#src-15">[15]</a></sup>, up roughly 30% year-to-date.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Then there's oil. When Iran effectively closed the Strait of Hormuz on March 4, it triggered what the International Energy Agency called <a href="https://www.reuters.com/business/energy/iran-wars-energy-impact-forces-world-pay-up-cut-consumption-2026-03-21/" target="_blank" rel="noopener noreferrer">"the greatest global energy disruption in history"</a> — surpassing even the 1973 Arab oil embargo. Over 10 million barrels per day were knocked offline from Kuwait, Iraq, Saudi Arabia, and the UAE. Brent crude <a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer">surged past $120 per barrel</a>. US oil majors — <a href="https://fortune.com/2026/03/12/exxon-chevron-us-oil-gas-producers-refiners-all-time-high-stock-values-iran-war/" target="_blank" rel="noopener noreferrer">Exxon, Chevron, and Shell hit all-time-high stock valuations</a>, up roughly 30% year-to-date.</p>
 
-            <p>Safe-haven assets followed the pattern. Gold jumped from $5,296 to $5,423 per ounce<sup><a href="#src-16">[16]</a></sup> immediately after the strikes, with analysts projecting a run to $5,500–$5,600 — a new all-time high — if the conflict persists.</p>
+            <p>Safe-haven assets followed the pattern. <a href="https://www.cnbc.com/2026/03/12/gold-iran-conflict-where-next-markets.html" target="_blank" rel="noopener noreferrer">Gold jumped from $5,296 to $5,423 per ounce</a> immediately after the strikes, with analysts projecting a run to $5,500–$5,600 — a new all-time high — if the conflict persists.</p>
 
             <div class="pull-quote">
                 "Takes money to kill bad guys."
-                <cite>— Defense Secretary Pete Hegseth, <time datetime="2026-03-19">March 19, 2026</time>, on the Pentagon's $200 billion supplemental budget request<sup><a href="#src-23">[23]</a></sup></cite>
+                <cite>— Defense Secretary Pete Hegseth, <time datetime="2026-03-19">March 19, 2026</time>, on the Pentagon's $200 billion supplemental budget request (<a href="https://www.cnbc.com/2026/03/19/hegseth-iran-war-budget.html" target="_blank" rel="noopener noreferrer">CNBC</a>)</cite>
             </div>
 
             <!-- THE INSIDERS -->
             <h3>II. The Insiders</h3>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The stock gains would be troubling enough on their own. But congressional financial disclosures tell a more uncomfortable story. According to an investigation by Sludge<sup><a href="#src-1">[1]</a></sup>, at least <span class="stat-highlight">19 members of Congress</span> purchased defense contractor stocks — Lockheed Martin, RTX/Raytheon, Boeing, Northrop Grumman — between Election Day 2024 and the June 2025/February 2026 Iran strikes. All but one still held the stocks when they filed.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The stock gains would be troubling enough on their own. But congressional financial disclosures tell a more uncomfortable story. According to an investigation by <a href="https://readsludge.com/2025/06/24/members-of-congress-bought-defense-stocks-then-watched-them-rise-as-the-bombs-dropped/" target="_blank" rel="noopener noreferrer">Sludge</a>, at least <span class="stat-highlight">19 members of Congress</span> purchased defense contractor stocks — Lockheed Martin, RTX/Raytheon, Boeing, Northrop Grumman — between Election Day 2024 and the June 2025/February 2026 Iran strikes. All but one still held the stocks when they filed.</p>
 
             <p>The specifics are damning in their precision:</p>
 
             <ul>
-                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Rob Bresnahan (R-PA)</strong> — the primary sponsor of the TRUST Act to <em>ban</em> congressional stock trading — purchased Lockheed Martin stock on <time datetime="2025-05-15">May 15, 2025</time><sup><a href="#src-2">[2]</a></sup>, less than a month before Israel's June 2025 strikes on Iran. Two weeks later, he received a $1,000 Lockheed Martin PAC donation.</li>
-                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Marjorie Taylor Greene</strong> — bought Palantir stock on April 7–8, 2025<sup><a href="#src-3">[3]</a></sup>, days before a $30M Palantir-ICE contract was announced. She sits on the House Homeland Security Committee. She then bought Boeing and Qualcomm stock in May 2025 — while publicly condemning the prospect of war with Iran<sup><a href="#src-2">[2]</a></sup>.</li>
-                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Josh Gottheimer (D-NJ)</strong> bought Raytheon in April 2025. <strong>Rep. Jared Moskowitz (D-FL)</strong> bought Lockheed and Qualcomm in April 2025. This was bipartisan.<sup><a href="#src-2">[2]</a></sup><sup><a href="#src-30">[30]</a></sup></li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Rob Bresnahan (R-PA)</strong> — the primary sponsor of the TRUST Act to <em>ban</em> congressional stock trading — <a href="https://www.the-independent.com/news/world/americas/us-politics/congress-iran-stock-trading-defense-b2776998.html" target="_blank" rel="noopener noreferrer">purchased Lockheed Martin stock on <time datetime="2025-05-15">May 15, 2025</time></a>, less than a month before Israel's June 2025 strikes on Iran. Two weeks later, he received a $1,000 Lockheed Martin PAC donation.</li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Marjorie Taylor Greene</strong> — bought <a href="https://www.capitoltrades.com/buzz/lawmaker-s-palantir-trade-sparks-attention-after-big-ice-deal-stock-jump-2025-04-30" target="_blank" rel="noopener noreferrer">Palantir stock on April 7–8, 2025</a>, days before a $30M Palantir-ICE contract was announced. She sits on the House Homeland Security Committee. She then bought Boeing and Qualcomm stock in May 2025 — <a href="https://www.the-independent.com/news/world/americas/us-politics/congress-iran-stock-trading-defense-b2776998.html" target="_blank" rel="noopener noreferrer">while publicly condemning the prospect of war with Iran</a>.</li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>Rep. Josh Gottheimer (D-NJ)</strong> bought Raytheon in April 2025. <strong>Rep. Jared Moskowitz (D-FL)</strong> bought Lockheed and Qualcomm in April 2025. This was bipartisan.</li>
             </ul>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Then there are the Epstein files. On <time datetime="2026-02-24">February 24, 2026</time>, NPR published an investigation<sup><a href="#src-6">[6]</a></sup> revealing the DOJ had removed or withheld Epstein files related to accusations about President Trump. Four days later — on February 28 — the United States and Israel launched Operation Epic Fury.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Then there are the Epstein files. On <time datetime="2026-02-24">February 24, 2026</time>, <a href="https://www.npr.org/2026/02/24/nx-s1-5723968/epstein-files-trump-accusation-maxwell" target="_blank" rel="noopener noreferrer">NPR published an investigation</a> revealing the DOJ had removed or withheld Epstein files related to accusations about President Trump. Four days later — on February 28 — the United States and Israel launched Operation Epic Fury.</p>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The timing is made more striking by a document already in the public record. DOJ-released Epstein iMessages from <time datetime="2018-12-20">December 20, 2018</time> (evidence file EFTA01211330, device NYC024365.aff4, from DOJ Epstein Files Dataset 9<sup><a href="#src-8">[8]</a></sup>) show Epstein privately speculating that Trump would "bomb Iran" as a "large diversion"<sup><a href="#src-7">[7]</a></sup> if "cornered like a rat." Epstein wrote: <em>"We only had 2k troops there, if he were to bomb Iran, they would be slaughtered."</em> That message was written seven years before it happened.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The timing is made more striking by a document already in the public record. DOJ-released Epstein iMessages from <time datetime="2018-12-20">December 20, 2018</time> (evidence file EFTA01211330, device NYC024365.aff4, from <a href="https://www.justice.gov/epstein/doj-disclosures/data-set-9-files" target="_blank" rel="noopener noreferrer">DOJ Epstein Files Dataset 9</a>) show Epstein privately speculating that Trump would "bomb Iran" as a <a href="https://www.ibtimes.co.uk/epstein-imessages-trump-military-speculation-1782286" target="_blank" rel="noopener noreferrer">"large diversion"</a> if "cornered like a rat." Epstein wrote: <em>"We only had 2k troops there, if he were to bomb Iran, they would be slaughtered."</em> That message was written seven years before it happened.</p>
 
-            <p><span class="evidence-tag tag-alleged">ALLEGED</span> A Newsweek/Telegraph poll<sup><a href="#src-9">[9]</a></sup> found that a majority of Americans believe the Iran war is at least partly connected to burying the Epstein files. This remains an allegation — there is no direct evidence of causation — but the documented timeline speaks for itself.</p>
+            <p><span class="evidence-tag tag-alleged">ALLEGED</span> A <a href="https://www.newsweek.com/epstein-files-linked-to-donald-trumps-iran-war-most-voters-say-11663251" target="_blank" rel="noopener noreferrer">Newsweek/Telegraph poll</a> found that a majority of Americans believe the Iran war is at least partly connected to burying the Epstein files. This remains an allegation — there is no direct evidence of causation — but the documented timeline speaks for itself.</p>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Adding further weight: a pre-war CIA assessment<sup><a href="#src-10">[10]</a></sup> found that attacking Iran was "unlikely to result in regime change" and that Khamenei would likely be replaced by hardline IRGC elements, not reformers. On March 18, DNI Tulsi Gabbard and CIA Director John Ratcliffe testified<sup><a href="#src-11">[11]</a></sup> that they saw "no change in Iran's missile capabilities" before the war — directly contradicting the administration's stated casus belli. The war proceeded anyway.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Adding further weight: a <a href="https://www.nytimes.com/2026/03/07/world/middleeast/a-us-intelligence-assessment-in-february-found-that-an-attack-on-iran-was-unlikely-to-result-in-regime-change.html" target="_blank" rel="noopener noreferrer">pre-war CIA assessment</a> found that attacking Iran was "unlikely to result in regime change" and that Khamenei would likely be replaced by hardline IRGC elements, not reformers. On March 18, <a href="https://www.nytimes.com/2026/03/18/world/middleeast/tulsi-gabbard-senate-testimony-iran-war.html" target="_blank" rel="noopener noreferrer">DNI Tulsi Gabbard and CIA Director John Ratcliffe testified</a> that they saw "no change in Iran's missile capabilities" before the war — directly contradicting the administration's stated casus belli. The war proceeded anyway.</p>
 
             <!-- THE GEOPOLITICAL WINNERS -->
             <h3>III. The Geopolitical Winners</h3>
 
-            <p>Perhaps the greatest irony of the 2026 Iran War is who benefits most without firing a single shot.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Perhaps the greatest irony of the 2026 Iran War is who benefits most without firing a single shot.</p>
 
-            <p><strong>Russia</strong> tops the list. With Middle Eastern oil supplies devastated and global buyers scrambling for alternatives, Russian crude has become the world's substitute of choice<sup><a href="#src-17">[17]</a></sup>. At current prices, Russia is earning an estimated <span class="stat-highlight">€510 million per day</span> in energy revenue — money flowing directly into its war chest while the United States is distracted from Ukraine. Moscow didn't start this war. It didn't need to. The conflict is literally financing Russia's other war.</p>
+            <p><strong>Russia</strong> tops the list. With Middle Eastern oil supplies devastated and global buyers scrambling for alternatives, <a href="https://www.latimes.com/politics/story/2026-03-10/russia-putin-oil-boom-iran-war" target="_blank" rel="noopener noreferrer">Russian crude has become the world's substitute of choice</a>. At current prices, Russia is earning an estimated <span class="stat-highlight">€510 million per day</span> in energy revenue — money flowing directly into its war chest while the United States is distracted from Ukraine. Moscow didn't start this war. It didn't need to. The conflict is literally financing Russia's other war.</p>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>China</strong> is playing a quieter game. Shielded by strategic petroleum reserves and renewable energy investments<sup><a href="#src-13">[13]</a></sup>, Beijing has maintained what analysts call "strategic silence" — not condemning the strikes, not supporting Iran, but quietly positioning itself as a potential mediator<sup><a href="#src-18">[18]</a></sup> while expanding influence into the vacuum left by a distracted America. Some Chinese-linked vessels have even continued transiting the Strait of Hormuz — 11 between March 1–15<sup><a href="#src-19">[19]</a></sup> — while Western shipping has ground to a halt.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> <strong>China</strong> is playing a quieter game. <a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer">Shielded by strategic petroleum reserves and renewable energy investments</a>, Beijing has maintained what analysts call "strategic silence" — not condemning the strikes, not supporting Iran, but <a href="https://www.axios.com/2026/03/11/oil-iran-china-russia" target="_blank" rel="noopener noreferrer">quietly positioning itself as a potential mediator</a> while expanding influence into the vacuum left by a distracted America. Some Chinese-linked vessels have even continued transiting the Strait of Hormuz — <a href="https://www.cnbc.com/2026/03/18/hormuz-bottleneck-vessel-tanker-tracker-shipping-strait-of-hormuz.html" target="_blank" rel="noopener noreferrer">11 between March 1–15</a> — while Western shipping has ground to a halt.</p>
 
             <p>The historical pattern is impossible to ignore. Every major Gulf conflict has accelerated the rise of non-combatant powers:</p>
 
@@ -169,25 +167,25 @@
                 <li><strong>2026 Iran War</strong> → Russia receives a massive energy windfall; the multipolar world order accelerates</li>
             </ul>
 
-            <p>Other non-combatant energy exporters — Norway, Canada, Brazil, and Nigeria<sup><a href="#src-18">[18]</a></sup> — are capturing market share as the Strait of Hormuz remains effectively closed. Every week this war continues, the global energy map redraws itself further from the Middle East.</p>
+            <p>Other non-combatant energy exporters — <a href="https://www.axios.com/2026/03/11/oil-iran-china-russia" target="_blank" rel="noopener noreferrer">Norway, Canada, Brazil, and Nigeria</a> — are capturing market share as the Strait of Hormuz remains effectively closed. Every week this war continues, the global energy map redraws itself further from the Middle East.</p>
 
             <!-- THE MILITARY-INDUSTRIAL COMPLEX -->
             <h3>IV. The Military-Industrial Complex</h3>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> This war isn't just a windfall for defense contractors — it's a structural transformation. President Trump has directed manufacturers to "quadruple" weapons production<sup><a href="#src-29">[29]</a></sup>. Lockheed Martin is ramping THAAD missile defense system output. RTX has locked in a Pentagon deal for over 1,000 Tomahawk missiles per year. These aren't temporary wartime orders — they're permanent production infrastructure.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> This war isn't just a windfall for defense contractors — it's a structural transformation. President Trump has directed manufacturers to <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">"quadruple" weapons production</a>. Lockheed Martin is ramping THAAD missile defense system output. RTX has locked in a Pentagon deal for over 1,000 Tomahawk missiles per year. These aren't temporary wartime orders — they're permanent production infrastructure.</p>
 
             <p>The numbers tell the story of a self-perpetuating machine:</p>
 
             <ul>
-                <li>The FY2026 baseline defense budget: <span class="stat-highlight">$848 billion</span><sup><a href="#src-31">[31]</a></sup></li>
-                <li>The Pentagon's supplemental war funding request<sup><a href="#src-5">[5]</a></sup>: <span class="stat-highlight">$200+ billion</span></li>
-                <li>Trump's FY2027 target for total military spending<sup><a href="#src-32">[32]</a></sup>: <span class="stat-highlight">$1.5 trillion</span></li>
-                <li>Cost of the first 6 days of Operation Epic Fury<sup><a href="#src-24">[24]</a></sup>: <span class="stat-highlight">$12.7 billion</span></li>
+                <li>The FY2026 baseline defense budget: <span class="stat-highlight">$840 billion</span></li>
+                <li>The Pentagon's <a href="https://www.nytimes.com/2026/03/19/world/middleeast/pentagon-200-billion-iran-war-funding-hegseth.html" target="_blank" rel="noopener noreferrer">supplemental war funding request</a>: <span class="stat-highlight">$200+ billion</span></li>
+                <li>Trump's FY2027 target for total military spending: <span class="stat-highlight">$1.5 trillion</span></li>
+                <li>Cost of the first 6 days of Operation Epic Fury: <a href="https://www.theguardian.com/world/2026/mar/21/iran-war-conflict-middle-east-trump-israel" target="_blank" rel="noopener noreferrer"><span class="stat-highlight">$12.7 billion</span></a></li>
             </ul>
 
-            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The economics of missile defense illustrate the asymmetry. A single Patriot interceptor costs approximately $4 million. Against Iran's ballistic missile salvos, it can take up to 11 Patriot missiles to intercept a single incoming warhead<sup><a href="#src-29">[29]</a></sup> — that's $44 million to stop one missile. Iran has fired hundreds. Every Iranian missile that launches generates tens of millions in guaranteed replacement orders for US defense contractors.</p>
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The economics of missile defense illustrate the asymmetry. A single Patriot interceptor costs approximately $4 million. Against Iran's ballistic missile salvos, it can take <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">up to 11 Patriot missiles to intercept a single incoming warhead</a> — that's $44 million to stop one missile. Iran has fired hundreds. Every Iranian missile that launches generates tens of millions in guaranteed replacement orders for US defense contractors.</p>
 
-            <p><span class="evidence-tag tag-alleged">ALLEGED</span> Forbes identified Exxon and Raytheon<sup><a href="#src-21">[21]</a></sup> as the headline beneficiaries of the conflict. Defense Secretary Hegseth dismissed concerns about the Strait of Hormuz closure<sup><a href="#src-22">[22]</a></sup>, suggesting the administration views energy disruption as manageable — or perhaps even strategically useful for domestic producers.</p>
+            <p><span class="evidence-tag tag-alleged">ALLEGED</span> <a href="https://www.forbes.com/sites/alisondurkee/2026/03/05/these-companies-stand-to-benefit-from-trumps-iran-war-exxon-raytheon-and-more/" target="_blank" rel="noopener noreferrer">Forbes identified Exxon and Raytheon</a> as the headline beneficiaries of the conflict. Defense Secretary Hegseth <a href="https://www.cnbc.com/2026/03/13/iran-war-strait-of-hormuz-hegseth.html" target="_blank" rel="noopener noreferrer">dismissed concerns about the Strait of Hormuz closure</a>, suggesting the administration views energy disruption as manageable — or perhaps even strategically useful for domestic producers.</p>
 
             <!-- THE CROSS-CONNECTIONS -->
             <h3>V. The Cross-Connections</h3>
@@ -196,7 +194,7 @@
 
             <div class="cross-connection">
                 <h4>Connection 1: Timing</h4>
-                <p>Congressional defense stock purchases (April–May 2025) align precisely with the period when military planning for Iran strikes would have been underway. The stocks purchased — Lockheed Martin, Raytheon, Boeing, Northrop Grumman — are exactly the contractors whose products were used in Operation Epic Fury. The $25–30 billion day-one gain<sup><a href="#src-4">[4]</a></sup> went to shareholders who were already positioned.</p>
+                <p>Congressional defense stock purchases (April–May 2025) align precisely with the period when military planning for Iran strikes would have been underway. The stocks purchased — Lockheed Martin, Raytheon, Boeing, Northrop Grumman — are exactly the contractors whose products were used in Operation Epic Fury. The <a href="https://govfacts.org/policy-security/military/defense-budget-spending/defense-stocks-surged-after-the-iran-strikes-heres-exactly-who-gained/" target="_blank" rel="noopener noreferrer">$25–30 billion day-one gain</a> went to shareholders who were already positioned.</p>
             </div>
 
             <div class="cross-connection">
@@ -222,19 +220,19 @@
             <div class="losers-grid">
                 <div class="loser-card">
                     <h4>🇮🇷 Iranian Civilians</h4>
-                    <p>1,444+ killed, 18,000+ injured, 204 children dead<sup><a href="#src-29">[29]</a></sup>. Tehran choked by toxic smoke from oil infrastructure strikes. Nowruz — the Persian New Year — celebrated under bombardment.</p>
+                    <p><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">1,444+ killed, 18,000+ injured, 204 children dead</a>. Tehran choked by toxic smoke from oil infrastructure strikes. Nowruz — the Persian New Year — celebrated under bombardment.</p>
                 </div>
                 <div class="loser-card">
                     <h4>Gulf Civilians</h4>
-                    <p>Food prices spiked 40–120%<sup><a href="#src-13">[13]</a></sup> across the Gulf. Desalination plants — the lifeline of desert cities — threatened by strikes<sup><a href="#src-27">[27]</a></sup>. The Atlantic Council warned that large-scale damage to Gulf desalination infrastructure could make some cities uninhabitable within weeks.</p>
+                    <p><a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer">Food prices spiked 40–120%</a> across the Gulf. Desalination plants — the lifeline of desert cities — <a href="https://www.reuters.com/business/energy/oil-prices-rise-further-monday-mideast-war-escalates-2026-03-22/" target="_blank" rel="noopener noreferrer">threatened by strikes</a>. The Atlantic Council warned that large-scale damage to Gulf desalination infrastructure could make some cities uninhabitable within weeks.</p>
                 </div>
                 <div class="loser-card">
                     <h4>🇪🇺 Europe</h4>
-                    <p>Facing its second energy crisis in four years<sup><a href="#src-25">[25]</a></sup>. Gas prices nearly doubled. The ECB postponed rate cuts and slashed growth projections. UK inflation expected to breach 5%. Heavy industry — BASF, Huntsman — raising prices or at risk of shutdown. Stagflation looms.</p>
+                    <p>Facing its <a href="https://www.theguardian.com/news/ng-interactive/2026/mar/22/iran-war-global-economy-donald-trump-oil-prices-inflation" target="_blank" rel="noopener noreferrer">second energy crisis in four years</a>. Gas prices nearly doubled. The ECB postponed rate cuts and slashed growth projections. UK inflation expected to breach 5%. Heavy industry — BASF, Huntsman — raising prices or at risk of shutdown. Stagflation looms.</p>
                 </div>
                 <div class="loser-card">
                     <h4>🇺🇸 US Taxpayers</h4>
-                    <p>$12.7 billion spent in the first 6 days<sup><a href="#src-24">[24]</a></sup>. $200+ billion more requested<sup><a href="#src-5">[5]</a></sup>. Gas approaching $4 per gallon<sup><a href="#src-26">[26]</a></sup> — up 30%+ since the war began. The S&P 500 dropped on the first trading day; Goldman Sachs is telling clients to go defensive.</p>
+                    <p><a href="https://www.theguardian.com/world/2026/mar/21/iran-war-conflict-middle-east-trump-israel" target="_blank" rel="noopener noreferrer">$12.7 billion spent in the first 6 days</a>. <a href="https://www.nytimes.com/2026/03/19/world/middleeast/pentagon-200-billion-iran-war-funding-hegseth.html" target="_blank" rel="noopener noreferrer">$200+ billion more requested</a>. Gas approaching <a href="https://www.reuters.com/business/energy/us-pump-prices-jump-30-since-middle-east-war-began-headed-toward-4-gallon-2026-03-19/" target="_blank" rel="noopener noreferrer">$4 per gallon</a> — up 30%+ since the war began. The S&P 500 dropped on the first trading day; Goldman Sachs is telling clients to go defensive.</p>
                 </div>
             </div>
 
@@ -251,38 +249,35 @@
             <div class="sources-section">
                 <h3>Sources</h3>
                 <ol>
-                    <li id="src-1"><a href="https://readsludge.com/2025/06/24/members-of-congress-bought-defense-stocks-then-watched-them-rise-as-the-bombs-dropped/" target="_blank" rel="noopener noreferrer">Sludge — Members of Congress Bought Defense Stocks, Then Watched Them Rise as the Bombs Dropped</a></li>
-                    <li id="src-2"><a href="https://www.the-independent.com/news/world/americas/us-politics/congress-iran-stock-trading-defense-b2776998.html" target="_blank" rel="noopener noreferrer">The Independent — Congress Iran Stock Trading Defense</a></li>
-                    <li id="src-3"><a href="https://www.capitoltrades.com/buzz/lawmaker-s-palantir-trade-sparks-attention-after-big-ice-deal-stock-jump-2025-04-30" target="_blank" rel="noopener noreferrer">Capitol Trades — Lawmaker's Palantir Trade Sparks Attention After Big ICE Deal</a></li>
-                    <li id="src-4"><a href="https://govfacts.org/policy-security/military/defense-budget-spending/defense-stocks-surged-after-the-iran-strikes-heres-exactly-who-gained/" target="_blank" rel="noopener noreferrer">GovFacts — Defense Stocks Surged After the Iran Strikes: Here's Exactly Who Gained</a></li>
-                    <li id="src-5"><a href="https://www.nytimes.com/2026/03/19/world/middleeast/pentagon-200-billion-iran-war-funding-hegseth.html" target="_blank" rel="noopener noreferrer">NYT — Pentagon Requests $200 Billion in Iran War Funding</a></li>
-                    <li id="src-6"><a href="https://www.npr.org/2026/02/24/nx-s1-5723968/epstein-files-trump-accusation-maxwell" target="_blank" rel="noopener noreferrer">NPR — Epstein Files: Trump Accusation</a></li>
-                    <li id="src-7"><a href="https://www.ibtimes.co.uk/epstein-imessages-trump-military-speculation-1782286" target="_blank" rel="noopener noreferrer">IBTimes — Epstein iMessages: Trump Military Speculation</a></li>
-                    <li id="src-8"><a href="https://www.justice.gov/epstein/doj-disclosures/data-set-9-files" target="_blank" rel="noopener noreferrer">DOJ — Epstein Files Dataset 9</a></li>
-                    <li id="src-9"><a href="https://www.newsweek.com/epstein-files-linked-to-donald-trumps-iran-war-most-voters-say-11663251" target="_blank" rel="noopener noreferrer">Newsweek — Epstein Files Linked to Trump's Iran War, Most Voters Say</a></li>
-                    <li id="src-10"><a href="https://www.nytimes.com/2026/03/07/world/middleeast/a-us-intelligence-assessment-in-february-found-that-an-attack-on-iran-was-unlikely-to-result-in-regime-change.html" target="_blank" rel="noopener noreferrer">NYT — CIA Assessment Found Attack on Iran Unlikely to Result in Regime Change</a></li>
-                    <li id="src-11"><a href="https://www.nytimes.com/2026/03/18/world/middleeast/tulsi-gabbard-senate-testimony-iran-war.html" target="_blank" rel="noopener noreferrer">NYT — Gabbard & Ratcliffe Testimony: No Change in Iran's Missile Capabilities</a></li>
-                    <li id="src-12"><a href="https://www.reuters.com/world/middle-east/prior-iran-attacks-cia-assessed-khamenei-would-be-replaced-by-hardline-irgc-2026-02-28/" target="_blank" rel="noopener noreferrer">Reuters — CIA Assessed Khamenei Would Be Replaced by Hardline IRGC</a></li>
-                    <li id="src-13"><a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer">Wikipedia — Economic Impact of the 2026 Iran War</a></li>
-                    <li id="src-14"><a href="https://www.reuters.com/business/energy/iran-wars-energy-impact-forces-world-pay-up-cut-consumption-2026-03-21/" target="_blank" rel="noopener noreferrer">Reuters — Iran War's Energy Impact Forces World to Pay Up or Cut Consumption</a></li>
-                    <li id="src-15"><a href="https://fortune.com/2026/03/12/exxon-chevron-us-oil-gas-producers-refiners-all-time-high-stock-values-iran-war/" target="_blank" rel="noopener noreferrer">Fortune — Exxon, Chevron, US Oil Producers Hit All-Time High Values</a></li>
-                    <li id="src-16"><a href="https://www.cnbc.com/2026/03/12/gold-iran-conflict-where-next-markets.html" target="_blank" rel="noopener noreferrer">CNBC — Gold and the Iran Conflict: Where Next for Markets</a></li>
-                    <li id="src-17"><a href="https://www.latimes.com/politics/story/2026-03-10/russia-putin-oil-boom-iran-war" target="_blank" rel="noopener noreferrer">LA Times — Russia, Putin Oil Boom From Iran War</a></li>
-                    <li id="src-18"><a href="https://www.axios.com/2026/03/11/oil-iran-china-russia" target="_blank" rel="noopener noreferrer">Axios — Oil, Iran, China, Russia</a></li>
-                    <li id="src-19"><a href="https://www.cnbc.com/2026/03/18/hormuz-bottleneck-vessel-tanker-tracker-shipping-strait-of-hormuz.html" target="_blank" rel="noopener noreferrer">CNBC — Hormuz Bottleneck: Vessel and Tanker Tracker</a></li>
-                    <li id="src-20"><a href="https://www.fool.com/investing/2026/03/17/2-defense-stocks-set-to-rise-if-the-iran-war-drags/" target="_blank" rel="noopener noreferrer">Motley Fool — 2 Defense Stocks Set to Rise if the Iran War Drags On</a></li>
-                    <li id="src-21"><a href="https://www.forbes.com/sites/alisondurkee/2026/03/05/these-companies-stand-to-benefit-from-trumps-iran-war-exxon-raytheon-and-more/" target="_blank" rel="noopener noreferrer">Forbes — These Companies Stand to Benefit From Trump's Iran War</a></li>
-                    <li id="src-22"><a href="https://www.cnbc.com/2026/03/13/iran-war-strait-of-hormuz-hegseth.html" target="_blank" rel="noopener noreferrer">CNBC — Hegseth Dismisses Strait of Hormuz Concerns</a></li>
-                    <li id="src-23"><a href="https://www.cnbc.com/2026/03/19/hegseth-iran-war-budget.html" target="_blank" rel="noopener noreferrer">CNBC — Hegseth on Iran War Budget</a></li>
-                    <li id="src-24"><a href="https://www.theguardian.com/world/2026/mar/21/iran-war-conflict-middle-east-trump-israel" target="_blank" rel="noopener noreferrer">Guardian — Iran War: $12.7 Billion in First 6 Days</a></li>
-                    <li id="src-25"><a href="https://www.theguardian.com/news/ng-interactive/2026/mar/22/iran-war-global-economy-donald-trump-oil-prices-inflation" target="_blank" rel="noopener noreferrer">Guardian — Iran War, Global Economy, Oil Prices, Inflation</a></li>
-                    <li id="src-26"><a href="https://www.reuters.com/business/energy/us-pump-prices-jump-30-since-middle-east-war-began-headed-toward-4-gallon-2026-03-19/" target="_blank" rel="noopener noreferrer">Reuters — US Pump Prices Jump 30% Since War Began</a></li>
-                    <li id="src-27"><a href="https://www.reuters.com/business/energy/oil-prices-rise-further-monday-mideast-war-escalates-2026-03-22/" target="_blank" rel="noopener noreferrer">Reuters — Oil Prices Rise Further as Middle East War Escalates</a></li>
-                    <li id="src-28"><a href="https://www.investopedia.com/the-stocks-goldman-sachs-thinks-you-should-own-as-iran-war-stretches-into-a-third-week-11927339" target="_blank" rel="noopener noreferrer">Investopedia — Goldman Sachs Stock Recommendations Amid Iran War</a></li>
-                    <li id="src-29"><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">Wikipedia — 2026 Iran War</a></li>
-                    <li id="src-30"><a href="https://www.benzinga.com/news/politics/26/03/50983194/lockheed-martin-rtx-corp-stocks-hit-all-time-highs-on-iran-attack-heres-the-congress-members-who-own-shares" target="_blank" rel="noopener noreferrer">Benzinga — Lockheed Martin, RTX Corp Stocks Hit All-Time Highs: Congress Members Who Own Shares</a></li>
-                    <li id="src-31"><a href="https://www.congress.gov/crs-product/R48860" target="_blank" rel="noopener noreferrer">Congressional Research Service — FY2026 Defense Budget Overview (R48860)</a></li>
-                    <li id="src-32"><a href="https://www.reuters.com/world/us/trump-says-us-military-budget-2027-should-be-15-trillion-2026-01-07/" target="_blank" rel="noopener noreferrer">Reuters — Trump Says US Military Budget for 2027 Should Be $1.5 Trillion</a></li>
+                    <li><a href="https://readsludge.com/2025/06/24/members-of-congress-bought-defense-stocks-then-watched-them-rise-as-the-bombs-dropped/" target="_blank" rel="noopener noreferrer">Sludge — Members of Congress Bought Defense Stocks, Then Watched Them Rise as the Bombs Dropped</a></li>
+                    <li><a href="https://www.the-independent.com/news/world/americas/us-politics/congress-iran-stock-trading-defense-b2776998.html" target="_blank" rel="noopener noreferrer">The Independent — Congress Iran Stock Trading Defense</a></li>
+                    <li><a href="https://www.capitoltrades.com/buzz/lawmaker-s-palantir-trade-sparks-attention-after-big-ice-deal-stock-jump-2025-04-30" target="_blank" rel="noopener noreferrer">Capitol Trades — Lawmaker's Palantir Trade Sparks Attention After Big ICE Deal</a></li>
+                    <li><a href="https://govfacts.org/policy-security/military/defense-budget-spending/defense-stocks-surged-after-the-iran-strikes-heres-exactly-who-gained/" target="_blank" rel="noopener noreferrer">GovFacts — Defense Stocks Surged After the Iran Strikes: Here's Exactly Who Gained</a></li>
+                    <li><a href="https://www.nytimes.com/2026/03/19/world/middleeast/pentagon-200-billion-iran-war-funding-hegseth.html" target="_blank" rel="noopener noreferrer">NYT — Pentagon Requests $200 Billion in Iran War Funding</a></li>
+                    <li><a href="https://www.npr.org/2026/02/24/nx-s1-5723968/epstein-files-trump-accusation-maxwell" target="_blank" rel="noopener noreferrer">NPR — Epstein Files: Trump Accusation</a></li>
+                    <li><a href="https://www.ibtimes.co.uk/epstein-imessages-trump-military-speculation-1782286" target="_blank" rel="noopener noreferrer">IBTimes — Epstein iMessages: Trump Military Speculation</a></li>
+                    <li><a href="https://www.justice.gov/epstein/doj-disclosures/data-set-9-files" target="_blank" rel="noopener noreferrer">DOJ — Epstein Files Dataset 9</a></li>
+                    <li><a href="https://www.newsweek.com/epstein-files-linked-to-donald-trumps-iran-war-most-voters-say-11663251" target="_blank" rel="noopener noreferrer">Newsweek — Epstein Files Linked to Trump's Iran War, Most Voters Say</a></li>
+                    <li><a href="https://www.nytimes.com/2026/03/07/world/middleeast/a-us-intelligence-assessment-in-february-found-that-an-attack-on-iran-was-unlikely-to-result-in-regime-change.html" target="_blank" rel="noopener noreferrer">NYT — CIA Assessment Found Attack on Iran Unlikely to Result in Regime Change</a></li>
+                    <li><a href="https://www.nytimes.com/2026/03/18/world/middleeast/tulsi-gabbard-senate-testimony-iran-war.html" target="_blank" rel="noopener noreferrer">NYT — Gabbard & Ratcliffe Testimony: No Change in Iran's Missile Capabilities</a></li>
+                    <li><a href="https://www.reuters.com/world/middle-east/prior-iran-attacks-cia-assessed-khamenei-would-be-replaced-by-hardline-irgc-2026-02-28/" target="_blank" rel="noopener noreferrer">Reuters — CIA Assessed Khamenei Would Be Replaced by Hardline IRGC</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war" target="_blank" rel="noopener noreferrer">Wikipedia — Economic Impact of the 2026 Iran War</a></li>
+                    <li><a href="https://www.reuters.com/business/energy/iran-wars-energy-impact-forces-world-pay-up-cut-consumption-2026-03-21/" target="_blank" rel="noopener noreferrer">Reuters — Iran War's Energy Impact Forces World to Pay Up or Cut Consumption</a></li>
+                    <li><a href="https://fortune.com/2026/03/12/exxon-chevron-us-oil-gas-producers-refiners-all-time-high-stock-values-iran-war/" target="_blank" rel="noopener noreferrer">Fortune — Exxon, Chevron, US Oil Producers Hit All-Time High Values</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/12/gold-iran-conflict-where-next-markets.html" target="_blank" rel="noopener noreferrer">CNBC — Gold and the Iran Conflict: Where Next for Markets</a></li>
+                    <li><a href="https://www.latimes.com/politics/story/2026-03-10/russia-putin-oil-boom-iran-war" target="_blank" rel="noopener noreferrer">LA Times — Russia, Putin Oil Boom From Iran War</a></li>
+                    <li><a href="https://www.axios.com/2026/03/11/oil-iran-china-russia" target="_blank" rel="noopener noreferrer">Axios — Oil, Iran, China, Russia</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/18/hormuz-bottleneck-vessel-tanker-tracker-shipping-strait-of-hormuz.html" target="_blank" rel="noopener noreferrer">CNBC — Hormuz Bottleneck: Vessel and Tanker Tracker</a></li>
+                    <li><a href="https://www.fool.com/investing/2026/03/17/2-defense-stocks-set-to-rise-if-the-iran-war-drags/" target="_blank" rel="noopener noreferrer">Motley Fool — 2 Defense Stocks Set to Rise if the Iran War Drags On</a></li>
+                    <li><a href="https://www.forbes.com/sites/alisondurkee/2026/03/05/these-companies-stand-to-benefit-from-trumps-iran-war-exxon-raytheon-and-more/" target="_blank" rel="noopener noreferrer">Forbes — These Companies Stand to Benefit From Trump's Iran War</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/13/iran-war-strait-of-hormuz-hegseth.html" target="_blank" rel="noopener noreferrer">CNBC — Hegseth Dismisses Strait of Hormuz Concerns</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/19/hegseth-iran-war-budget.html" target="_blank" rel="noopener noreferrer">CNBC — Hegseth on Iran War Budget</a></li>
+                    <li><a href="https://www.theguardian.com/world/2026/mar/21/iran-war-conflict-middle-east-trump-israel" target="_blank" rel="noopener noreferrer">Guardian — Iran War: $12.7 Billion in First 6 Days</a></li>
+                    <li><a href="https://www.theguardian.com/news/ng-interactive/2026/mar/22/iran-war-global-economy-donald-trump-oil-prices-inflation" target="_blank" rel="noopener noreferrer">Guardian — Iran War, Global Economy, Oil Prices, Inflation</a></li>
+                    <li><a href="https://www.reuters.com/business/energy/us-pump-prices-jump-30-since-middle-east-war-began-headed-toward-4-gallon-2026-03-19/" target="_blank" rel="noopener noreferrer">Reuters — US Pump Prices Jump 30% Since War Began</a></li>
+                    <li><a href="https://www.reuters.com/business/energy/oil-prices-rise-further-monday-mideast-war-escalates-2026-03-22/" target="_blank" rel="noopener noreferrer">Reuters — Oil Prices Rise Further as Middle East War Escalates</a></li>
+                    <li><a href="https://www.investopedia.com/the-stocks-goldman-sachs-thinks-you-should-own-as-iran-war-stretches-into-a-third-week-11927339" target="_blank" rel="noopener noreferrer">Investopedia — Goldman Sachs Stock Recommendations Amid Iran War</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank" rel="noopener noreferrer">Wikipedia — 2026 Iran War</a></li>
                 </ol>
             </div>
 
@@ -294,7 +289,7 @@
         </article>
     </main>
 
-
+    
         <section class="newsletter-cta" role="region" aria-label="Newsletter signup">
             <h3>Get the daily briefing</h3>
             <p>War economics, market analysis, and daily updates — delivered every morning.</p>
