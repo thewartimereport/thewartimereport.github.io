@@ -46,19 +46,10 @@ main li a,
     text-underline-offset: 2px;
 }
 
-/* Cards are full-clickable blocks, not inline links */
+/* Cards — no underlines anywhere */
 a.report-card,
 a.report-card * {
     text-decoration: none !important;
-    color: inherit;
-}
-
-a.report-card h3 {
-    color: var(--text-primary);
-}
-
-a.report-card .read-more {
-    color: var(--accent-red);
 }
 
 /* Headers and cards should not be underlined */
