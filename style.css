@@ -675,9 +675,9 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (min-width: 769px) {
-    .nav-toggle-row { display: flex; margin-left: auto; flex-shrink: 0; }
+    .nav-links { display: flex !important; gap: 24px; order: 1; }
+    .nav-toggle-row { display: flex; order: 2; margin-left: auto; flex-shrink: 0; }
     .nav-toggle-row .hamburger { display: none; }
-    .nav-links { display: flex !important; gap: 24px; }
 }
 
 /* === REPORT CARD THUMBNAILS === */
