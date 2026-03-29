@@ -14,14 +14,18 @@ function initSearch() {
 
   function openSearch() {
     overlay.classList.add('active');
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
     input.focus();
     document.body.style.overflow = 'hidden';
   }
 
   function closeSearch() {
     overlay.classList.remove('active');
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
     input.value = '';
-    results.innerHTML = '';
+    results.innerHTML = '<div class="search-hint">Search across all reports, investigations, and economic analysis</div>';
     document.body.style.overflow = '';
   }
 

@@ -237,8 +237,8 @@ document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+
 </script>
 <script src="../search-index.js"></script>
 <script src="../search.js"></script>
-<div id="search-overlay" class="search-overlay">
-  <div class="search-modal">
+<div id="search-overlay" class="search-overlay" style="position:fixed;inset:0;z-index:9999;display:flex;justify-content:center;align-items:flex-start;padding-top:max(10vh,80px);opacity:0;visibility:hidden;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:opacity .15s,visibility .15s">
+  <div class="search-modal" style="background:var(--bg-primary,#1a1a1a);border:1px solid rgba(255,255,255,0.12);border-radius:16px;width:100%;max-width:580px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7)">
     <div class="search-header">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       <input type="search" id="search-input" class="search-input" placeholder="Search reports, investigations, economics..." aria-label="Search">
