@@ -31,6 +31,21 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+
+/* Content links — red and underlined */
+.report-body a,
+.investigation-article a,
+article a,
+main p a,
+main li a,
+.sources-section a,
+.disclaimer-box a,
+.pull-quote a,
+.cross-connection a {
+    color: var(--accent-red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
 button, input, select, textarea { font-family: inherit; }
 img { max-width: 100%; height: auto; }
 
