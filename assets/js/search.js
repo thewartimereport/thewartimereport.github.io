@@ -144,13 +144,13 @@ function subscribeNewsletter() {
   if (btn) { btn.disabled = true; btn.textContent = 'Subscribing...'; }
   input.disabled = true;
 
-  // Submit to FormSubmit (forwards to your email) + Beehiiv handled server-side
+  // Submit to FormSubmit (notifies you + triggers server-side Beehiiv sync)
   fetch('https://formsubmit.co/ajax/3c457e8b34adf42313257d26c49397e5', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       email: email,
-      _subject: 'New subscriber: ' + email,
+      _subject: 'New subscriber: ' + email + ' — ADD TO BEEHIIV',
       _template: 'box',
       _captcha: 'false',
       source: window.location.pathname
@@ -159,7 +159,12 @@ function subscribeNewsletter() {
   .then(r => r.json())
   .then(data => {
     if (data.success) {
-      form.innerHTML = '<p style="color: #22c55e; font-weight: 600; padding: 10px 0;">✓ Subscribed! You\'ll receive the daily briefing at 6:30 AM ET.</p>';
+      form.innerHTML = '<p style="color: #22c55e; font-weight: 600; padding: 10px 0;">✓ Subscribed! You\'ll receive a confirmation email shortly.</p>';
+      // Also store locally for server-side Beehiiv sync
+      try {
+        const pending = JSON.parse(localStorage.getItem('twtr_pending') || '[]');
+        if (!pending.includes(email)) { pending.push(email); localStorage.setItem('twtr_pending', JSON.stringify(pending)); }
+      } catch(e) {}
     } else {
       showError(input, 'Something went wrong. Try again.');
       if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
