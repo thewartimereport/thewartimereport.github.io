@@ -48,10 +48,17 @@ main li a,
 
 /* Cards are full-clickable blocks, not inline links */
 a.report-card,
-a.report-card *,
-.report-card a {
-    text-decoration: none;
+a.report-card * {
+    text-decoration: none !important;
     color: inherit;
+}
+
+a.report-card h3 {
+    color: var(--text-primary);
+}
+
+a.report-card .read-more {
+    color: var(--accent-red);
 }
 
 /* Headers and cards should not be underlined */
@@ -1017,6 +1024,8 @@ img { max-width: 100%; height: auto; }
 
 .breadcrumb a {
     color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .breadcrumb a:hover {
