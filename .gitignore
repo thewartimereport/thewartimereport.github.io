@@ -1,0 +1,23 @@
+# Agent workspaces — internal AI configuration
+agents/
+
+# Claude Code files
+.claude/
+
+# Build scripts — internal tooling
+scripts/
+
+# Research data — unpublished internal notes
+research/
+
+# Newsletters — drafts before publication
+newsletters/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
