@@ -304,13 +304,6 @@ img { max-width: 100%; height: auto; }
 .report-header {
     padding: 48px 0 32px;
     border-bottom: 1px solid var(--border);
-    max-width: 80ch;
-    margin: 0 auto;
-}
-
-.report-header-full {
-    max-width: none;
-    margin: 0;
 }
 
 .report-header .day-badge {
@@ -337,8 +330,6 @@ img { max-width: 100%; height: auto; }
 
 .report-body {
     padding: 24px 0;
-    max-width: 80ch;
-    margin: 0 auto;
 }
 
 .report-body h2 {
