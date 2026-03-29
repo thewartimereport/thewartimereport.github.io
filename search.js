@@ -88,26 +88,79 @@ function initSearch() {
 
 document.addEventListener('DOMContentLoaded', initSearch);
 
-// Newsletter subscription (temporary - swap with Beehiiv API when ready)
+// Newsletter subscription via FormSubmit.co (sends to thewartimereport@gmail.com)
 function subscribeNewsletter() {
   const input = document.getElementById('newsletter-email');
-  if (!input) return;
-  
+  const btn = input?.closest('.newsletter-form')?.querySelector('.newsletter-btn');
+  const form = input?.closest('.newsletter-form');
+  if (!input || !form) return;
+
   const email = input.value.trim();
-  if (!email || !email.includes('@')) {
-    input.style.borderColor = '#dc2626';
-    input.placeholder = 'Please enter a valid email';
+
+  // Validation
+  if (!email) {
+    showError(input, 'Please enter your email address');
     return;
   }
-  
-  // Store in localStorage for now (Beehiiv integration TODO)
-  const subs = JSON.parse(localStorage.getItem('twtr_subscribers') || '[]');
-  if (!subs.includes(email)) {
-    subs.push(email);
-    localStorage.setItem('twtr_subscribers', JSON.stringify(subs));
+
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+  if (!emailRegex.test(email)) {
+    showError(input, 'Please enter a valid email address');
+    return;
   }
-  
-  // Show success
-  const form = input.closest('.newsletter-form');
-  form.innerHTML = '<p style="color: var(--accent-red); font-weight: 600; padding: 10px 0;">✓ Subscribed! Check your inbox tomorrow at 6:30 AM ET.</p>';
+
+  // Common typo detection
+  const domain = email.split('@')[1]?.toLowerCase();
+  const typos = { 'gmial.com': 'gmail.com', 'gmal.com': 'gmail.com', 'gamil.com': 'gmail.com', 'gnail.com': 'gmail.com', 'gmaill.com': 'gmail.com', 'yaho.com': 'yahoo.com', 'yahooo.com': 'yahoo.com', 'hotmal.com': 'hotmail.com', 'outlok.com': 'outlook.com' };
+  if (typos[domain]) {
+    showError(input, 'Did you mean @' + typos[domain] + '?');
+    return;
+  }
+
+  // Honeypot check (hidden field)
+  const hp = form.querySelector('.hp-field');
+  if (hp && hp.value) return; // Bot detected
+
+  // Disable button, show loading
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing...'; }
+  input.disabled = true;
+
+  // Submit to FormSubmit.co
+  fetch('https://formsubmit.co/ajax/thewartimereport@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      email: email,
+      _subject: 'New Wartime Report subscriber: ' + email,
+      _template: 'box',
+      _captcha: 'false',
+      source: window.location.pathname
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success) {
+      form.innerHTML = '<p style="color: #22c55e; font-weight: 600; padding: 10px 0;">✓ Subscribed! You\'ll receive the daily briefing at 6:30 AM ET.</p>';
+    } else {
+      showError(input, 'Something went wrong. Try again.');
+      if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+      input.disabled = false;
+    }
+  })
+  .catch(() => {
+    showError(input, 'Network error. Please try again.');
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+    input.disabled = false;
+  });
+}
+
+function showError(input, msg) {
+  input.style.borderColor = '#dc2626';
+  input.value = '';
+  input.placeholder = msg;
+  input.classList.add('shake');
+  setTimeout(() => {
+    input.classList.remove('shake');
+    input.style.borderColor = '';
+  }, 2000);
 }
