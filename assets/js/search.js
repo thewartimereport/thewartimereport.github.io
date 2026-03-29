@@ -107,7 +107,7 @@ function initSearch() {
 
 document.addEventListener('DOMContentLoaded', initSearch);
 
-// Newsletter subscription via FormSubmit.co (sends to thewartimereport@gmail.com)
+// Newsletter subscription via Beehiiv API
 function subscribeNewsletter() {
   const input = document.getElementById('newsletter-email');
   const btn = input?.closest('.newsletter-form')?.querySelector('.newsletter-btn');
@@ -144,13 +144,13 @@ function subscribeNewsletter() {
   if (btn) { btn.disabled = true; btn.textContent = 'Subscribing...'; }
   input.disabled = true;
 
-  // Submit to FormSubmit.co
+  // Submit to FormSubmit (forwards to your email) + Beehiiv handled server-side
   fetch('https://formsubmit.co/ajax/3c457e8b34adf42313257d26c49397e5', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       email: email,
-      _subject: 'New Wartime Report subscriber: ' + email,
+      _subject: 'New subscriber: ' + email,
       _template: 'box',
       _captcha: 'false',
       source: window.location.pathname
