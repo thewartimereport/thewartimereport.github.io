@@ -56,12 +56,30 @@ function initSearch() {
       return;
     }
 
-    const words = query.split(/\s+/).filter(w => w.length > 0);
     const matches = searchIndex
       .map(item => {
-        const text = (item.title + ' ' + item.snippet + ' ' + (item.date || '') + ' ' + (item.tags || '')).toLowerCase();
-        const score = words.reduce((s, w) => s + (text.includes(w) ? 1 : 0), 0);
-        return { ...item, score };
+        const title = (item.title || '').toLowerCase();
+        const snippet = (item.snippet || '').toLowerCase();
+        const body = (item.body || '').toLowerCase();
+        const date = (item.date || '').toLowerCase();
+        
+        // Score: title match worth most, then snippet, then body
+        let score = 0;
+        if (title.includes(query)) score += 10;
+        if (snippet.includes(query)) score += 5;
+        if (body.includes(query)) score += 2;
+        if (date.includes(query)) score += 3;
+        
+        // Find a context snippet from body if matched there
+        let context = item.snippet;
+        if (score > 0 && !title.includes(query) && !snippet.includes(query) && body.includes(query)) {
+          const idx = body.indexOf(query);
+          const start = Math.max(0, idx - 60);
+          const end = Math.min(body.length, idx + query.length + 60);
+          context = (start > 0 ? '...' : '') + body.slice(start, end).replace(/</g,'&lt;') + (end < body.length ? '...' : '');
+        }
+        
+        return { ...item, score, context };
       })
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score)
@@ -74,13 +92,13 @@ function initSearch() {
 
     results.innerHTML = matches.map(item => {
       const esc = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const highlighted = item.title.replace(
-        new RegExp('(' + esc + ')', 'gi'), '<mark>$1</mark>'
-      );
+      const re = new RegExp('(' + esc + ')', 'gi');
+      const highlighted = item.title.replace(re, '<mark>$1</mark>');
+      const snippetText = (item.context || item.snippet || '').replace(re, '<mark>$1</mark>');
       const badge = item.type ? `<span class="search-badge search-badge-${item.type}">${item.type}</span>` : '';
       return `<a href="${prefix}${item.url}" class="search-result-item">
         <div class="result-header">${badge}<span class="result-title">${highlighted}</span></div>
-        <div class="result-snippet">${item.snippet}</div>
+        <div class="result-snippet">${snippetText}</div>
       </a>`;
     }).join('');
   });
