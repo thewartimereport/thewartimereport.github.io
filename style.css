@@ -654,11 +654,29 @@ img { max-width: 100%; height: auto; }
     }
     .site-nav .search-trigger {
         order: -1;
-    }
-    .search-overlay {
-        padding: 5vh 12px 12px;
+        width: 100%;
+        justify-content: center;
+        margin: 0 0 4px;
+        padding: 10px;
+        background: rgba(255,255,255,0.03);
+        border-radius: 8px;
     }
     .search-trigger kbd {
+        display: none;
+    }
+    .search-overlay,
+    .search-overlay.active {
+        padding: 24px 12px 12px !important;
+        align-items: flex-start !important;
+    }
+    .search-modal {
+        max-width: 100% !important;
+        border-radius: 12px !important;
+    }
+    .search-results {
+        max-height: 60vh;
+    }
+    .search-footer {
         display: none;
     }
 }
