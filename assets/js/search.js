@@ -55,7 +55,38 @@ function initSearch() {
     }
   });
 
+  let selectedIndex = -1;
+
+  function updateSelection() {
+    const items = results.querySelectorAll('.search-result-item');
+    items.forEach((item, i) => {
+      item.style.background = i === selectedIndex ? 'rgba(220, 38, 38, 0.1)' : '';
+    });
+    if (selectedIndex >= 0 && items[selectedIndex]) {
+      items[selectedIndex].scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  input.addEventListener('keydown', function (e) {
+    const items = results.querySelectorAll('.search-result-item');
+    if (!items.length) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+      updateSelection();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIndex = Math.max(selectedIndex - 1, 0);
+      updateSelection();
+    } else if (e.key === 'Enter' && selectedIndex >= 0 && items[selectedIndex]) {
+      e.preventDefault();
+      items[selectedIndex].click();
+    }
+  });
+
   input.addEventListener('input', function () {
+    selectedIndex = -1;
     const query = this.value.trim().toLowerCase();
     if (query.length < 2) {
       results.innerHTML = '<div class="search-hint">Type to search across all reports, investigations, and economic analysis...</div>';
@@ -183,29 +214,24 @@ function showError(input, msg) {
   }, 2000);
 }
 
-// Subscribe popup — shows once on first visit
+// Subscribe popup — shows on every homepage visit (once per session)
 function initSubscribePopup() {
   const popup = document.getElementById('subscribe-popup');
   if (!popup) return;
   
-  // Only show on homepage, only once
-  if (localStorage.getItem('twtr_popup_dismissed')) return;
+  // Don't show if already subscribed or dismissed this session
+  if (sessionStorage.getItem('twtr_popup_shown')) return;
+  if (localStorage.getItem('twtr_subscribed')) return;
   
   // Show after 3 seconds
   setTimeout(() => {
     popup.classList.add('active');
+    sessionStorage.setItem('twtr_popup_shown', '1');
   }, 3000);
   
   // Close on backdrop click
   popup.addEventListener('click', (e) => {
     if (e.target === popup) closeSubscribePopup();
-  });
-  
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && popup.classList.contains('active')) {
-      closeSubscribePopup();
-    }
   });
 }
 
@@ -213,7 +239,6 @@ function closeSubscribePopup() {
   const popup = document.getElementById('subscribe-popup');
   if (popup) {
     popup.classList.remove('active');
-    localStorage.setItem('twtr_popup_dismissed', Date.now());
   }
 }
 
@@ -241,7 +266,7 @@ function subscribeFromPopup() {
   .then(data => {
     if (data.success) {
       form.innerHTML = '<p style="color: #22c55e; font-weight: 600; padding: 10px 0;">✓ Check your inbox to confirm!</p>';
-      localStorage.setItem('twtr_popup_dismissed', Date.now());
+      localStorage.setItem('twtr_subscribed', '1');
       setTimeout(closeSubscribePopup, 2000);
     } else {
       if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
