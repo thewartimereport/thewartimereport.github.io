@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $1.5 Billion Bet — How Wall Street Is Trading on War Secrets | The Wartime Report</title>
+    <meta name="description" content="A $1.5 billion Polymarket trade placed before Trump's war announcement, open calls to seize Iran's oil, and a $200 billion Pentagon request. Three threads, one investigation.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+    <style>
+        .investigation-article { padding: 2rem 0; }
+        .investigation-article h2 { font-family: var(--font-serif); font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.5rem; color: var(--text-primary, #f0f0f0); }
+        .investigation-article h3 { font-family: var(--font-serif); font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-red, #c0392b); color: var(--text-primary, #f0f0f0); }
+        .investigation-article p { font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.2rem; color: var(--text-secondary, #ccc); }
+        .investigation-article .lead { font-size: 1.25rem; line-height: 1.9; color: var(--text-primary, #f0f0f0); font-weight: 400; }
+        .disclaimer-box { background: rgba(192, 57, 43, 0.1); border-left: 4px solid var(--accent-red, #c0392b); padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-radius: 0 4px 4px 0; }
+        .disclaimer-box strong { color: var(--accent-red, #c0392b); }
+        .byline { font-size: 0.9rem; color: var(--text-muted, #888); margin-bottom: 2rem; }
+        .byline time { color: var(--accent-red, #c0392b); }
+        .evidence-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 6px; border-radius: 3px; margin-right: 4px; vertical-align: middle; }
+        .tag-documented { background: rgba(39, 174, 96, 0.2); color: #27ae60; border: 1px solid rgba(39, 174, 96, 0.3); }
+        .tag-alleged { background: rgba(243, 156, 18, 0.2); color: #f39c12; border: 1px solid rgba(243, 156, 18, 0.3); }
+        .investigation-article ul { list-style: none; padding: 0; }
+        .investigation-article ul li { padding: 0.6rem 0 0.6rem 1.5rem; position: relative; font-size: 1rem; line-height: 1.7; color: var(--text-secondary, #ccc); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .investigation-article ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-red, #c0392b); font-weight: bold; }
+        .pull-quote { border-left: 4px solid var(--accent-red, #c0392b); padding: 1.5rem 2rem; margin: 2rem 0; background: rgba(255,255,255,0.03); font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; line-height: 1.8; color: var(--text-primary, #f0f0f0); }
+        .pull-quote cite { display: block; margin-top: 0.8rem; font-style: normal; font-size: 0.85rem; color: var(--text-muted, #888); }
+        .losers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+        .loser-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1.2rem 1.5rem; }
+        .loser-card h4 { font-size: 1rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.5rem; }
+        .loser-card p { font-size: 0.9rem; margin-bottom: 0; }
+        .cross-connection { background: rgba(192, 57, 43, 0.08); border: 1px solid rgba(192, 57, 43, 0.2); border-radius: 6px; padding: 1.5rem; margin: 1rem 0; }
+        .cross-connection h4 { color: var(--accent-red, #c0392b); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .cross-connection p { font-size: 0.95rem; margin-bottom: 0; }
+        .sources-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(255,255,255,0.1); }
+        .sources-section h3 { border-bottom: none; font-size: 1.2rem; }
+        .sources-section ol { padding-left: 1.5rem; }
+        .sources-section ol li { font-size: 0.85rem; line-height: 1.6; color: var(--text-muted, #888); padding: 0.3rem 0; border-bottom: none; }
+        .sources-section ol li::before { content: none; }
+        .sources-section ol li a { color: var(--accent-red, #c0392b); word-break: break-all; }
+        .article-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+        .article-nav a { color: var(--accent-red, #c0392b); text-decoration: none; }
+        .article-nav a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .investigation-article h2 { font-size: 1.7rem; }
+            .investigation-article h3 { font-size: 1.3rem; }
+            .losers-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The $1.5 Billion Bet — How Wall Street Is Trading on War Secrets">
+    <meta property="og:description" content="A $1.5 billion Polymarket trade placed before Trump's war announcement, open calls to seize Iran's oil, and a $200 billion Pentagon request. Three threads, one investigation.">
+    <meta property="og:url" content="https://thewartimereport.com/investigations/insider-trading.html">
+    <meta property="og:image" content="https://thewartimereport.com/images/og-image.jpg">
+    <meta property="og:site_name" content="The Wartime Report">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The $1.5 Billion Bet — How Wall Street Is Trading on War Secrets">
+    <meta name="twitter:description" content="A $1.5 billion Polymarket trade placed before Trump's war announcement, open calls to seize Iran's oil, and a $200 billion Pentagon request.">
+    <meta name="twitter:image" content="https://thewartimereport.com/images/og-image.jpg">
+    <meta name="twitter:site" content="@wartimereport">
+    <meta property="og:locale" content="en_US">
+    <link rel="canonical" href="https://thewartimereport.com/investigations/insider-trading.html">
+    <link rel="alternate" type="application/rss+xml" title="The Wartime Report RSS" href="https://thewartimereport.com/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "The $1.5 Billion Bet — How Wall Street Is Trading on War Secrets",
+        "description": "A $1.5 billion Polymarket trade placed before Trump's war announcement, open calls to seize Iran's oil, and a $200 billion Pentagon request. Three threads, one investigation.",
+        "datePublished": "2026-03-30",
+        "dateModified": "2026-03-30",
+        "author": {
+            "@type": "Organization",
+            "name": "The Wartime Report"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "The Wartime Report",
+            "url": "https://thewartimereport.com"
+        },
+        "mainEntityOfPage": "https://thewartimereport.com/investigations/insider-trading.html"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
+    <header class="site-header">
+        <div class="container">
+            <div class="masthead">
+                <h1 class="site-title">THE WARTIME REPORT</h1>
+                <p class="site-tagline">Open source · Unbiased · Independent — Daily briefings on the 2026 Iran War</p>
+            </div>
+            </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="container">
+            <div class="nav-toggle-row">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.getElementById('nav-links').classList.toggle('open')">☰ Menu</button>
+                <button id="search-trigger" class="search-trigger" aria-label="Search">Search <kbd>/</kbd></button>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html">Home</a>
+            <a href="../pages/start-here.html">Start Here</a>
+            <a href="../pages/timeline.html">Timeline</a>
+            <a href="../economics/index.html">Economics</a>
+            <a aria-current="page" href="index.html">Investigations</a>
+            <a href="../pages/about.html">About</a></div>
+
+        </div>
+    </nav>
+
+    <main class="container" id="main-content">
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="separator">→</span><a href="index.html">Investigations</a><span class="separator">→</span><span>Insider Trading</span></nav>
+<article class="investigation-article">
+
+            <div class="byline">
+                <span class="breaking-badge" style="font-size: 0.7rem; padding: 3px 10px; vertical-align: middle;">INVESTIGATION</span>
+                &nbsp; Published <time datetime="2026-03-30">March 30, 2026</time> · Multi-source collaborative analysis · Reading time: 18 minutes
+            </div>
+
+            <h2>The $1.5 Billion Bet</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted, #888); margin-bottom: 2rem; font-style: italic;">How Wall Street Is Trading on War Secrets</p>
+
+            <div class="disclaimer-box">
+                <strong><span class="warning-label">WARNING</span> Editorial Note:</strong> This article presents documented evidence from congressional statements, SEC filings, prediction market records, Pentagon budget documents, and credible journalism. Where claims are allegations or lack definitive proof, they are clearly labeled as <span class="evidence-tag tag-alleged">ALLEGED</span>. Items marked <span class="evidence-tag tag-documented">DOCUMENTED</span> are based on official records, direct quotes, or confirmed reporting. All factual claims are sourced with inline citations.
+            </div>
+
+            <!-- OPENING -->
+            <p class="lead">Someone placed a $1.5 billion bet on Polymarket before the president announced a five-day pause in energy strikes against Iran. The president told the Financial Times he wants to seize Iran's oil. The Pentagon is requesting $200 billion in supplemental war funding. These are not separate stories. They are the same story.</p>
+
+            <p class="lead">What follows is a documented investigation into how the 2026 Iran War has become a vehicle for the largest insider trading operation in modern history — not hidden in dark pools or offshore accounts, but conducted in plain sight on prediction markets, in congressional stock portfolios, and in the president's own words. The money trail runs from Polymarket to the Pentagon, from Wall Street trading floors to Kharg Island. Follow it.</p>
+
+            <!-- THREAD 1: POLYMARKET -->
+            <h3>I. The $1.5 Billion Bet</h3>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> On March 24, 2026, Senator Chris Murphy (D-CT) flagged what he called <a href="https://thehill.com/homenews/senate/5798756-murphy-trump-oil-iran-insider-trading/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">"mind blowing corruption"</a> on the Senate floor. A single trader — or coordinated group of traders — had placed approximately <strong>$1.5 billion</strong> in positions on Polymarket, the crypto-based prediction market, <em>before</em> President Trump publicly announced a five-day pause in U.S. energy strikes against Iran.</p>
+
+            <p>The trade was not subtle. It was not ambiguous. It was a directional bet that required advance knowledge of a presidential war decision — the kind of decision known only to a handful of senior administration officials, Pentagon leadership, and select members of congressional intelligence committees.</p>
+
+            <div class="pull-quote">
+                "Someone made $1.5 billion on Polymarket by betting on Trump's decision to pause energy strikes before it was announced. This is mind blowing corruption."
+                <cite>— Senator Chris Murphy (D-CT), <time datetime="2026-03-24">March 24, 2026</time> (<a href="https://thehill.com/homenews/senate/5798756-murphy-trump-oil-iran-insider-trading/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">The Hill</a>)</cite>
+            </div>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The scale of the trade drew immediate scrutiny from multiple outlets. <a href="https://www.aljazeera.com/news/2026/3/25/large-polymarket-wall-street-bets-on-trumps-war-news-under-scrutiny" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Al Jazeera reported</a> that large Polymarket and Wall Street bets on Trump's war announcements were "under scrutiny," noting a pattern of suspiciously well-timed positions that coincided with presidential decisions about the Iran conflict. The trades weren't limited to Polymarket — corresponding movements in oil futures, defense stocks, and options markets suggested a broader network of actors trading on advance war intelligence.</p>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> <a href="https://nymag.com/intelligencer/article/evidence-grows-of-iran-insider-trading-on-polymarket.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">New York Magazine reported</a> that the evidence of insider trading on Polymarket was growing, with multiple instances of large positions being opened hours before major war announcements. <a href="https://www.salon.com/2026/03/26/evidence-of-insider-trading-on-iran-war-grows/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Salon corroborated</a> this reporting, documenting additional suspicious trading patterns tied to Iran war developments.</p>
+
+            <p>The pattern is damning in its consistency:</p>
+
+            <ul>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> Large positions opened on Polymarket hours before Trump's pause announcement — positions that would only be profitable if the trader knew the announcement was coming</li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> Corresponding spikes in oil futures trading volume in the same pre-announcement window</li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> Senator Murphy's public identification of the $1.5 billion figure, based on publicly visible blockchain transactions on the Polygon network</li>
+                <li><span class="evidence-tag tag-documented">DOCUMENTED</span> Murphy introduced the <strong>BETS OFF Act</strong> — legislation that would ban event contract trading on U.S. military operations, directly in response to this incident</li>
+            </ul>
+
+            <p>The BETS OFF Act targets a regulatory blind spot that didn't exist until recently. Traditional insider trading laws cover securities — stocks, bonds, options. But prediction markets like Polymarket operate in a gray zone. Betting on whether the president will bomb a country is not, technically, a securities transaction. There is no SEC enforcement mechanism. There is no CFTC rule specifically prohibiting it. The $1.5 billion bet may have been the largest act of insider trading in American history — and it may have been entirely legal.</p>
+
+            <!-- THREAD 2: TRUMP WANTS THE OIL -->
+            <h3>II. "My Preference Would Be to Take the Oil"</h3>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> On March 30, 2026, the Financial Times published an exclusive interview in which President Trump stated his <a href="https://www.ft.com/content/3bd9fb6c-2985-4d24-b86b-23b7884031f5" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">"preference would be to take the oil"</a> — specifically referencing Iran's Kharg Island, the offshore terminal that handles approximately 90% of Iran's crude oil exports.</p>
+
+            <p>This was not a leak. It was not an anonymous source. The president of the United States told the world's leading financial newspaper that he intended to seize a sovereign nation's primary source of revenue.</p>
+
+            <div class="pull-quote">
+                "My preference would be to take the oil."
+                <cite>— President Donald Trump, in an exclusive interview with the <a href="https://www.ft.com/content/3bd9fb6c-2985-4d24-b86b-23b7884031f5" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Financial Times</a>, <time datetime="2026-03-30">March 30, 2026</time></cite>
+            </div>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The statement was immediately confirmed and amplified across global media. <a href="https://www.cnn.com/2026/03/30/world/live-news/iran-war-us-israel-trump" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">CNN</a>, <a href="https://www.bbc.com/news/live/c8jke9v9xv9t" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">BBC</a>, <a href="https://www.cnbc.com/2026/03/30/trump-iran-oil-middle-east-war-israel-us-kuwait-attack-.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">CNBC</a>, and <a href="https://www.theguardian.com/world/live/2026/mar/30/iran-war-live-updates-trump-oil-kharg-island-houthis-israel-lebanon-middle-east" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">The Guardian</a> all carried the story, each treating it as a major escalation — not just of the war, but of its stated objectives.</p>
+
+            <p>The significance of Kharg Island cannot be overstated. It is Iran's economic lifeline — the chokepoint through which the country earns the revenue that funds its government, its military, and the livelihoods of 88 million people. Seizing it would not end the war. It would transform it from a military campaign into an occupation — one built explicitly around the extraction of a natural resource.</p>
+
+            <p>The historical parallel is Iraq, 2003. But there is a critical difference. In 2003, the Bush administration denied that oil was a motive. Officials insisted the war was about weapons of mass destruction, democracy promotion, counterterrorism. The "blood for oil" accusation was treated as a fringe critique — something protesters chanted, not something the president said out loud.</p>
+
+            <p>In 2026, the president said it out loud.</p>
+
+            <p><span class="evidence-tag tag-alleged">ALLEGED</span> The "take the oil" statement raises a question that markets are already answering: if the president has publicly stated his intention to seize Iranian oil infrastructure, who else knew this was the plan — and when did they know it? The $1.5 billion Polymarket bet, placed before the energy strike pause, suggests that at least some traders had advance knowledge of presidential war decisions. If they knew about the pause, what else did they know?</p>
+
+            <!-- THREAD 3: THE $200B WAR MACHINE -->
+            <h3>III. The $200 Billion War Machine</h3>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> While traders were cashing out on prediction markets and the president was discussing oil seizures, the Pentagon quietly submitted its own bill. <a href="https://www.upi.com/Top_News/US/2026/03/24/cost-of-war-iran-defense-budget/7801774358253/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">UPI reported</a> that the Department of Defense requested a <strong>$200 billion supplemental appropriation</strong> for the Iran war — on top of the existing $848 billion baseline defense budget.</p>
+
+            <p>The true cost is higher. With interest on deficit spending, independent analysts estimate the ten-year cost at approximately <strong>$300 billion</strong>. That figure comes not from anti-war activists but from Reason.com, the libertarian policy outlet — hardly a publication predisposed to oppose military spending on ideological grounds.</p>
+
+            <div class="pull-quote">
+                "It takes money to kill bad guys."
+                <cite>— Defense Secretary Pete Hegseth, on the $200 billion supplemental request (<a href="https://www.cnbc.com/2026/03/19/hegseth-iran-war-budget.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">CNBC</a>)</cite>
+            </div>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> <a href="https://responsiblestatecraft.org/republicans-iran-supplemental/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Responsible Statecraft</a>, the Quincy Institute's policy journal, framed the supplemental in stark terms: the administration is "either using war to grab taxpayer dollars, or planning long-term war." Both interpretations point to the same conclusion — the $200 billion request is not a one-time emergency measure. It is the opening bid in a permanent expansion of the war budget.</p>
+
+            <p>The political dynamics are revealing. <a href="https://www.politico.com/news/2026/03/19/iran-war-funding-reconciliation-00837102" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">Politico reported</a> that Republicans are balking at passing the war funding through reconciliation — the budget process that requires only a simple majority. The concern is not the spending itself but the political risk of voting for $200 billion in unfunded war costs without Democratic cover. The same party that cut Medicaid and food assistance in the name of fiscal responsibility is now debating how to fund an open-ended war.</p>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> The Pentagon's lack of transparency compounds the concern. UPI noted that the Defense Department has provided limited detail on how the $200 billion would be spent, which contracts would be awarded, or what metrics would define success. The supplemental request arrived without an accompanying cost breakdown — a departure from standard practice even in previous wartime supplementals.</p>
+
+            <p>The beneficiaries are not hard to identify:</p>
+
+            <ul>
+                <li><strong>Lockheed Martin</strong> — primary contractor for THAAD missile defense systems, F-35s, and precision-guided munitions currently being expended over Iran</li>
+                <li><strong>RTX (Raytheon)</strong> — manufacturer of Tomahawk cruise missiles, with a pre-signed Pentagon contract for 1,000+ per year</li>
+                <li><strong>Northrop Grumman</strong> — B-2 stealth bomber operations, surveillance systems, and the next-generation ICBM program</li>
+                <li><strong>Palantir</strong> — AI-driven targeting and intelligence platform being used in real-time theater operations</li>
+            </ul>
+
+            <p>Every missile fired over Iran generates a replacement order. Every replacement order flows through the $200 billion supplemental. Every dollar of the supplemental flows to contractors whose stocks are held by members of Congress.</p>
+
+            <!-- THE CROSS-CONNECTIONS -->
+            <h3>IV. The Cross-Connections</h3>
+
+            <p>Each of these threads — the Polymarket bet, the oil seizure, the war budget — is significant on its own. But the investigation only comes into focus when you trace the connections between them.</p>
+
+            <div class="cross-connection">
+                <h4>Connection 1: The Information Loop</h4>
+                <p>The $1.5 billion Polymarket trade required advance knowledge of a presidential war decision. That knowledge existed in a small circle: senior White House staff, Pentagon leadership, and members of the congressional intelligence and armed services committees. These same committees are now voting on the $200 billion supplemental that will enrich the defense contractors whose stocks those same members hold. The information flows in a closed loop — from classified briefings, to trading desks, to appropriations votes, and back again.</p>
+            </div>
+
+            <div class="cross-connection">
+                <h4>Connection 2: The Oil Motive</h4>
+                <p>Trump's admission that he wants to "take the oil" reframes the entire war. If the objective is oil seizure, then the $200 billion supplemental is not a war cost — it is an investment. And if it is an investment, then the traders who bet on war decisions before they were announced weren't just committing insider trading. They were investing in a known business plan. The "follow the money" thesis is no longer an allegation. The president confirmed it on the record.</p>
+            </div>
+
+            <div class="cross-connection">
+                <h4>Connection 3: The Regulatory Void</h4>
+                <p>Traditional insider trading occurs in regulated markets with enforcement mechanisms — the SEC, the DOJ, the CFTC. But the $1.5 billion Polymarket bet exploited a gap. Prediction markets are not securities markets. Congressional stock trading, while subject to the STOCK Act, has resulted in zero criminal prosecutions in its 14-year history. And the seizure of a foreign nation's oil reserves exists in an international legal vacuum. Each element of this story occurs in a space where the rules either don't exist or aren't enforced. That is not a coincidence. It is a feature.</p>
+            </div>
+
+            <div class="cross-connection">
+                <h4>Connection 4: Iraq 2003, Repeated in Real-Time</h4>
+                <p>The pattern from Iraq is repeating with one difference: visibility. In 2003, the insider trading happened in private — defense stock purchases by officials with war knowledge, no-bid contracts to Halliburton, oil concessions quietly negotiated. In 2026, the same dynamics play out on public blockchains, in presidential interviews, and in prediction markets that anyone can audit. The corruption hasn't changed. The transparency has. And yet, knowing it is happening has not stopped it from happening.</p>
+            </div>
+
+            <!-- THE BETS OFF ACT -->
+            <h3>V. The Legislative Response</h3>
+
+            <p><span class="evidence-tag tag-documented">DOCUMENTED</span> Senator Murphy's BETS OFF Act represents the first legislative attempt to close the prediction market loophole. The bill would prohibit event contract trading on U.S. military operations — making it illegal to bet on whether the president will bomb, invade, or impose a ceasefire on a foreign country.</p>
+
+            <p>The bill faces long odds. Polymarket operates offshore, primarily serving non-U.S. traders through crypto wallets that are difficult to regulate. The prediction market industry has powerful allies in the tech and crypto sectors. And Congress has historically been reluctant to regulate its own members' trading — the STOCK Act, passed in 2012, was <a href="https://thehill.com/homenews/senate/5798756-murphy-trump-oil-iran-insider-trading/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-red);">quietly gutted</a> within a year of passage.</p>
+
+            <p>But the BETS OFF Act matters for what it acknowledges: that the 2026 Iran War has created a new category of financial corruption — one where war itself has become a tradeable asset, and presidential decisions about who lives and who dies are being monetized in real-time by people with advance knowledge of those decisions.</p>
+
+            <!-- WHAT WE DON'T KNOW -->
+            <h3>VI. What We Don't Know</h3>
+
+            <p><span class="evidence-tag tag-alleged">ALLEGED</span> This investigation documents a pattern. It does not — yet — identify the individuals behind the $1.5 billion Polymarket trade. Blockchain analysis can trace wallet addresses but not necessarily the people behind them. Several key questions remain unanswered:</p>
+
+            <ul>
+                <li>Who controlled the wallets that placed the $1.5 billion bet? Were they connected to U.S. government officials, political operatives, or their associates?</li>
+                <li>Were the Polymarket trades coordinated with corresponding positions in traditional financial markets — oil futures, defense stock options, currency trades?</li>
+                <li>How many presidential war decisions have been preceded by similar trading patterns on prediction markets? Is the pause announcement an isolated case or part of a pattern?</li>
+                <li>Who in the administration knew about the "take the oil" plan before Trump told the Financial Times — and did any of them trade on that knowledge?</li>
+                <li>How will the $200 billion supplemental be allocated, and which contractors stand to benefit from specific line items?</li>
+            </ul>
+
+            <p>The answers to these questions will determine whether the 2026 Iran War is remembered as a military conflict or as the largest insider trading scheme in history — conducted not in the shadows, but on public blockchains, in newspaper interviews, and on the floor of the United States Senate.</p>
+
+            <!-- SHARE -->
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this investigation:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://twitter.com/intent/tweet?text=The%20%241.5%20Billion%20Bet%20%E2%80%94%20How%20Wall%20Street%20Is%20Trading%20on%20War%20Secrets&url=https%3A%2F%2Fthewartimereport.com%2Finvestigations%2Finsider-trading.html" class="share-btn share-twitter" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthewartimereport.com%2Finvestigations%2Finsider-trading.html&title=The%20%241.5%20Billion%20Bet%20%E2%80%94%20How%20Wall%20Street%20Is%20Trading%20on%20War%20Secrets" class="share-btn share-reddit" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fthewartimereport.com%2Finvestigations%2Finsider-trading.html&text=The%20%241.5%20Billion%20Bet%20%E2%80%94%20How%20Wall%20Street%20Is%20Trading%20on%20War%20Secrets" class="share-btn share-telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://api.whatsapp.com/send?text=The%20%241.5%20Billion%20Bet%20%E2%80%94%20How%20Wall%20Street%20Is%20Trading%20on%20War%20Secrets%20https%3A%2F%2Fthewartimereport.com%2Finvestigations%2Finsider-trading.html" class="share-btn share-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://bsky.app/intent/compose?text=The%20%241.5%20Billion%20Bet%20%E2%80%94%20How%20Wall%20Street%20Is%20Trading%20on%20War%20Secrets%20https%3A%2F%2Fthewartimereport.com%2Finvestigations%2Finsider-trading.html" class="share-btn share-bluesky" target="_blank" rel="noopener noreferrer">Bluesky</a>
+    </div>
+</div>
+
+            <!-- SOURCES -->
+            <div class="sources-section">
+                <h3>Sources</h3>
+                <ol>
+                    <li><a href="https://thehill.com/homenews/senate/5798756-murphy-trump-oil-iran-insider-trading/" target="_blank" rel="noopener noreferrer">The Hill — Murphy Flags $1.5 Billion Polymarket Trade as 'Mind Blowing Corruption'</a></li>
+                    <li><a href="https://www.aljazeera.com/news/2026/3/25/large-polymarket-wall-street-bets-on-trumps-war-news-under-scrutiny" target="_blank" rel="noopener noreferrer">Al Jazeera — Large Polymarket, Wall Street Bets on Trump's War News Under Scrutiny</a></li>
+                    <li><a href="https://nymag.com/intelligencer/article/evidence-grows-of-iran-insider-trading-on-polymarket.html" target="_blank" rel="noopener noreferrer">New York Magazine — Evidence Grows of Iran Insider Trading on Polymarket</a></li>
+                    <li><a href="https://www.salon.com/2026/03/26/evidence-of-insider-trading-on-iran-war-grows/" target="_blank" rel="noopener noreferrer">Salon — Evidence of Insider Trading on Iran War Grows</a></li>
+                    <li><a href="https://www.ft.com/content/3bd9fb6c-2985-4d24-b86b-23b7884031f5" target="_blank" rel="noopener noreferrer">Financial Times — Trump: 'My Preference Would Be to Take the Oil'</a></li>
+                    <li><a href="https://www.cnn.com/2026/03/30/world/live-news/iran-war-us-israel-trump" target="_blank" rel="noopener noreferrer">CNN — Iran War Live Updates: Trump on Kharg Island Oil</a></li>
+                    <li><a href="https://www.bbc.com/news/live/c8jke9v9xv9t" target="_blank" rel="noopener noreferrer">BBC — Iran War Live: Trump 'Take the Oil' Statement</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/30/trump-iran-oil-middle-east-war-israel-us-kuwait-attack-.html" target="_blank" rel="noopener noreferrer">CNBC — Trump on Iran Oil, Kharg Island, and Middle East War</a></li>
+                    <li><a href="https://www.theguardian.com/world/live/2026/mar/30/iran-war-live-updates-trump-oil-kharg-island-houthis-israel-lebanon-middle-east" target="_blank" rel="noopener noreferrer">The Guardian — Iran War Live Updates: Trump, Oil, Kharg Island</a></li>
+                    <li><a href="https://www.upi.com/Top_News/US/2026/03/24/cost-of-war-iran-defense-budget/7801774358253/" target="_blank" rel="noopener noreferrer">UPI — Cost of War: Pentagon Requests $200 Billion Iran Supplemental</a></li>
+                    <li><a href="https://responsiblestatecraft.org/republicans-iran-supplemental/" target="_blank" rel="noopener noreferrer">Responsible Statecraft — Republicans and the Iran Supplemental</a></li>
+                    <li><a href="https://www.politico.com/news/2026/03/19/iran-war-funding-reconciliation-00837102" target="_blank" rel="noopener noreferrer">Politico — Republicans Balk at Going Alone on Iran War Funding</a></li>
+                    <li><a href="https://www.cnbc.com/2026/03/19/hegseth-iran-war-budget.html" target="_blank" rel="noopener noreferrer">CNBC — Hegseth: 'It Takes Money to Kill Bad Guys'</a></li>
+                </ol>
+            </div>
+
+            <div class="article-nav">
+                <a href="who-benefits.html">← Who Benefits From This War?</a>
+                <a href="index.html">All Investigations →</a>
+            </div>
+
+        </article>
+
+        <section class="newsletter-cta" role="region" aria-label="Newsletter signup">
+            <h2>Get the daily briefing</h2>
+            <p>War updates, economic analysis, and investigations — delivered to your inbox every morning at 6:30 AM ET.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter();">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" id="newsletter-email" name="email" required>
+                <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+            </form>
+            <p class="newsletter-note">Free · Daily · No spam · <a href="../feed.xml" style="color: var(--accent-red);">RSS</a></p>
+        </section>
+    </main>
+
+
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://x.com/wartimereport" target="_blank" rel="noopener noreferrer">X/Twitter</a> ·
+            <a href="https://bsky.app/profile/wartimereport.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a> ·
+            <a href="https://t.me/wartimereport" target="_blank" rel="noopener noreferrer">Telegram</a> ·
+            <a href="https://github.com/thewartimereport/thewartimereport.github.io" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="../feed.xml">RSS</a> ·
+            <a href="mailto:thewartimereport@gmail.com">Email</a>
+        </div>
+        <p>The Wartime Report is an independent, open-source news project covering the 2026 Iran War. Sources include Reuters, AP, Al Jazeera, BBC, CNN, NYT, Guardian, and other major outlets.</p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="../pages/about.html">About</a> ·· <a href="../pages/corrections.html">Corrections</a></p>
+        <p>&copy; 2026 The Wartime Report</p>
+    </div>
+</footer>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script>
+const btn=document.querySelector('.back-to-top');
+window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scrollY>300)});
+</script>
+<script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/search.js"></script>
+<div id="search-overlay" class="search-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:9999;display:flex;justify-content:center;align-items:flex-start;padding:12vh 16px 16px;opacity:0;visibility:hidden;background:rgba(0,0,0,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:opacity .15s,visibility .15s;overflow-y:auto">
+  <div class="search-modal" style="background:var(--bg-primary,#1a1a1a);border:1px solid rgba(255,255,255,0.12);border-radius:16px;width:100%;max-width:580px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7)">
+    <div class="search-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="search-input" class="search-input" placeholder="Search reports, investigations, economics..." aria-label="Search">
+      <button id="search-close" class="search-close">ESC</button>
+    </div>
+    <div id="search-results" class="search-results">
+      <div class="search-hint">Search across all reports, investigations, and economic analysis</div>
+    </div>
+    <div class="search-footer">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+<script data-goatcounter="https://thewartimereport.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
