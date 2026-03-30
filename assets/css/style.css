@@ -64,6 +64,12 @@ a.report-card * {
     text-decoration: none !important;
 }
 
+/* Share buttons — override content link styles */
+.share-btn {
+    color: white !important;
+    text-decoration: none !important;
+}
+
 /* Headers and cards should not be underlined */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .report-header a,
