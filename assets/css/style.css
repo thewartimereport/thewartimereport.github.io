@@ -906,27 +906,22 @@ img { max-width: 100%; height: auto; }
 }
 
 .search-close {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--text-muted);
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: var(--accent-red);
     cursor: pointer;
-    font-size: 0.6rem;
-    padding: 3px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
     border-radius: 5px;
     font-family: var(--font-sans);
     letter-spacing: 0.5px;
     transition: all 0.15s;
 }
 
-.search-close {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 10px;
-}
-
 .search-close:hover {
-    background: rgba(255,255,255,0.1);
-    color: var(--text-primary);
+    background: rgba(220, 38, 38, 0.2);
+    color: var(--accent-red);
 }
 
 .search-results {
