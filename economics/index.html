@@ -121,6 +121,28 @@
             </div>
         </section>
     
+        
+            <div style="margin: 32px 0; padding: 20px 0; border-top: 1px solid var(--border);">
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px;">Share this page:</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="" class="share-btn share-twitter" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="" class="share-btn share-reddit" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="" class="share-btn share-telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="" class="share-btn share-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="" class="share-btn share-bluesky" target="_blank" rel="noopener noreferrer">Bluesky</a>
+    </div>
+</div>
+<script>
+(function(){
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent(document.title);
+document.querySelector('.share-twitter').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+document.querySelector('.share-reddit').href='https://reddit.com/submit?url='+url+'&title='+title;
+document.querySelector('.share-telegram').href='https://t.me/share/url?url='+url+'&text='+title;
+document.querySelector('.share-whatsapp').href='https://wa.me/?text='+title+' '+url;
+document.querySelector('.share-bluesky').href='https://bsky.app/intent/compose?text='+title+' '+url;
+})();
+</script>
         <section class="newsletter-cta" role="region" aria-label="Newsletter signup">
             <h2>Get the daily briefing</h2>
             <p>War updates, economic analysis, and investigations — delivered to your inbox every morning at 6:30 AM ET.</p>
