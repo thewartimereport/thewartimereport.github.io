@@ -214,22 +214,36 @@ function showError(input, msg) {
   }, 2000);
 }
 
-// Subscribe popup — shows on every homepage visit (once per session)
+// Subscribe popup — shows on every new tab until subscribed
 function initSubscribePopup() {
-  const popup = document.getElementById('subscribe-popup');
-  if (!popup) return;
-  
-  // Don't show if already subscribed or dismissed this session
-  if (sessionStorage.getItem('twtr_popup_shown')) return;
   if (localStorage.getItem('twtr_subscribed')) return;
   
-  // Show after 3 seconds
+  // Create popup if it doesn't exist on this page
+  let popup = document.getElementById('subscribe-popup');
+  if (!popup) {
+    popup = document.createElement('div');
+    popup.id = 'subscribe-popup';
+    popup.className = 'subscribe-popup';
+    popup.innerHTML = `
+      <div class="subscribe-popup-card">
+        <button class="subscribe-popup-close" onclick="closeSubscribePopup()" aria-label="Close">&times;</button>
+        <h3>Stay informed</h3>
+        <p>Get daily war briefings, economic analysis, and investigations delivered to your inbox at 6:30 AM ET.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); subscribeFromPopup();">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" id="popup-email" name="email" required>
+          <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="newsletter-btn">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Free · Daily · No spam</p>
+        <button class="no-thanks" onclick="closeSubscribePopup()">No thanks, just reading</button>
+      </div>`;
+    document.body.appendChild(popup);
+  }
+  
   setTimeout(() => {
     popup.classList.add('active');
-    sessionStorage.setItem('twtr_popup_shown', '1');
   }, 3000);
   
-  // Close on backdrop click
   popup.addEventListener('click', (e) => {
     if (e.target === popup) closeSubscribePopup();
   });
