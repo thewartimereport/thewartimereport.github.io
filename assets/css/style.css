@@ -911,6 +911,12 @@ img { max-width: 100%; height: auto; }
     transition: all 0.15s;
 }
 
+.search-close {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+}
+
 .search-close:hover {
     background: rgba(255,255,255,0.1);
     color: var(--text-primary);
@@ -1235,4 +1241,92 @@ img { max-width: 100%; height: auto; }
     .newsletter-form {
         flex-direction: column;
     }
+}
+
+/* === SUBSCRIBE POPUP === */
+.subscribe-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.subscribe-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.subscribe-popup-card {
+    background: var(--bg-primary);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 40px 36px;
+    max-width: 440px;
+    width: calc(100% - 32px);
+    text-align: center;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+.subscribe-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+}
+
+.subscribe-popup-close:hover {
+    color: var(--text-primary);
+}
+
+.subscribe-popup h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+    color: var(--text-primary);
+}
+
+.subscribe-popup p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.subscribe-popup .newsletter-form {
+    max-width: 100%;
+}
+
+.subscribe-popup .newsletter-note {
+    margin-top: 12px;
+    font-size: 0.75rem;
+}
+
+.subscribe-popup .no-thanks {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.subscribe-popup .no-thanks:hover {
+    color: var(--text-secondary);
 }

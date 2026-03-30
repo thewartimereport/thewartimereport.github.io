@@ -16,9 +16,14 @@ function initSearch() {
     overlay.classList.add('active');
     overlay.style.opacity = '1';
     overlay.style.visibility = 'visible';
-    // Delay focus to ensure the overlay is visible before focusing
-    requestAnimationFrame(() => { input.focus(); });
     document.body.style.overflow = 'hidden';
+    // Double RAF to ensure overlay is painted before focusing
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        input.focus();
+        input.click();
+      });
+    });
   }
 
   function closeSearch() {
@@ -177,3 +182,76 @@ function showError(input, msg) {
     input.style.borderColor = '';
   }, 2000);
 }
+
+// Subscribe popup — shows once on first visit
+function initSubscribePopup() {
+  const popup = document.getElementById('subscribe-popup');
+  if (!popup) return;
+  
+  // Only show on homepage, only once
+  if (localStorage.getItem('twtr_popup_dismissed')) return;
+  
+  // Show after 3 seconds
+  setTimeout(() => {
+    popup.classList.add('active');
+  }, 3000);
+  
+  // Close on backdrop click
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) closeSubscribePopup();
+  });
+  
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup.classList.contains('active')) {
+      closeSubscribePopup();
+    }
+  });
+}
+
+function closeSubscribePopup() {
+  const popup = document.getElementById('subscribe-popup');
+  if (popup) {
+    popup.classList.remove('active');
+    localStorage.setItem('twtr_popup_dismissed', Date.now());
+  }
+}
+
+function subscribeFromPopup() {
+  const input = document.getElementById('popup-email');
+  const form = input?.closest('.newsletter-form');
+  const btn = form?.querySelector('.newsletter-btn');
+  if (!input || !form) return;
+
+  const email = input.value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showError(input, 'Please enter a valid email');
+    return;
+  }
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing...'; }
+  input.disabled = true;
+
+  fetch('https://wartime-subscribe.thewartimereport.workers.dev', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.success) {
+      form.innerHTML = '<p style="color: #22c55e; font-weight: 600; padding: 10px 0;">✓ Check your inbox to confirm!</p>';
+      localStorage.setItem('twtr_popup_dismissed', Date.now());
+      setTimeout(closeSubscribePopup, 2000);
+    } else {
+      if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+      input.disabled = false;
+    }
+  })
+  .catch(() => {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+    input.disabled = false;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initSubscribePopup);

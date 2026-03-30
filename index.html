@@ -57,12 +57,11 @@
             </div>
             <div class="nav-links" id="nav-links">
                 <a aria-current="page" href="index.html">Home</a>
+            <a href="pages/start-here.html">Start Here</a>
             <a href="pages/timeline.html">Timeline</a>
             <a href="economics/index.html">Economics</a>
             <a href="investigations/index.html">Investigations</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/start-here.html">Start Here</a>
-            </div>
+            <a href="pages/about.html">About</a></div>
             
         </div>
     </nav>
@@ -218,7 +217,7 @@ Last updated: <time datetime="2026-03-29">March 29, 2026</time> at 04:00 UTC · 
             <a href="mailto:thewartimereport@gmail.com">Email</a>
         </div>
         <p>The Wartime Report is an independent, open-source news project covering the 2026 Iran War. Sources include Reuters, AP, Al Jazeera, BBC, CNN, NYT, Guardian, and other major outlets.</p>
-        <p class="disclaimer">Open source · Unbiased · Independent · <a href="pages/about.html">About</a> · <a href="pages/start-here.html">Start Here</a> · <a href="pages/corrections.html">Corrections</a></p>
+        <p class="disclaimer">Open source · Unbiased · Independent · <a href="pages/about.html">About</a> ·· <a href="pages/corrections.html">Corrections</a></p>
         <p>&copy; 2026 The Wartime Report</p>
     </div>
 </footer>
@@ -247,6 +246,20 @@ window.addEventListener('scroll',()=>{btn.classList.toggle('visible',window.scro
   </div>
 </div>
 <script data-goatcounter="https://thewartimereport.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<div id="subscribe-popup" class="subscribe-popup">
+  <div class="subscribe-popup-card">
+    <button class="subscribe-popup-close" onclick="closeSubscribePopup()" aria-label="Close">&times;</button>
+    <h3>Stay informed</h3>
+    <p>Get daily war briefings, economic analysis, and investigations delivered to your inbox at 6:30 AM ET.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); subscribeFromPopup();">
+      <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" id="popup-email" name="email" required>
+      <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="newsletter-btn">Subscribe</button>
+    </form>
+    <p class="newsletter-note">Free · Daily · No spam</p>
+    <button class="no-thanks" onclick="closeSubscribePopup()">No thanks, just reading</button>
+  </div>
+</div>
 </body>
 </html>
 <!-- cache-bust 1774265512 -->
