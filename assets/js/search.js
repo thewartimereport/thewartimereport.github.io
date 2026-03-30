@@ -214,9 +214,11 @@ function showError(input, msg) {
   }, 2000);
 }
 
-// Subscribe popup — shows on every new tab until subscribed
+// Subscribe popup — once per tab, never after subscribing
 function initSubscribePopup() {
   if (localStorage.getItem('twtr_subscribed')) return;
+  if (sessionStorage.getItem('twtr_popup_shown')) return;
+  sessionStorage.setItem('twtr_popup_shown', '1');
   
   // Create popup if it doesn't exist on this page
   let popup = document.getElementById('subscribe-popup');
