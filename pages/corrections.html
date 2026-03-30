@@ -75,6 +75,16 @@
             <h2>Corrections Log</h2>
             <p><em>No significant corrections to date. This page will be updated as needed.</em></p>
         </div>
+    
+        <section class="newsletter-cta" role="region" aria-label="Newsletter signup">
+            <h3>Get the daily briefing</h3>
+            <p>War updates, economic analysis, and investigations — delivered to your inbox every morning at 6:30 AM ET.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter();">
+                <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email address" id="newsletter-email" name="email" required>
+                <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+            </form>
+            <p class="newsletter-note">Free · Daily · No spam · <a href="../feed.xml" style="color: var(--accent-red);">RSS</a></p>
+        </section>
     </main>
 
 <footer class="site-footer">
