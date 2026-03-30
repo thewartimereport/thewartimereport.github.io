@@ -1332,3 +1332,12 @@ img { max-width: 100%; height: auto; }
 .subscribe-popup .no-thanks:hover {
     color: var(--text-secondary);
 }
+
+/* Search input clear button (native browser X) */
+.search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;
+    cursor: pointer;
+}
