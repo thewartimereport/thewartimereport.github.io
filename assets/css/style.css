@@ -599,6 +599,7 @@ img { max-width: 100%; height: auto; }
 .share-reddit { background: #FF4500; }
 .share-telegram { background: #0088cc; }
 .share-whatsapp { background: #25D366; }
+.share-bluesky { background: #0085ff; }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
