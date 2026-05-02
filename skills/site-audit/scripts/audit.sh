@@ -229,7 +229,7 @@ echo "=== 12. IMAGE DEDUP ==="
 DUPES=$(for f in "$REPO/reports/day-"*.html; do
   day=$(basename "$f" .html | sed 's/day-//')
   src=$(grep -oP 'img loading="lazy" src="\K[^"]+' "$f" | head -1)
-  echo "$day: $src"
+  [ -n "$src" ] && echo "$day: $src"
 done | sort -t: -k2 | uniq -d -f1)
 
 if [ -z "$DUPES" ]; then
